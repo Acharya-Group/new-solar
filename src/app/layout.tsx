@@ -19,6 +19,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
+    
     <html lang="en" className={`${inter.variable} ${syne.variable}`}>
       <body style={{ fontFamily: "var(--font-inter), system-ui, sans-serif" }}>
         <TopBar />
