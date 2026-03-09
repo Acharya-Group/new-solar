@@ -19,8 +19,12 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    
+
     <html lang="en" className={`${inter.variable} ${syne.variable}`}>
+       <head>
+        <link rel="icon" href="/favicon.ico" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+      </head>
       <body style={{ fontFamily: "var(--font-inter), system-ui, sans-serif" }}>
         <TopBar />
         <Header />
