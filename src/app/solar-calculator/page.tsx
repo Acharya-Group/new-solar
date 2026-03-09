@@ -1,0 +1,14 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Solar Savings Calculator – Calculate Your ROI | Neo Solar",
+  description: "Free solar calculator for India. Get instant system size, cost and savings estimate.",
+};
+
+export default function SolarCalculatorPage() {
+  return (
+    <main className="min-h-screen">
+      {/* TODO: Add SolarCalculator page content */}
+    </main>
+  );
+}

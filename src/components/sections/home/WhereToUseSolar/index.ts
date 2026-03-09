@@ -1,0 +1,1 @@
+export { WhereToUseSolar } from "./WhereToUseSolar";

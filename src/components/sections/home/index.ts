@@ -1,0 +1,17 @@
+export { Hero } from "./Hero";
+export { About } from "./About";
+export { WhySolar } from "./WhySolar";
+export { CalculateSavings } from "./CalculateSavings";
+export { PanelCompanies } from "./PanelCompanies";
+export { ChooseSystem } from "./ChooseSystem";
+export { WhereToUseSolar } from "./WhereToUseSolar";
+export { NeoBenefits } from "./NeoBenefits";
+export { FreeConsultation } from "./FreeConsultation";
+export { SuccessStories } from "./SuccessStories";
+export { FAQ } from "./FAQ";
+export { Projects } from "./Projects";
+export { GridComparison } from "./GridComparison";
+export { ExpertConsultation } from "./ExpertConsultation";
+export { SuccessRate } from "./SuccessRate";
+export { InstallationProcess } from "./InstallationProcess";
+export { Contact } from "./Contact";
