@@ -1,5 +1,6 @@
 "use client";
 import React, { useState, useEffect, useRef } from "react";
+import Image from "next/image";   
 import { Heading } from "@/components/common/Heading";
 import { SubHeading } from "@/components/common/SubHeading";
 import { Button } from "@/components/common/Button";
@@ -443,12 +444,23 @@ export const Hero: React.FC = () => {
   }, [charIndex, isDeleting, currentWord]);
 
   return (
-    <section
-      id="hero"
-      className="relative lg:bg-[url(/images/common/hero-bg.jpg)] lg:bg-cover lg:bg-no-repeat lg:bg-center min-h-screen flex flex-col justify-center overflow-hidden"
-    >
-      {/* Canvas */}
-      <SolarCanvas />
+   // ✅ AFTER
+<section
+  id="hero"
+  className="relative min-h-screen flex flex-col justify-center overflow-hidden"
+>
+  {/* ✅ LCP Fix — Priority background image */}
+  <Image
+    src="/images/common/hero-bg.jpg"
+    alt="Neo Solar hero background"
+    fill
+    priority
+    className="object-cover object-center hidden lg:block"
+    sizes="100vw"
+  />
+
+  {/* Canvas */}
+  <SolarCanvas />
 
       {/* Gradient overlays */}
       <div className="absolute inset-0 pointer-events-none">

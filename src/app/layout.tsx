@@ -5,6 +5,7 @@ import { siteConfig } from "@/lib/constants/site";
 import { Header } from "@/components/common/Header";
 import { Footer } from "@/components/common/Footer";
 import { TopBar } from "@/components/common/TopBar";
+import { LangProvider } from "@/lib/context/LangContext"; 
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter", display: "swap" });
 const syne = Syne({ subsets: ["latin"], variable: "--font-syne", display: "swap" });
@@ -25,12 +26,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link rel="icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
       </head>
-      <body style={{ fontFamily: "var(--font-inter), system-ui, sans-serif" }}>
-        <TopBar />
-        <Header />
-        <main>{children}</main>
-        <Footer />
-      </body>
+    <body style={{ fontFamily: "var(--font-inter), system-ui, sans-serif" }}>
+  <LangProvider>
+    <TopBar />
+    <Header />
+    <main>{children}</main>
+    <Footer />
+  </LangProvider>
+</body>
     </html>
   );
 }

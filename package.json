@@ -27,5 +27,14 @@
     "postcss": "^8.5.1",
     "tailwindcss": "^3.4.17",
     "typescript": "^5.7.0"
-  }
+  },
+  "browserslist": [
+    "chrome >= 80",
+    "firefox >= 80",
+    "safari >= 14",
+    "edge >= 80",
+    "not dead",
+    "not ie 11",
+    "not op_mini all"
+  ]
 }
