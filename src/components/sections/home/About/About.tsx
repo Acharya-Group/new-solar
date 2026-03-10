@@ -49,8 +49,8 @@ export const About: React.FC = () => {
 </p>
 <p className="text-gray-500 text-sm leading-relaxed border-l-4 border-yellow-400 pl-4 bg-yellow-50/50 py-2 rounded-r-xl">
   At Neo Solar, we combine innovation and efficiency — hamare high-performance solar solutions aapki{" "}
-  <span className="text-orange-600 font-semibold">laagat 90% tak kam</span> karte hain aur carbon footprint ghataate hain.
-  Switch karo clean energy pe — <span className="text-orange-600 font-semibold">aaj hi shuru karo.</span>
+  <span className="text-orange-700 font-semibold">laagat 90% tak kam</span> karte hain aur carbon footprint ghataate hain.
+  Switch karo clean energy pe — <span className="text-orange-700 font-semibold">aaj hi shuru karo.</span>
 </p>
             </div>
 

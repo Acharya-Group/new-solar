@@ -482,7 +482,7 @@ export const Hero: React.FC = () => {
                 href="https://wa.me/919991777218"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-green-500 text-white hover:bg-green-600 px-7 py-4 rounded-xl font-semibold transition-all duration-300 hover:scale-105 shadow-lg shadow-green-200"
+                className="inline-flex items-center gap-2 bg-green-500 text-white hover:bg-green-600 px-7 py-4 rounded-xl font-semibold transition-all duration-300 hover:scale-105 shadow-lg"
               >
                 <FaWhatsapp size={20} />
                 WhatsApp Karo
@@ -511,7 +511,7 @@ export const Hero: React.FC = () => {
                   </div>
                   <div>
                     <p className="text-white/80 text-xs font-medium uppercase tracking-wide">Government Scheme</p>
-                    <h3 className="text-white font-bold text-lg leading-tight">PM Surya Ghar Yojana</h3>
+                    <h2 className="text-white font-bold text-lg leading-tight">PM Surya Ghar Yojana</h2>
                   </div>
                 </div>
               </div>
@@ -543,7 +543,7 @@ export const Hero: React.FC = () => {
                   <div className="text-2xl">⚡</div>
                   <div>
                     <p className="text-sm font-bold text-green-700">300 Units FREE Har Mahine</p>
-                    <p className="text-xs text-green-600">Net Metering se extra units becho bhi</p>
+                    <p className="text-xs text-green-700">Net Metering se extra units becho bhi</p>
                   </div>
                 </div>
 

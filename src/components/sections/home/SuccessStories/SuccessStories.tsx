@@ -78,7 +78,7 @@ useEffect(() => {
           <SubHeading align="center" className="mt-3 max-w-xl mx-auto">
             500+ families jo ab{" "}
             <span className="text-yellow-600 font-semibold">ZERO bijli bill</span> de rahe hain —{" "}
-            <span className="text-orange-600 font-semibold">hum guarantee dete hain.</span>
+            <span className="text-orange-700 font-semibold">hum guarantee dete hain.</span>
           </SubHeading>
           <div className="inline-flex items-center gap-2 bg-green-500 text-white px-5 py-2 rounded-full text-sm font-bold mt-4 shadow-lg shadow-green-200">
             ✅ Zero Bijli Bill Ki Guarantee — Hum Dete Hain

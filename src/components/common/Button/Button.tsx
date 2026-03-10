@@ -33,7 +33,7 @@ export const Button: React.FC<ButtonProps> = ({
   if (href) return <Link href={href} className={classes}>{children}</Link>;
 
   return (
-    <button type={type} onClick={onClick} disabled={disabled} className={classes}>
+    <button aria-label={typeof children === "string" ? children : undefined} type={type} onClick={onClick} disabled={disabled} className={classes}>
       {children}
     </button>
   );
