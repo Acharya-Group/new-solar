@@ -9,8 +9,9 @@ import Link from "next/link";
 
 const contactInfo = [
   { icon: FiPhone, label: "Phone", value: "+91 99917-77218", href: "tel:+919991777218" },
+  { icon: FiPhone, label: "Phone", value: "+91 99917-77219", href: "tel:+919991777219" },
   { icon: FaWhatsapp, label: "WhatsApp", value: "+91 99917-77218", href: "https://wa.me/919991777218" },
-  { icon: FiMail, label: "Email", value: "info@neosolar.in", href: "mailto:info@neosolar.in" },
+  { icon: FiMail, label: "Email", value: "neosolarco@gmail.com", href: "mailto:neosolarco@gmail.com" },
   { icon: FiMapPin, label: "Address", value: "123 Solar Avenue, Delhi, India", href: "#" },
   { icon: FiClock, label: "Working Hours", value: "Mon–Sat: 9AM – 7PM", href: "#" },
 ];
@@ -103,9 +104,15 @@ export const Contact: React.FC = () => {
             </div>
 
             <div className="flex flex-col gap-3">
-              {contactInfo.map(({ icon: Icon, label, value, href }) => (
-                <Link key={label} aria-label={label} href={href} target="_blank" rel="noopener noreferrer"
-                  className="flex items-center gap-4 bg-white border border-gray-100 rounded-2xl px-4 py-3.5 shadow-sm hover:shadow-md hover:border-green-200 transition-all group">
+              {contactInfo.map(({ icon: Icon, label, value, href }, index) => (
+                <Link
+                  key={`${label}-${index}`}
+                  aria-label={label}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-4 bg-white border border-gray-100 rounded-2xl px-4 py-3.5 shadow-sm hover:shadow-md hover:border-green-200 transition-all group"
+                >
                   <div className="w-10 h-10 bg-green-50 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:bg-green-100 transition-colors">
                     <Icon size={18} className="text-green-500" />
                   </div>
