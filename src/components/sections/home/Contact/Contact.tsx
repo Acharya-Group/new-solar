@@ -102,7 +102,6 @@ export const Contact: React.FC = () => {
                 </Link>
               </div>
             </div>
-
             <div className="flex flex-col gap-3">
               {contactInfo.map(({ icon: Icon, label, value, href }, index) => (
                 <Link
