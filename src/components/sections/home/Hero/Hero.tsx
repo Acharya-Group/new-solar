@@ -458,7 +458,7 @@ export const Hero: React.FC = () => {
 
             {/* Subheading */}
             <p
-              className="max-w-md !text-gray-600 !text-xl lg:!text-white [text-shadow:1px_1px_0_green,-1px_1px_0_green,1px_-1px_0_green,-1px_-1px_0_green,3px_3px_6px_rgba(0,0,0,0.35)]"
+              className="max-w-m !text-xl !text-white [text-shadow:1px_1px_0_green,-1px_1px_0_green,1px_-1px_0_green,-1px_-1px_0_green,3px_3px_6px_rgba(0,0,0,0.35)]"
             >
               Premium solar panels, expert installation aur{" "}
               25 saal ki warranty ke saath apna bijli bill 90% tak kam karo.
