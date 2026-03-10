@@ -11,7 +11,6 @@ import Link from "next/link";
 const typewriterWords = [
   "Solar is for Houses",
   "Solar is for Hospitals",
-  "Solar is for petrol pumps",
   "Solar is for Schools",
   "Solar is for Colleges",
 ];
