@@ -95,7 +95,7 @@ useEffect(() => {
               style={{ maxHeight: "480px", scrollbarWidth: "none", msOverflowStyle: "none" }}
             >
               {stories.map((st, i) => (
-                <button key={i} onClick={() => go(i)}
+                <button aria-label={`View story from ${st.name}`} key={i} onClick={() => go(i)}
                   className={`flex-shrink-0 flex items-center gap-3 rounded-2xl p-4 text-left border-2 transition-all duration-300 w-52 lg:w-full ${
                     i === current
                       ? "bg-white border-yellow-300 shadow-lg scale-[1.02]"
@@ -190,10 +190,10 @@ useEffect(() => {
                 ))}
               </div>
               <div className="flex gap-2">
-                <button onClick={prev} className="w-10 h-10 rounded-full border-2 border-gray-200 bg-white flex items-center justify-center hover:border-yellow-400 hover:text-yellow-500 transition-all">
+                <button aria-label="Previous story" onClick={prev} className="w-10 h-10 rounded-full border-2 border-gray-200 bg-white flex items-center justify-center hover:border-yellow-400 hover:text-yellow-500 transition-all">
                   <FiChevronLeft size={18} />
                 </button>
-                <button onClick={next} className="w-10 h-10 rounded-full border-2 border-gray-200 bg-white flex items-center justify-center hover:border-yellow-400 hover:text-yellow-500 transition-all">
+                <button aria-label="Next story" onClick={next} className="w-10 h-10 rounded-full border-2 border-gray-200 bg-white flex items-center justify-center hover:border-yellow-400 hover:text-yellow-500 transition-all">
                   <FiChevronRight size={18} />
                 </button>
               </div>

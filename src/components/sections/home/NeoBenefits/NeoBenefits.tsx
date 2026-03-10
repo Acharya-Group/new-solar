@@ -54,8 +54,8 @@ export const NeoBenefits: React.FC = () => {
             <p className="text-white text-sm">Aaj hi free consultation lo — koi obligation nahi.</p>
           </div>
           <div className="flex gap-3 flex-shrink-0">
-            <Button href="/solar-calculator" variant="ghost" size="md">Calculator →</Button>
-            <Button href="/contact" variant="primary" size="md">Free Consultation Lo</Button>
+            <Button aria-label="Calculate solar savings" href="/solar-calculator" variant="ghost" size="md">Calculator →</Button>
+            <Button aria-label="Request free consultation" href="/contact" variant="primary" size="md">Free Consultation Lo</Button>
           </div>
         </div>
       </div>

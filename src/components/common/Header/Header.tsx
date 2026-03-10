@@ -85,20 +85,17 @@ export const Header: React.FC = () => {
 
           {/* Desktop CTA */}
           <div className="hidden lg:flex items-center gap-3">
-            <Button href="/solar-calculator" variant="outline" size="sm">
+            <Button aria-label="Open solar calculator" href="/solar-calculator" variant="outline" size="sm">
               Calculator
             </Button>
 
-            <Button href="/contact" variant="primary" size="sm">
+            <Button aria-label="Request free quote" href="/contact" variant="primary" size="sm">
               Free Quote
             </Button>
           </div>
 
           {/* Mobile Toggle */}
-          <button
-            className="lg:hidden p-2 text-gray-700 hover:text-black transition"
-            onClick={() => setMobileOpen(!mobileOpen)}
-          >
+          <button aria-label="Toggle menu" className="lg:hidden p-2 text-gray-700 hover:text-black transition" onClick={() => setMobileOpen(!mobileOpen)}>
             {mobileOpen ? <FiX size={26} /> : <FiMenu size={26} />}
           </button>
         </div>
@@ -129,7 +126,7 @@ export const Header: React.FC = () => {
                 <div className="flex flex-col">
 
                   {/* Parent */}
-                  <button
+                  <button aria-label={item.label}
                     onClick={() =>
                       item.children
                         ? setOpenDropdown(
@@ -139,7 +136,9 @@ export const Header: React.FC = () => {
                     }
                     className="flex items-center justify-between px-4 py-3 text-gray-700 hover:text-yellow-600 hover:bg-gray-100 rounded-xl font-medium transition"
                   >
-                    <Link href={item.href}>{item.label}</Link>
+                    <Link aria-label={item.label} href={item.href}>
+                      {item.label}
+                    </Link>
 
                     {item.children && (
                       <FiChevronDown
@@ -183,6 +182,7 @@ export const Header: React.FC = () => {
             {/* CTA */}
             <div className="flex flex-col gap-3 mt-4 pt-4 border-t border-gray-200">
               <Button
+                aria-label="Open solar calculator"
                 href="/solar-calculator"
                 variant="outline"
                 fullWidth
@@ -191,7 +191,7 @@ export const Header: React.FC = () => {
                 Calculator
               </Button>
 
-              <Button
+              <Button aria-label="Request free quote"
                 href="/contact"
                 variant="primary"
                 fullWidth

@@ -4,6 +4,7 @@ import { Heading } from "@/components/common/Heading";
 import { SubHeading } from "@/components/common/SubHeading";
 import { FiSun, FiUsers, FiAward, FiThumbsUp, FiTrendingUp, FiShield, FiZap, FiStar } from "react-icons/fi";
 import { FaSolarPanel } from "react-icons/fa";
+import Link from "next/link";
 
 const stats = [
   { icon: FiThumbsUp, value: 98, suffix: "%", label: "Customer Satisfaction", desc: "Har customer khush hai", color: "from-yellow-400 to-orange-400", bg: "bg-yellow-50", border: "border-yellow-200", iconColor: "text-yellow-500" },
@@ -126,13 +127,13 @@ export const SuccessRate: React.FC = () => {
             <p className="text-black/70 text-sm">Free consultation lo aur apna solar journey shuru karo aaj hi.</p>
           </div>
           <div className="flex gap-3 flex-shrink-0">
-            <a href="https://wa.me/919991777218" target="_blank" rel="noopener noreferrer"
+            <Link aria-label="Chat with us on WhatsApp" href="https://wa.me/919991777218" target="_blank" rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-black text-green-400 font-bold px-6 py-3 rounded-xl hover:bg-gray-900 transition-all hover:scale-105">
               WhatsApp Karo
-            </a>
-            <a href="/contact" className="inline-flex items-center gap-2 bg-white text-black font-bold px-6 py-3 rounded-xl hover:bg-gray-50 transition-all hover:scale-105 shadow">
+            </Link>
+            <Link aria-label="Request a free quote" href="/contact" className="inline-flex items-center gap-2 bg-white text-black font-bold px-6 py-3 rounded-xl hover:bg-gray-50 transition-all hover:scale-105 shadow">
               Free Quote Lo →
-            </a>
+            </Link>
           </div>
         </div>
 

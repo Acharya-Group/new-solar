@@ -5,6 +5,7 @@ import { SubHeading } from "@/components/common/SubHeading";
 import { Button } from "@/components/common/Button";
 import { FaWhatsapp, FaSolarPanel } from "react-icons/fa";
 import { FiArrowDown, FiSun, FiZap, FiShield, FiCheckCircle } from "react-icons/fi";
+import Link from "next/link";
 
 const typewriterWords = [
   "Bijli Bill Zero Karo",
@@ -492,10 +493,14 @@ export const Hero: React.FC = () => {
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row items-center lg:items-start gap-3 mt-1">
-              <Button href="/contact" variant="primary" size="lg">
+              <Button aria-label="Request free consultation" href="/contact" variant="primary" size="lg">
                 Free Consultation Lo
               </Button>
-              <a
+              <Link aria-label="Explore our products" href="/products" className="inline-flex items-center gap-2 bg-gray-700 text-white hover:bg-gray-800 px-6 py-4 rounded-xl font-semibold transition-all duration-300 hover:scale-105 shadow-lg shadow-gray-300">
+                Explore Products
+              </Link>
+              <Link
+                aria-label="Chat with us on WhatsApp"
                 href="https://wa.me/919991777218"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -503,7 +508,7 @@ export const Hero: React.FC = () => {
               >
                 <FaWhatsapp size={20} />
                 WhatsApp Karo
-              </a>
+              </Link>
             </div>
 
             {/* Trust badges */}
@@ -565,7 +570,7 @@ export const Hero: React.FC = () => {
                 </div>
 
                 {/* CTA */}
-                <Button href="/contact" variant="primary" size="md" fullWidth>
+                <Button aria-label="Apply for subsidy" href="/contact" variant="primary" size="md" fullWidth>
                   Subsidy Ke Liye Apply Karo →
                 </Button>
 

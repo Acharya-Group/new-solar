@@ -5,6 +5,7 @@ import { SubHeading } from "@/components/common/SubHeading";
 import { Button } from "@/components/common/Button";
 import { FiPhone, FiMail, FiMapPin, FiClock, FiSend } from "react-icons/fi";
 import { FaWhatsapp } from "react-icons/fa";
+import Link from "next/link";
 
 const contactInfo = [
   { icon: FiPhone, label: "Phone", value: "+91 99917-77218", href: "tel:+919991777218" },
@@ -63,7 +64,7 @@ export const Contact: React.FC = () => {
                 <input className={inputClass} placeholder="Phone Number *" value={form.phone} onChange={(e) => setForm({ ...form, phone: e.target.value })} required />
               </div>
               <input type="email" className={inputClass} placeholder="Email Address" value={form.email} onChange={(e) => setForm({ ...form, email: e.target.value })} />
-              <select className={inputClass} value={form.service} onChange={(e) => setForm({ ...form, service: e.target.value })}>
+              <select aria-label="Select your state" className={inputClass} value={form.service} onChange={(e) => setForm({ ...form, service: e.target.value })}>
                 <option value="">Service Select Karo</option>
                 <option value="on-grid">On-Grid System</option>
                 <option value="off-grid">Off-Grid System</option>
@@ -73,7 +74,7 @@ export const Contact: React.FC = () => {
               </select>
               <textarea className={`${inputClass} resize-none`} rows={4} placeholder="Aapka message ya sawaal..." value={form.message} onChange={(e) => setForm({ ...form, message: e.target.value })} />
 
-              <button type="submit" disabled={loading}
+              <button aria-label="Send message" type="submit" disabled={loading}
                 className="w-full inline-flex items-center justify-center gap-2 bg-gradient-to-r from-green-400 to-blue-500 text-white font-bold py-3.5 rounded-xl hover:scale-[1.02] transition-all disabled:opacity-50 shadow-lg shadow-green-200">
                 <FiSend size={18} />
                 {loading ? "Bhej rahe hain..." : "Message Bhejo"}
@@ -90,20 +91,20 @@ export const Contact: React.FC = () => {
               <h3 className="text-white font-bold text-xl mb-1">Seedha Baat Karo</h3>
               <p className="text-white/70 text-sm mb-4">Form se zyada fast — call ya WhatsApp karo.</p>
               <div className="flex flex-col sm:flex-row gap-3">
-                <a href="tel:+919991777218"
+                <Link aria-label="Call us" href="tel:+919991777218"
                   className="flex-1 inline-flex items-center justify-center gap-2 bg-black text-green-500 font-bold px-4 py-3 rounded-xl hover:bg-gray-900 transition-all">
                   <FiPhone size={16} /> Call Now
-                </a>
-                <a href="https://wa.me/919991777218" target="_blank" rel="noopener noreferrer"
+                </Link>
+                <Link aria-label="WhatsApp us" href="https://wa.me/919991777218" target="_blank" rel="noopener noreferrer"
                   className="flex-1 inline-flex items-center justify-center gap-2 bg-green-500 text-white font-bold px-4 py-3 rounded-xl hover:bg-green-600 transition-all">
                   <FaWhatsapp size={16} /> WhatsApp
-                </a>
+                </Link>
               </div>
             </div>
 
             <div className="flex flex-col gap-3">
               {contactInfo.map(({ icon: Icon, label, value, href }) => (
-                <a key={label} href={href}
+                <Link key={label} aria-label={label} href={href} target="_blank" rel="noopener noreferrer"
                   className="flex items-center gap-4 bg-white border border-gray-100 rounded-2xl px-4 py-3.5 shadow-sm hover:shadow-md hover:border-green-200 transition-all group">
                   <div className="w-10 h-10 bg-green-50 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:bg-green-100 transition-colors">
                     <Icon size={18} className="text-green-500" />
@@ -112,7 +113,7 @@ export const Contact: React.FC = () => {
                     <p className="text-gray-400 text-xs">{label}</p>
                     <p className="text-gray-900 font-semibold text-sm">{value}</p>
                   </div>
-                </a>
+                </Link>
               ))}
             </div>
           </div>

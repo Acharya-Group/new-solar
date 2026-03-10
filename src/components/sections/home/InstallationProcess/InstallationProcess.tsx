@@ -61,7 +61,7 @@ export const InstallationProcess: React.FC = () => {
 
         {/* CTA */}
         <div className="mt-14 text-center">
-          <Button href="/contact" variant="primary" size="lg">
+          <Button aria-label="Request free consultation" href="/contact" variant="primary" size="lg">
             Abhi Start Karo — Free Consultation Lo →
           </Button>
           <p className="text-gray-400 text-sm mt-3">Koi advance payment nahi — pehle survey, phir decision</p>

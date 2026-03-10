@@ -3,6 +3,7 @@ import { Heading } from "@/components/common/Heading";
 import { SubHeading } from "@/components/common/SubHeading";
 import { Button } from "@/components/common/Button";
 import { FiSun, FiTrendingDown, FiShield, FiZap, FiHome, FiGlobe } from "react-icons/fi";
+import Link from "next/link";
 
 const reasons = [
   { icon: FiTrendingDown, title: "Bijli Bill 90% Kam", desc: "Har mahine hazar rupaye bachao — solar se bijli free mein banao aur grid ko becho.", color: "from-green-400 to-emerald-500", bg: "bg-green-50", border: "border-green-200", iconColor: "text-green-500" },
@@ -55,14 +56,14 @@ export const WhySolar: React.FC = () => {
             <p className="text-white/70 text-sm">Free site survey + instant savings estimate — koi charge nahi.</p>
           </div>
           <div className="flex gap-3 flex-shrink-0">
-            <a href="/solar-calculator"
+            <Link aria-label="Calculate your solar savings" href="/solar-calculator"
               className="inline-flex items-center gap-2 bg-white/20 text-white border border-white/30 hover:bg-white/30 px-6 py-3 rounded-xl font-semibold transition-all">
               Calculator →
-            </a>
-            <a href="/contact"
+            </Link>
+            <Link aria-label="Book a free solar survey" href="/contact"
               className="inline-flex items-center gap-2 bg-white text-green-600 font-bold px-6 py-3 rounded-xl hover:bg-gray-50 transition-all hover:scale-105 shadow">
               Free Survey Book Karo
-            </a>
+            </Link>
           </div>
         </div>
       </div>

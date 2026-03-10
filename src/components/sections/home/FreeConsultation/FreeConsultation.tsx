@@ -4,6 +4,7 @@ import { SubHeading } from "@/components/common/SubHeading";
 import { Button } from "@/components/common/Button";
 import { FiCheckCircle, FiPhone, FiCalendar, FiSun } from "react-icons/fi";
 import { FaWhatsapp } from "react-icons/fa";
+import Link from "next/link";
 
 const includes = [
   "Free roof & site analysis",
@@ -49,11 +50,11 @@ export const FreeConsultation: React.FC = () => {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-3 mt-2">
-              <a href="https://wa.me/919991777218" target="_blank" rel="noopener noreferrer"
+              <Link aria-label="Chat on WhatsApp" href="https://wa.me/919991777218" target="_blank" rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 bg-green-500 text-white font-bold px-6 py-3.5 rounded-xl hover:bg-green-600 transition-all hover:scale-105 shadow-lg shadow-green-200">
                 <FaWhatsapp size={20} /> WhatsApp Karo
-              </a>
-              <Button href="/contact" variant="primary" size="md">Book Site Survey →</Button>
+              </Link>
+              <Button aria-label="Book site survey" href="/contact" variant="primary" size="md">Book Site Survey →</Button>
             </div>
           </div>
 
@@ -66,10 +67,10 @@ export const FreeConsultation: React.FC = () => {
               <p className="text-black/70 text-sm mb-4 leading-relaxed">
                 Monday to Saturday, 9 AM – 7 PM — hamare solar experts ready hain.
               </p>
-              <a href="tel:+919991777218"
+              <Link aria-label="Call us" href="tel:+919991777218"
                 className="inline-flex items-center gap-2 bg-black text-green-400 font-bold px-5 py-3 rounded-xl hover:bg-gray-900 transition-all">
                 <FiPhone size={18} /> +91 99917-77218
-              </a>
+              </Link>
             </div>
 
             <div className="grid grid-cols-3 gap-3">

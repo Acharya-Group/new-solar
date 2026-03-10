@@ -39,7 +39,7 @@ export const FAQ: React.FC = () => {
           {faqs.map((faq, i) => (
             <div key={i}
               className={`border-2 rounded-2xl overflow-hidden transition-all duration-300 ${open === i ? "border-green-300 shadow-md" : "border-gray-100 hover:border-blue-200"}`}>
-              <button
+              <button aria-label={faq.q}
                 onClick={() => setOpen(open === i ? null : i)}
                 className="w-full flex items-center justify-between px-5 py-4 text-left gap-4"
               >
@@ -60,8 +60,8 @@ export const FAQ: React.FC = () => {
         <div className="mt-10 text-center">
           <p className="text-gray-400 text-sm mb-4">Aur koi sawaal hai? Hum se seedha poochho.</p>
           <div className="flex justify-center gap-3">
-            <Button href="https://wa.me/919991777218" variant="primary" size="md">WhatsApp Karo</Button>
-            <Button href="/contact" variant="outline" size="md">Contact Us</Button>
+            <Button aria-label="Chat on WhatsApp" href="https://wa.me/919991777218" variant="primary" size="md">WhatsApp Karo</Button>
+            <Button aria-label="Contact us" href="/contact" variant="outline" size="md">Contact Us</Button>
           </div>
         </div>
       </div>

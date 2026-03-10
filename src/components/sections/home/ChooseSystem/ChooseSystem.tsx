@@ -97,7 +97,7 @@ export const ChooseSystem: React.FC = () => {
                     ✅ Best for: <span className="font-semibold text-gray-600">{s.bestFor}</span>
                   </p>
 
-                  <Button href="/contact" variant="primary" size="sm">
+                  <Button aria-label="Request quote" href="/contact" variant="primary" size="sm">
                     Quote Lo →
                   </Button>
                 </div>

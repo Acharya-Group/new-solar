@@ -60,7 +60,7 @@ export const Footer: React.FC = () => {
             <p className="text-white/40 text-xs mb-3 uppercase tracking-wider">Follow Us</p>
             <div className="flex items-center gap-2 flex-wrap">
               {socials.map(({ icon: Icon, href, label, followers }) => (
-                <a key={label} href={href} target="_blank" rel="noopener noreferrer" title={label}
+                <Link aria-label={label} key={label} href={href} target="_blank" rel="noopener noreferrer" title={label}
                   className="group flex flex-col items-center gap-1">
                   <div className="w-10 h-10 rounded-xl bg-white/10 border border-white/20 flex items-center justify-center text-white/60 
   hover:text-white hover:bg-white/25 hover:border-white/60 hover:shadow-[0_0_12px_rgba(255,255,255,0.3)] hover:scale-110
@@ -68,7 +68,7 @@ export const Footer: React.FC = () => {
   <Icon size={16} />
 </div>
                   <span className="text-white/40 text-[9px] group-hover:text-white-400 transition-colors">{followers}</span>
-                </a>
+                </Link>
               ))}
             </div>
           </div>
@@ -99,13 +99,13 @@ export const Footer: React.FC = () => {
         {/* Contact strip */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-3 mb-8">
           {contacts.map(({ icon: Icon, text, href }, i) => (
-            <a key={i} href={href}
+            <Link aria-label={text} key={i} href={href}
               className="flex items-center gap-3 bg-white/10 border border-white/20 rounded-2xl px-4 py-3 hover:bg-white/15 hover:border-green-400/50 transition-all duration-300 group">
               <div className="w-8 h-8 bg-blue-400/20 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-green-400/30 transition-colors">
                 <Icon size={15} className="text-green-400" />
               </div>
               <span className="text-white/70 text-sm group-hover:text-white transition-colors">{text}</span>
-            </a>
+            </Link>
           ))}
         </div>
 

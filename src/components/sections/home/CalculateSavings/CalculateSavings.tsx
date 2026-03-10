@@ -65,7 +65,7 @@ export const CalculateSavings: React.FC = () => {
               />
             </div>
 
-            <Button onClick={calculate} variant="primary" size="lg" fullWidth>
+            <Button aria-label="Calculate savings" onClick={calculate} variant="primary" size="lg" fullWidth>
               Calculate Savings ⚡
             </Button>
 
@@ -107,7 +107,7 @@ export const CalculateSavings: React.FC = () => {
                   </div>
                 </div>
 
-                <Button href="/contact" variant="primary" size="md" fullWidth>
+                <Button aria-label="Request free quote" href="/contact" variant="primary" size="md" fullWidth>
                   Is System Ka Quote Lo →
                 </Button>
               </>

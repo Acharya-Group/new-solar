@@ -40,7 +40,7 @@ export const Projects: React.FC = () => {
         {/* Filters */}
         <div className="flex justify-center gap-3 mb-8 flex-wrap">
           {filters.map((f) => (
-            <button key={f} onClick={() => setActive(f)}
+            <button aria-label={`Filter by ${f}`} key={f} onClick={() => setActive(f)}
               className={`px-5 py-2 rounded-full text-sm font-semibold border-2 capitalize transition-all duration-300 ${
                 active === f
                   ? "bg-green-600 text-white border-transparent shadow-md"

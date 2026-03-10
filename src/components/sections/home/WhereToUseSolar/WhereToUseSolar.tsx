@@ -57,7 +57,7 @@ export const WhereToUseSolar: React.FC = () => {
         </div>
 
         <div className="mt-10 text-center">
-          <Button href="/contact" variant="primary" size="lg">Apne Use Case Ke Liye Quote Lo →</Button>
+          <Button aria-label="Request quote for your use case" href="/contact" variant="primary" size="lg">Apne Use Case Ke Liye Quote Lo →</Button>
         </div>
       </div>
     </section>

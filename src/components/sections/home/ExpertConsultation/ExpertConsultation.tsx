@@ -4,6 +4,7 @@ import { SubHeading } from "@/components/common/SubHeading";
 import { Button } from "@/components/common/Button";
 import { FiAward, FiStar, FiPhone } from "react-icons/fi";
 import { FaWhatsapp } from "react-icons/fa";
+import Link from "next/link";
 
 const experts = [
   { name: "Arjun Mehta", role: "Senior Solar Engineer", exp: "8 Years", emoji: "👨‍💼", speciality: "On-Grid & Net Metering", rating: 4.9, reviews: 120 },
@@ -54,10 +55,10 @@ export const ExpertConsultation: React.FC = () => {
                 </div>
               </div>
 
-              <a href="https://wa.me/919991777218" target="_blank" rel="noopener noreferrer"
+              <Link aria-label="Chat with expert" href="https://wa.me/919991777218" target="_blank" rel="noopener noreferrer"
                 className="w-full inline-flex items-center justify-center gap-2 bg-green-500 text-white text-sm font-bold px-4 py-2.5 rounded-xl hover:bg-green-600 transition-all">
                 <FaWhatsapp size={16} /> Chat Now
-              </a>
+              </Link>
             </div>
           ))}
         </div>
@@ -69,11 +70,11 @@ export const ExpertConsultation: React.FC = () => {
             <p className="text-white/70 text-sm">Monday–Saturday · 9AM–7PM · Free Consultation</p>
           </div>
           <div className="flex gap-3 flex-shrink-0 flex-wrap">
-            <a href="tel:+919991777218"
+            <Link aria-label="Call us" href="tel:+919991777218"
               className="inline-flex items-center gap-2 bg-black text-yellow-400 font-bold px-6 py-3 rounded-xl hover:bg-gray-900 transition-all hover:scale-105">
               <FiPhone size={18} /> Call Now
-            </a>
-            <Button href="/contact" variant="ghost" size="md">Book Appointment →</Button>
+            </Link>
+            <Button aria-label="Book appointment" href="/contact" variant="ghost" size="md">Book Appointment →</Button>
           </div>
         </div>
       </div>
