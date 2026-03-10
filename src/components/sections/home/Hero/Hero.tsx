@@ -457,13 +457,12 @@ export const Hero: React.FC = () => {
             </div>
 
             {/* Subheading */}
-            <SubHeading
-              align="left"
+            <p
               className="max-w-md !text-gray-600 !text-xl lg:!text-white [text-shadow:1px_1px_0_green,-1px_1px_0_green,1px_-1px_0_green,-1px_-1px_0_green,3px_3px_6px_rgba(0,0,0,0.35)]"
             >
               Premium solar panels, expert installation aur{" "}
               25 saal ki warranty ke saath apna bijli bill 90% tak kam karo.
-            </SubHeading>
+            </p>
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row items-center lg:items-start gap-3 mt-1">
