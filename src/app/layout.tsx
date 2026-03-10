@@ -7,9 +7,20 @@ import { Footer } from "@/components/common/Footer";
 import { TopBar } from "@/components/common/TopBar";
 import { LangProvider } from "@/lib/context/LangContext"; 
 
-const inter = Inter({ subsets: ["latin"], variable: "--font-inter", display: "swap" });
-const syne = Syne({ subsets: ["latin"], variable: "--font-syne", display: "swap" });
-
+const syne = Syne({
+  subsets: ["latin"],
+  variable: "--font-syne",
+  display: "swap",
+  preload: true,        
+  adjustFontFallback: true, 
+});
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+  display: "swap",
+  preload: true,       
+  adjustFontFallback: true, 
+});
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: { default: siteConfig.name, template: `%s | ${siteConfig.name}` },

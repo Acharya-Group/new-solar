@@ -1,6 +1,6 @@
 "use client";
 import React, { useState, useEffect, useRef } from "react";
-import Image from "next/image";   
+import Image from "next/image";
 import { Heading } from "@/components/common/Heading";
 import { SubHeading } from "@/components/common/SubHeading";
 import { Button } from "@/components/common/Button";
@@ -10,10 +10,8 @@ import Link from "next/link";
 
 const typewriterWords = [
   "Bijli Bill Zero Karo",
-  // "PM Surya Ghar Subsidy Pao",
   "Clean Energy Apnao",
   "Solar Se Azaad Ho",
-  // "78,000 Tak Subsidy Milegi",
 ];
 
 const stats = [
@@ -49,7 +47,6 @@ const SolarCanvas: React.FC = () => {
     resize();
     window.addEventListener("resize", resize);
 
-    // ── SUN ──
     const sun = {
       x: canvas.width * 0.85,
       y: canvas.height * 0.15,
@@ -58,14 +55,12 @@ const SolarCanvas: React.FC = () => {
       pulseT: 0,
     };
 
-    // ── CLOUDS ──
     const clouds: { x: number; y: number; w: number; speed: number; opacity: number }[] = [
       { x: canvas.width * 0.1, y: canvas.height * 0.08, w: 120, speed: 0.12, opacity: 0.5 },
       { x: canvas.width * 0.4, y: canvas.height * 0.05, w: 90, speed: 0.08, opacity: 0.4 },
       { x: canvas.width * 0.65, y: canvas.height * 0.12, w: 100, speed: 0.1, opacity: 0.35 },
     ];
 
-    // ── HOUSE ──
     const house = {
       x: canvas.width * 0.5,
       y: canvas.height * 0.72,
@@ -73,8 +68,6 @@ const SolarCanvas: React.FC = () => {
       h: 120,
     };
 
-    // ── SOLAR PANELS ON ROOF ──
-    // 6 panels on sloped roof
     const roofPanels = Array.from({ length: 6 }, (_, i) => ({
       offsetX: -70 + i * 26,
       offsetY: -10 + i * 4,
@@ -83,7 +76,6 @@ const SolarCanvas: React.FC = () => {
       shimmer: Math.random() * Math.PI * 2,
     }));
 
-    // ── ENERGY PARTICLES from panels to grid ──
     const energyParticles: {
       x: number; y: number; tx: number; ty: number;
       progress: number; speed: number; opacity: number;
@@ -97,7 +89,6 @@ const SolarCanvas: React.FC = () => {
       opacity: 0.6 + Math.random() * 0.4,
     }));
 
-    // ── SUN RAYS to panels ──
     const sunRays: { angle: number; length: number; speed: number; dotPos: number }[] = Array.from({ length: 6 }, (_, i) => ({
       angle: Math.PI * 0.6 + i * 0.12,
       length: 280 + i * 30,
@@ -105,7 +96,6 @@ const SolarCanvas: React.FC = () => {
       dotPos: Math.random(),
     }));
 
-    // ── FLOATING PARTICLES ──
     const floatParticles: {
       x: number; y: number; vx: number; vy: number;
       r: number; life: number; maxLife: number; color: string;
@@ -120,14 +110,11 @@ const SolarCanvas: React.FC = () => {
       color: Math.random() > 0.5 ? "#fbbf24" : "#f97316",
     }));
 
-    // ── METER / LIGHTNING BOLT icons floating ──
     const icons: { x: number; y: number; vy: number; opacity: number; type: string }[] = [
       { x: canvas.width * 0.15, y: canvas.height * 0.3, vy: -0.3, opacity: 0.08, type: "bolt" },
       { x: canvas.width * 0.25, y: canvas.height * 0.6, vy: -0.25, opacity: 0.07, type: "sun" },
       { x: canvas.width * 0.75, y: canvas.height * 0.45, vy: -0.2, opacity: 0.06, type: "bolt" },
     ];
-
-    // ─── DRAW FUNCTIONS ───
 
     const drawCloud = (x: number, y: number, w: number, opacity: number) => {
       ctx.save();
@@ -148,8 +135,6 @@ const SolarCanvas: React.FC = () => {
       const pulse = 1 + Math.sin(sun.pulseT) * 0.04;
       ctx.save();
       ctx.translate(sun.x, sun.y);
-
-      // Outer glow
       const glow = ctx.createRadialGradient(0, 0, sun.r, 0, 0, sun.r * 3.5);
       glow.addColorStop(0, "rgba(251,191,36,0.22)");
       glow.addColorStop(0.6, "rgba(251,191,36,0.06)");
@@ -158,8 +143,6 @@ const SolarCanvas: React.FC = () => {
       ctx.arc(0, 0, sun.r * 3.5, 0, Math.PI * 2);
       ctx.fillStyle = glow;
       ctx.fill();
-
-      // Core gradient
       const core = ctx.createRadialGradient(-10, -10, 0, 0, 0, sun.r * pulse);
       core.addColorStop(0, "#fffbeb");
       core.addColorStop(0.3, "#fde68a");
@@ -169,8 +152,6 @@ const SolarCanvas: React.FC = () => {
       ctx.arc(0, 0, sun.r * pulse, 0, Math.PI * 2);
       ctx.fillStyle = core;
       ctx.fill();
-
-      // Rotating rays
       ctx.rotate(sun.angle);
       for (let i = 0; i < 16; i++) {
         const a = (i / 16) * Math.PI * 2;
@@ -193,8 +174,6 @@ const SolarCanvas: React.FC = () => {
         if (ray.dotPos > 1) ray.dotPos = 0;
         const ex = sun.x + Math.cos(ray.angle) * ray.length;
         const ey = sun.y + Math.sin(ray.angle) * ray.length;
-
-        // Faint ray line
         ctx.save();
         ctx.globalAlpha = 0.06;
         ctx.strokeStyle = "#fbbf24";
@@ -205,8 +184,6 @@ const SolarCanvas: React.FC = () => {
         ctx.lineTo(ex, ey);
         ctx.stroke();
         ctx.setLineDash([]);
-
-        // Moving dot
         const dx = sun.x + (ex - sun.x) * ray.dotPos;
         const dy = sun.y + (ey - sun.y) * ray.dotPos;
         ctx.globalAlpha = 0.5 * Math.sin(ray.dotPos * Math.PI);
@@ -224,8 +201,6 @@ const SolarCanvas: React.FC = () => {
       const { x, y, w, h } = house;
       ctx.save();
       ctx.globalAlpha = 0.12;
-
-      // House body
       ctx.fillStyle = "#92400e";
       ctx.beginPath();
       ctx.rect(x - w / 2, y - h / 2, w, h);
@@ -233,8 +208,6 @@ const SolarCanvas: React.FC = () => {
       ctx.strokeStyle = "#d97706";
       ctx.lineWidth = 1.5;
       ctx.stroke();
-
-      // Roof triangle
       ctx.beginPath();
       ctx.moveTo(x - w / 2 - 15, y - h / 2);
       ctx.lineTo(x, y - h / 2 - 65);
@@ -244,19 +217,12 @@ const SolarCanvas: React.FC = () => {
       ctx.fill();
       ctx.strokeStyle = "#d97706";
       ctx.stroke();
-
-      // Door
       ctx.strokeStyle = "#d97706";
       ctx.lineWidth = 1;
       ctx.strokeRect(x - 18, y + h / 2 - 45, 36, 45);
-
-      // Windows
       ctx.strokeRect(x - w / 2 + 18, y - h / 2 + 20, 30, 25);
       ctx.strokeRect(x + w / 2 - 48, y - h / 2 + 20, 30, 25);
-
       ctx.restore();
-
-      // Solar panels on roof
       roofPanels.forEach((panel, i) => {
         panel.shimmer += 0.04;
         const px = x + panel.offsetX;
@@ -265,8 +231,6 @@ const SolarCanvas: React.FC = () => {
         ctx.globalAlpha = 0.18 + Math.sin(panel.shimmer) * 0.06;
         ctx.translate(px, py);
         ctx.rotate(-0.34);
-
-        // Panel body
         const grad = ctx.createLinearGradient(0, 0, panel.w, panel.h);
         grad.addColorStop(0, "#1e40af");
         grad.addColorStop(0.5, "#3b82f6");
@@ -275,21 +239,16 @@ const SolarCanvas: React.FC = () => {
         ctx.beginPath();
         ctx.roundRect(0, 0, panel.w, panel.h, 2);
         ctx.fill();
-
-        // Grid lines
         ctx.strokeStyle = "#93c5fd";
         ctx.lineWidth = 0.4;
         ctx.beginPath(); ctx.moveTo(panel.w / 3, 0); ctx.lineTo(panel.w / 3, panel.h); ctx.stroke();
         ctx.beginPath(); ctx.moveTo((panel.w * 2) / 3, 0); ctx.lineTo((panel.w * 2) / 3, panel.h); ctx.stroke();
         ctx.beginPath(); ctx.moveTo(0, panel.h / 2); ctx.lineTo(panel.w, panel.h / 2); ctx.stroke();
-
-        // Shimmer highlight
         ctx.globalAlpha = 0.1 + Math.sin(panel.shimmer + i) * 0.08;
         ctx.fillStyle = "#fbbf24";
         ctx.beginPath();
         ctx.roundRect(0, 0, panel.w, panel.h, 2);
         ctx.fill();
-
         ctx.restore();
       });
     };
@@ -340,7 +299,6 @@ const SolarCanvas: React.FC = () => {
         ctx.lineWidth = 1.5;
         ctx.fillStyle = "#fbbf24";
         if (ic.type === "bolt") {
-          // Lightning bolt shape
           ctx.beginPath();
           ctx.moveTo(ic.x + 8, ic.y);
           ctx.lineTo(ic.x, ic.y + 16);
@@ -351,7 +309,6 @@ const SolarCanvas: React.FC = () => {
           ctx.closePath();
           ctx.fill();
         } else {
-          // Sun circle
           ctx.beginPath();
           ctx.arc(ic.x, ic.y, 12, 0, Math.PI * 2);
           ctx.stroke();
@@ -367,7 +324,6 @@ const SolarCanvas: React.FC = () => {
       });
     };
 
-    // Dot grid background
     const drawDotGrid = () => {
       ctx.save();
       ctx.globalAlpha = 0.07;
@@ -383,7 +339,6 @@ const SolarCanvas: React.FC = () => {
       ctx.restore();
     };
 
-    // ── MAIN LOOP ──
     let animId: number;
     const animate = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -426,6 +381,14 @@ export const Hero: React.FC = () => {
   const [isDeleting, setIsDeleting] = useState(false);
   const [charIndex, setCharIndex] = useState(0);
 
+  // ✅ FIX: Canvas ko 1 second baad load karo — LCP pehle complete ho
+  const [showCanvas, setShowCanvas] = useState(false);
+
+  useEffect(() => {
+    const t = setTimeout(() => setShowCanvas(true), 1000);
+    return () => clearTimeout(t);
+  }, []);
+
   useEffect(() => {
     const word = typewriterWords[currentWord];
     let timeout: NodeJS.Timeout;
@@ -444,23 +407,24 @@ export const Hero: React.FC = () => {
   }, [charIndex, isDeleting, currentWord]);
 
   return (
-   // ✅ AFTER
-<section
-  id="hero"
-  className="relative min-h-screen flex flex-col justify-center overflow-hidden"
->
-  {/* ✅ LCP Fix — Priority background image */}
-  <Image
-    src="/images/common/hero-bg.jpg"
-    alt="Neo Solar hero background"
-    fill
-    priority
-    className="object-cover object-center hidden lg:block"
-    sizes="100vw"
-  />
+    <section
+      id="hero"
+      className="relative min-h-screen flex flex-col justify-center overflow-hidden"
+    >
+      {/* ✅ LCP Fix — Priority background image */}
+      <Image
+        src="/images/common/hero-bg.jpg"
+        alt="Neo Solar hero background"
+        fill
+        priority
+        decoding="sync"
+        fetchPriority="high"
+        className="object-cover object-center hidden lg:block"
+        sizes="100vw"
+      />
 
-  {/* Canvas */}
-  <SolarCanvas />
+      {/* ✅ Canvas — 1 second delay se load hoga, LCP block nahi karega */}
+      {showCanvas && <SolarCanvas />}
 
       {/* Gradient overlays */}
       <div className="absolute inset-0 pointer-events-none">
@@ -482,7 +446,7 @@ export const Hero: React.FC = () => {
             </div>
 
             {/* Heading + Typewriter */}
-                      <Heading level="h1" align="center">Neo Solar Se</Heading>
+            <Heading level="h1" align="center">Neo Solar Se</Heading>
             <div className="flex flex-col gap-1">
               <div className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight tracking-tight min-h-[1.3em]">
                 <span className="bg-gradient-to-r from-green-500 to-blue-500 bg-clip-text text-transparent">
@@ -493,22 +457,24 @@ export const Hero: React.FC = () => {
             </div>
 
             {/* Subheading */}
-<SubHeading
-  align="left"
-  className="max-w-md !text-gray-600 !text-xl lg:!text-white [text-shadow:1px_1px_0_green,-1px_1px_0_green,1px_-1px_0_green,-1px_-1px_0_green,3px_3px_6px_rgba(0,0,0,0.35)]"
->
-  Premium solar panels, expert installation aur{" "}
-  25 saal ki warranty ke saath
-  apna bijli bill
-  90% tak kam karo.
-</SubHeading>
+            <SubHeading
+              align="left"
+              className="max-w-md !text-gray-600 !text-xl lg:!text-white [text-shadow:1px_1px_0_green,-1px_1px_0_green,1px_-1px_0_green,-1px_-1px_0_green,3px_3px_6px_rgba(0,0,0,0.35)]"
+            >
+              Premium solar panels, expert installation aur{" "}
+              25 saal ki warranty ke saath apna bijli bill 90% tak kam karo.
+            </SubHeading>
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row items-center lg:items-start gap-3 mt-1">
               <Button aria-label="Request free consultation" href="/contact" variant="primary" size="lg">
                 Free Consultation Lo
               </Button>
-              <Link aria-label="Explore our products" href="/products" className="inline-flex items-center gap-2 bg-gray-700 text-white hover:bg-gray-800 px-6 py-4 rounded-xl font-semibold transition-all duration-300 hover:scale-105 shadow-lg shadow-gray-300">
+              <Link
+                aria-label="Explore our products"
+                href="/products"
+                className="inline-flex items-center gap-2 bg-gray-700 text-white hover:bg-gray-800 px-6 py-4 rounded-xl font-semibold transition-all duration-300 hover:scale-105 shadow-lg shadow-gray-300"
+              >
                 Explore Products
               </Link>
               <Link
