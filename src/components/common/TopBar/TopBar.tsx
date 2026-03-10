@@ -30,25 +30,23 @@ export const TopBar: React.FC = () => {
               <FiPhone size={14} />
               +91 99917-77218
             </a>
-            <a href="mailto:demo@gmail.com" className="flex items-center gap-1.5 hover:opacity-70 transition-opacity">
+            <a href="mailto:neosolarco@gmail.com" className="flex items-center gap-1.5 hover:opacity-70 transition-opacity">
               <FiMail size={14} />
-              demo@gmail.com
+              neosolarco@gmail.com
             </a>
             <span className="hidden lg:flex items-center gap-1.5">
               <FiMapPin size={14} />
-              123, demo address, city, country
+              Plot No. 01, Near Blessing Marriage Palace, Hisar-125001 (Haryana), India
             </span>
           </div>
           <div className="flex items-center gap-4">
             <a href="https://facebook.com/neosolar" target="_blank" rel="noopener noreferrer" className="hover:opacity-70 transition-opacity">
               <FaFacebook size={16} />
             </a>
-            <a href="https://instagram.com/neosolar" target="_blank" rel="noopener noreferrer" className="hover:opacity-70 transition-opacity">
+            <a href="https://instagram.com/myneosolar" target="_blank" rel="noopener noreferrer" className="hover:opacity-70 transition-opacity">
               <FaInstagram size={16} />
             </a>
-            <a href="https://youtube.com/neosolar" target="_blank" rel="noopener noreferrer" className="hover:opacity-70 transition-opacity">
-              <FaYoutube size={16} />
-            </a>
+        
             <a
               href="https://wa.me/919991777218"
               target="_blank"
