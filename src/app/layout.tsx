@@ -5,21 +5,21 @@ import { siteConfig } from "@/lib/constants/site";
 import { Header } from "@/components/common/Header";
 import { Footer } from "@/components/common/Footer";
 import { TopBar } from "@/components/common/TopBar";
-import { LangProvider } from "@/lib/context/LangContext"; 
+import { LangProvider } from "@/lib/context/LangContext";
 
 const syne = Syne({
   subsets: ["latin"],
   variable: "--font-syne",
   display: "swap",
-  preload: true,        
-  adjustFontFallback: true, 
+  preload: true,
+  adjustFontFallback: true,
 });
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
   display: "swap",
-  preload: true,       
-  adjustFontFallback: true, 
+  preload: true,
+  adjustFontFallback: true,
 });
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
@@ -33,18 +33,18 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
 
     <html lang="en" className={`${inter.variable} ${syne.variable}`}>
-       <head>
+      <head>
         <link rel="icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
       </head>
-    <body style={{ fontFamily: "var(--font-inter), system-ui, sans-serif" }}>
-  <LangProvider>
-    <TopBar />
-    <Header />
-    <main>{children}</main>
-    <Footer />
-  </LangProvider>
-</body>
+      <body style={{ fontFamily: "var(--font-inter), system-ui, sans-serif" }}>
+        <LangProvider>
+          <TopBar />
+          <Header />
+          <main>{children}</main>
+          <Footer />
+        </LangProvider>
+      </body>
     </html>
   );
 }
