@@ -9,9 +9,11 @@ import { FiArrowDown, FiSun, FiZap, FiShield, FiCheckCircle } from "react-icons/
 import Link from "next/link";
 
 const typewriterWords = [
-  "Bijli Bill Zero Karo",
-  "Clean Energy Apnao",
-  "Solar Se Azaad Ho",
+  "Solar is for Houses",
+  "Solar is for Hospitals",
+  "Solar is for petrol pumps",
+  "Solar is for Schools",
+  "Solar is for Colleges",
 ];
 
 const stats = [
