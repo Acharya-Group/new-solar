@@ -8,11 +8,10 @@ import { FaWhatsapp } from "react-icons/fa";
 import Link from "next/link";
 
 const contactInfo = [
-  { icon: FiPhone, label: "Phone", value: "+91 99917-77218", href: "tel:+919991777218" },
   { icon: FiPhone, label: "Phone", value: "+91 99917-77219", href: "tel:+919991777219" },
   { icon: FaWhatsapp, label: "WhatsApp", value: "+91 99917-77218", href: "https://wa.me/919991777218" },
   { icon: FiMail, label: "Email", value: "neosolarco@gmail.com", href: "mailto:neosolarco@gmail.com" },
-  { icon: FiMapPin, label: "Address", value: "123 Solar Avenue, Delhi, India", href: "#" },
+  { icon: FiMapPin, label: "Address", value: "Plot No. 01, Near Blessing Marriage Palace, Hisar-125001 (Haryana), India", href: "#" },
   { icon: FiClock, label: "Working Hours", value: "Mon–Sat: 9AM – 7PM", href: "#" },
 ];
 
@@ -35,7 +34,7 @@ export const Contact: React.FC = () => {
     finally { setLoading(false); }
   };
 
-  const inputClass = "bg-gray-50 border-2 border-gray-200 focus:border-yellow-400 rounded-xl px-4 py-3 text-gray-900 placeholder-gray-400 outline-none transition-colors text-sm w-full";
+  const inputClass = "bg-gray-50 border-2 border-gray-200 focus:border-green-400 rounded-xl px-4 py-3 text-gray-900 placeholder-gray-400 outline-none transition-colors text-sm w-full";
 
   return (
     <section id="contact" className="py-16 md:py-24 bg-white relative overflow-hidden">
@@ -44,12 +43,12 @@ export const Contact: React.FC = () => {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-12">
-          <div className="inline-flex items-center gap-2 bg-yellow-100 border border-yellow-300 text-yellow-700 px-4 py-1.5 rounded-full text-sm font-semibold mb-4">
+          <div className="inline-flex items-center gap-2 bg-green-100 border border-green-300 text-green-700 px-4 py-1.5 rounded-full text-sm font-semibold mb-4">
             📞 Hum Se Baat Karo
           </div>
           <Heading level="h2" align="center" gradient>Contact Us</Heading>
           <SubHeading align="center" className="mt-3 max-w-xl mx-auto">
-            Koi bhi sawaal ho — <span className="text-yellow-600 font-semibold">hum yahan hain.</span>{" "}
+            Koi bhi sawaal ho — <span className="text-green-600 font-semibold">hum yahan hain.</span>{" "}
             Form bharo ya seedha call karo.
           </SubHeading>
         </div>
@@ -92,7 +91,7 @@ export const Contact: React.FC = () => {
               <h3 className="text-white font-bold text-xl mb-1">Seedha Baat Karo</h3>
               <p className="text-white/70 text-sm mb-4">Form se zyada fast — call ya WhatsApp karo.</p>
               <div className="flex flex-col sm:flex-row gap-3">
-                <Link aria-label="Call us" href="tel:+919991777218"
+                <Link aria-label="Call us" href="tel:+919991777219"
                   className="flex-1 inline-flex items-center justify-center gap-2 bg-black text-green-500 font-bold px-4 py-3 rounded-xl hover:bg-gray-900 transition-all">
                   <FiPhone size={16} /> Call Now
                 </Link>

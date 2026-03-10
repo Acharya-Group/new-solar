@@ -11,8 +11,8 @@ export const siteConfig = {
     address: "Plot 42, Solar Park, Sector 18, Hisar, Haryana - 125001",
   },
   social: {
-    facebook: "https://facebook.com/neosolarindia",
-    instagram: "https://instagram.com/neosolarindia",
+    facebook: "https://facebook.com/neosolar",
+    instagram: "https://instagram.com/myneosolar",
     youtube: "https://youtube.com/@neosolarindia",
     linkedin: "https://linkedin.com/company/neosolarindia",
   },

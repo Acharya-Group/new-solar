@@ -2,7 +2,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import { Heading } from "@/components/common/Heading";
-import { SubHeading } from "@/components/common/SubHeading";
 import { Button } from "@/components/common/Button";
 import { FaWhatsapp, FaSolarPanel } from "react-icons/fa";
 import { FiArrowDown, FiSun, FiZap, FiShield, FiCheckCircle } from "react-icons/fi";

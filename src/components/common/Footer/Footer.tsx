@@ -9,8 +9,6 @@ import { FiPhone, FiMail, FiMapPin } from "react-icons/fi";
 const socials = [
   { icon: FaFacebook, href: siteConfig.social.facebook, label: "Facebook", followers: "12K" },
   { icon: FaInstagram, href: siteConfig.social.instagram, label: "Instagram", followers: "8.5K" },
-  { icon: FaYoutube, href: siteConfig.social.youtube, label: "YouTube", followers: "5.2K" },
-  { icon: FaLinkedin, href: siteConfig.social.linkedin, label: "LinkedIn", followers: "3.1K" },
   { icon: FaWhatsapp, href: `https://wa.me/${siteConfig.contact.whatsapp}`, label: "WhatsApp", followers: "Chat" },
 ];
 
@@ -35,17 +33,17 @@ export const Footer: React.FC = () => {
 
           {/* Brand */}
           <div className="lg:col-span-2">
-        <Link href="/" className="flex items-center">
-  <div className="bg-white rounded-xl px-3 mb-2 py-1.5 shadow-sm">
-    <Image
-      src="/images/common/logo.jpg"
-      alt="Neo Solar Logo"
-      width={120}
-      height={40}
-      className="object-contain h-10 w-auto"
-    />
-  </div>
-</Link>
+            <Link href="/" className="flex items-center">
+              <div className="bg-white rounded-xl px-3 mb-2 py-1.5 shadow-sm">
+                <Image
+                  src="/images/common/logo.jpg"
+                  alt="Neo Solar Logo"
+                  width={120}
+                  height={40}
+                  className="object-contain h-10 w-auto"
+                />
+              </div>
+            </Link>
 
             <p className="text-white/60 text-sm leading-relaxed mb-4 max-w-sm">
               {siteConfig.description}
@@ -63,10 +61,10 @@ export const Footer: React.FC = () => {
                 <Link aria-label={label} key={label} href={href} target="_blank" rel="noopener noreferrer" title={label}
                   className="group flex flex-col items-center gap-1">
                   <div className="w-10 h-10 rounded-xl bg-white/10 border border-white/20 flex items-center justify-center text-white/60 
-  hover:text-white hover:bg-white/25 hover:border-white/60 hover:shadow-[0_0_12px_rgba(255,255,255,0.3)] hover:scale-110
-  transition-all duration-300">
-  <Icon size={16} />
-</div>
+                hover:text-white hover:bg-white/25 hover:border-white/60 hover:shadow-[0_0_12px_rgba(255,255,255,0.3)] hover:scale-110
+                  transition-all duration-300">
+                    <Icon size={16} />
+                  </div>
                   <span className="text-white/40 text-[9px] group-hover:text-white-400 transition-colors">{followers}</span>
                 </Link>
               ))}
