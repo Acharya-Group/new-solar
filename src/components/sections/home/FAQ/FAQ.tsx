@@ -4,6 +4,7 @@ import { Heading } from "@/components/common/Heading";
 import { SubHeading } from "@/components/common/SubHeading";
 import { Button } from "@/components/common/Button";
 import { FiPlus, FiMinus } from "react-icons/fi";
+import SectionBadge from "@/components/common/SectionBadge/SectionBadge";
 
 const faqs = [
   { q: "Solar lagwane mein kitna kharcha aata hai?", a: "3 kW On-Grid system ₹55,000–₹90,000 mein aata hai. PM Surya Ghar subsidy ke baad ₹78,000 tak discount milta hai — matlab 3 kW system almost free ho jaata hai eligible customers ke liye." },
@@ -25,9 +26,7 @@ export const FAQ: React.FC = () => {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-12">
-          <div className="inline-flex items-center gap-2 bg-yellow-100 border border-green-300 text-yellow-700 px-4 py-1.5 rounded-full text-sm font-semibold mb-4">
-            ❓ Aksar Pooche Jaane Wale Sawaal
-          </div>
+          <SectionBadge text="Aksar Pooche Jaane Wale Sawaal" />
           <Heading level="h2" align="center" gradient>Frequently Asked Questions</Heading>
           <SubHeading align="center" className="mt-3 max-w-xl mx-auto">
             Solar ke baare mein koi bhi sawaal ho —{" "}

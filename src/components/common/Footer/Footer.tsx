@@ -123,7 +123,7 @@ export const Footer: React.FC = () => {
 
         {/* Bottom bar */}
         <div className="border-t border-white/15 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3">
-          <p className="text-white/40 text-xs">© {year} Neo Solar. All rights reserved. | India Ka #1 Trusted Solar Company</p>
+          <p className="text-white/40 text-center text-xs">© {year} Neo Solar. All rights reserved. | India Ka #1 Trusted Solar Company</p>
           <div className="flex gap-5">
             <Link href="/terms-and-conditions" className="text-white/40 hover:text-white text-xs transition-colors">Terms & Conditions</Link>
             <Link href="/privacy-policy" className="text-white/40 hover:text-white text-xs transition-colors">Privacy Policy</Link>

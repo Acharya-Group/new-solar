@@ -3,6 +3,7 @@ import { Heading } from "@/components/common/Heading";
 import { SubHeading } from "@/components/common/SubHeading";
 import { Button } from "@/components/common/Button";
 import { FiPhone, FiMapPin, FiFileText, FiTool, FiZap, FiShield } from "react-icons/fi";
+import SectionBadge from "@/components/common/SectionBadge/SectionBadge";
 
 const steps = [
   { icon: FiPhone, step: "01", title: "Free Consultation", desc: "Call ya WhatsApp karo — hamare expert aapki zarurat samjhenge aur best system suggest karenge.", duration: "Day 1", color: "from-blue-400 to-cyan-500", bg: "bg-blue-50", iconColor: "text-blue-500" },
@@ -21,9 +22,9 @@ export const InstallationProcess: React.FC = () => {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-14">
-          <div className="inline-flex items-center gap-2 bg-yellow-100 border border-yellow-300 text-yellow-700 px-4 py-1.5 rounded-full text-sm font-semibold mb-4">
-            🔧 Sirf 7 Din Mein
-          </div>
+
+          <SectionBadge text="Sirf 7 Din Mein" />
+
           <Heading level="h2" align="center" gradient>Installation Process</Heading>
           <SubHeading align="center" className="mt-3 max-w-2xl mx-auto">
             Call se lekar{" "}

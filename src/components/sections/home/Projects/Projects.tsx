@@ -4,6 +4,7 @@ import { Heading } from "@/components/common/Heading";
 import { SubHeading } from "@/components/common/SubHeading";
 import { Button } from "@/components/common/Button";
 import { FiMapPin, FiZap, FiTrendingDown } from "react-icons/fi";
+import SectionBadge from "@/components/common/SectionBadge/SectionBadge";
 
 const projects = [
   { title: "Sharma Residence", location: "Delhi", capacity: "5 kW", type: "On-Grid", category: "residential", savings: "₹4,500/month", panels: 10, emoji: "🏠", color: "from-blue-400 to-cyan-500" },
@@ -27,9 +28,8 @@ export const Projects: React.FC = () => {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-10">
-          <div className="inline-flex items-center gap-2 bg-green-100 border border-green-300 text-green-700 px-4 py-1.5 rounded-full text-sm font-semibold mb-4">
-            🏗️ Hamare Kaam Ki Jhalkee
-          </div>
+          <SectionBadge text="Hamare Kaam Ki Jhalkee" />
+
           <Heading level="h2" align="center" gradient>Our Projects</Heading>
           <SubHeading align="center" className="mt-3 max-w-xl mx-auto">
             500+ installations mein se kuch{" "}
@@ -41,11 +41,10 @@ export const Projects: React.FC = () => {
         <div className="flex justify-center gap-3 mb-8 flex-wrap">
           {filters.map((f) => (
             <button aria-label={`Filter by ${f}`} key={f} onClick={() => setActive(f)}
-              className={`px-5 py-2 rounded-full text-sm font-semibold border-2 capitalize transition-all duration-300 ${
-                active === f
+              className={`px-5 py-2 rounded-full text-sm font-semibold border-2 capitalize transition-all duration-300 ${active === f
                   ? "bg-green-600 text-white border-transparent shadow-md"
                   : "bg-blue text-gray-600 border-gray-200 hover:border-green-300"
-              }`}>
+                }`}>
               {f}
             </button>
           ))}

@@ -4,6 +4,7 @@ import { Heading } from "@/components/common/Heading";
 import { SubHeading } from "@/components/common/SubHeading";
 import { Button } from "@/components/common/Button";
 import { FiZap, FiSun, FiTrendingDown, FiDollarSign } from "react-icons/fi";
+import SectionBadge from "@/components/common/SectionBadge/SectionBadge";
 
 export const CalculateSavings: React.FC = () => {
   const [bill, setBill] = useState("");
@@ -31,9 +32,7 @@ export const CalculateSavings: React.FC = () => {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-12">
-          <div className="inline-flex items-center gap-2 bg-yellow-100 border border-yellow-300 text-yellow-700 px-4 py-1.5 rounded-full text-sm font-semibold mb-4">
-            <FiZap size={14} /> Free Solar Calculator
-          </div>
+          <SectionBadge text="Free Solar Calculator" />
           <Heading level="h2" align="center" gradient>Calculate Your Savings</Heading>
           <SubHeading align="center" className="mt-3 max-w-xl mx-auto">
             Apna monthly bijli bill enter karo aur dekhо kitna{" "}

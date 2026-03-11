@@ -5,6 +5,7 @@ import { SubHeading } from "@/components/common/SubHeading";
 import { FiSun, FiUsers, FiAward, FiThumbsUp, FiTrendingUp, FiShield, FiZap, FiStar } from "react-icons/fi";
 import { FaSolarPanel } from "react-icons/fa";
 import Link from "next/link";
+import SectionBadge from "@/components/common/SectionBadge/SectionBadge";
 
 const stats = [
   { icon: FiThumbsUp, value: 98, suffix: "%", label: "Customer Satisfaction", desc: "Har customer khush hai", color: "from-yellow-400 to-orange-400", bg: "bg-yellow-50", border: "border-yellow-200", iconColor: "text-yellow-500" },
@@ -52,8 +53,8 @@ const Ring: React.FC<{ value: number; suffix: string; started: boolean }> = ({ v
   }, [started, target]);
   return (
     <svg width={size} height={size} className="-rotate-90">
-      <circle cx={size/2} cy={size/2} r={r} fill="none" stroke="#e5e7eb" strokeWidth={stroke} />
-      <circle cx={size/2} cy={size/2} r={r} fill="none" stroke="url(#g)" strokeWidth={stroke}
+      <circle cx={size / 2} cy={size / 2} r={r} fill="none" stroke="#e5e7eb" strokeWidth={stroke} />
+      <circle cx={size / 2} cy={size / 2} r={r} fill="none" stroke="url(#g)" strokeWidth={stroke}
         strokeLinecap="round" strokeDasharray={circ} strokeDashoffset={circ * (1 - p)} />
       <defs>
         <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="0%">
@@ -83,9 +84,8 @@ export const SuccessRate: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
 
         <div className="text-center mb-12">
-          <div className="inline-flex items-center gap-2 bg-yellow-100 border border-green-300 text-yellow-700 px-4 py-1.5 rounded-full text-sm font-semibold mb-4">
-            <FiTrendingUp size={14} /> Hamare Numbers Bolte Hain
-          </div>
+          <SectionBadge text="Hamare Numbers Bolte Hain" />
+
           <Heading level="h2" align="center" gradient>Our Success Rate</Heading>
           <SubHeading align="center" className="mt-3 max-w-2xl mx-auto">
             Sirf baatein nahi — yeh hain hamare{" "}

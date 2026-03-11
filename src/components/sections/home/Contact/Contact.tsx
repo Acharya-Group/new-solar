@@ -6,6 +6,7 @@ import { Button } from "@/components/common/Button";
 import { FiPhone, FiMail, FiMapPin, FiClock, FiSend } from "react-icons/fi";
 import { FaWhatsapp } from "react-icons/fa";
 import Link from "next/link";
+import SectionBadge from "@/components/common/SectionBadge/SectionBadge";
 
 const contactInfo = [
   { icon: FiPhone, label: "Phone", value: "+91 99917-77219", href: "tel:+919991777219" },
@@ -43,9 +44,7 @@ export const Contact: React.FC = () => {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-12">
-          <div className="inline-flex items-center gap-2 bg-green-100 border border-green-300 text-green-700 px-4 py-1.5 rounded-full text-sm font-semibold mb-4">
-            📞 Hum Se Baat Karo
-          </div>
+          <SectionBadge text="Hum Se Baat Karo" />
           <Heading level="h2" align="center" gradient>Contact Us</Heading>
           <SubHeading align="center" className="mt-3 max-w-xl mx-auto">
             Koi bhi sawaal ho — <span className="text-green-600 font-semibold">hum yahan hain.</span>{" "}

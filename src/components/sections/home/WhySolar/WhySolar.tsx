@@ -4,6 +4,7 @@ import { SubHeading } from "@/components/common/SubHeading";
 import { Button } from "@/components/common/Button";
 import { FiSun, FiTrendingDown, FiShield, FiZap, FiHome, FiGlobe } from "react-icons/fi";
 import Link from "next/link";
+import SectionBadge from "@/components/common/SectionBadge/SectionBadge";
 
 const reasons = [
   { icon: FiTrendingDown, title: "Bijli Bill 90% Kam", desc: "Har mahine hazar rupaye bachao — solar se bijli free mein banao aur grid ko becho.", color: "from-green-400 to-emerald-500", bg: "bg-green-50", border: "border-green-200", iconColor: "text-green-500" },
@@ -22,9 +23,8 @@ export const WhySolar: React.FC = () => {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-12">
-          <div className="inline-flex items-center gap-2 bg-green-100 border border-green-300 text-green-700 px-4 py-1.5 rounded-full text-sm font-semibold mb-4">
-            <FiSun size={14} /> Solar Kyun Lagayen?
-          </div>
+          <SectionBadge text="Solar Kyun Lagayen?" />
+
           <Heading level="h2" align="center" gradient>Why Solar Energy?</Heading>
           <SubHeading align="center" className="mt-3 max-w-2xl mx-auto">
             Solar sirf bijli nahi — yeh ek{" "}

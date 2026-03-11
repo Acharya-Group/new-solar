@@ -4,6 +4,7 @@ import { SubHeading } from "@/components/common/SubHeading";
 import { Button } from "@/components/common/Button";
 import { FiCheckCircle, FiAward, FiUsers, FiZap, FiSettings, FiTarget, FiEye } from "react-icons/fi";
 import { FaLeaf } from "react-icons/fa";
+import SectionBadge from "@/components/common/SectionBadge/SectionBadge";
 
 const features = [
   { icon: FiAward, title: "Expertise & Experience", desc: "10+ saal ka field experience aur 500+ successful installations" },
@@ -28,9 +29,11 @@ export const About: React.FC = () => {
 
           {/* LEFT */}
           <div className="flex flex-col gap-6">
-            <div className="inline-flex items-center gap-2 bg-yellow-100 border border-green-300 text-yellow-700 px-4 py-1.5 rounded-full text-sm font-semibold w-fit">
-              🌞 About Neo Solar
-            </div>
+        
+                      <div>
+                        <SectionBadge text="About Neo Solar" />
+                      </div>
+            
 
             <Heading level="h2" align="left" color="text-gray-900">
               Innovation Aur Efficiency Ka{" "}

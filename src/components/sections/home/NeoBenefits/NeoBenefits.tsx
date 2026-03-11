@@ -3,6 +3,7 @@ import { Heading } from "@/components/common/Heading";
 import { SubHeading } from "@/components/common/SubHeading";
 import { Button } from "@/components/common/Button";
 import { FiShield, FiTool, FiPhone, FiAward, FiUsers, FiClock, FiCheckCircle, FiStar } from "react-icons/fi";
+import SectionBadge from "@/components/common/SectionBadge/SectionBadge";
 
 const benefits = [
   { icon: FiAward, title: "10+ Saal Ka Experience", desc: "Daskon saal mein 500+ installations — har type ke system pe expertise hai hamare paas.", color: "from-yellow-400 to-orange-400", bg: "bg-yellow-50", iconColor: "text-yellow-500" },
@@ -23,9 +24,8 @@ export const NeoBenefits: React.FC = () => {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-12">
-          <div className="inline-flex items-center gap-2 bg-yellow-100 border border-yellow-300 text-yellow-700 px-4 py-1.5 rounded-full text-sm font-semibold mb-4">
-            ⭐ Neo Solar Kyun Choose Karein?
-          </div>
+                              <SectionBadge text="Neo Solar Kyun Choose Karein?" />
+
           <Heading level="h2" align="center" gradient>Why Choose Neo Solar?</Heading>
           <SubHeading align="center" className="mt-3 max-w-2xl mx-auto">
             Sirf panels nahi — hum dete hain{" "}
@@ -36,7 +36,7 @@ export const NeoBenefits: React.FC = () => {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
           {benefits.map(({ icon: Icon, title, desc, color, bg, iconColor }, i) => (
-            <div key={i} className="group relative bg-white border-2 border-gray-100 rounded-3xl p-5 hover:shadow-xl hover:-translate-y-2 hover:border-yellow-200 transition-all duration-300 overflow-hidden">
+            <div key={i} className="group relative bg-white border-2 border-gray-100 rounded-3xl p-5 hover:shadow-xl hover:-translate-y-2 hover:border-green-200 transition-all duration-300 overflow-hidden">
               <div className={`absolute inset-0 bg-gradient-to-br ${color} opacity-0 group-hover:opacity-5 transition-opacity duration-300`} />
               <div className={`w-11 h-11 ${bg} rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
                 <Icon size={20} className={iconColor} />

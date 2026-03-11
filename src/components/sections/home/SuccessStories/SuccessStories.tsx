@@ -3,6 +3,7 @@ import React, { useState, useEffect, useRef } from "react";
 import { Heading } from "@/components/common/Heading";
 import { SubHeading } from "@/components/common/SubHeading";
 import { FiStar, FiMapPin, FiChevronLeft, FiChevronRight, FiTrendingDown } from "react-icons/fi";
+import SectionBadge from "@/components/common/SectionBadge/SectionBadge";
 
 const stories = [
   { name: "Rajesh Sharma", location: "Delhi", system: "5 kW On-Grid", savings: "₹4,200/month", billBefore: "₹5,000", rating: 5, avatar: "👨‍💼", tag: "Ghar Wala", color: "from-yellow-400 to-orange-400", review: "Neo Solar ne hamari zindagi badal di! Pehle ₹5,000 ka bill aata tha, ab ZERO aata hai. Installation sirf 1 din mein complete — team ekdum professional hai." },
@@ -35,16 +36,16 @@ export const SuccessStories: React.FC = () => {
   const prev = () => go((current - 1 + stories.length) % stories.length);
   const next = () => go((current + 1) % stories.length);
 
-// sidebar scroll useEffect replace karo:
-useEffect(() => {
-  if (!sidebarRef.current) return;
-  const card = sidebarRef.current.children[current] as HTMLElement;
-  if (!card) return;
-  const container = sidebarRef.current;
-  // Manual scroll — page scroll nahi karega
-  const cardTop = card.offsetTop;
-  container.scrollTo({ top: cardTop - 20, behavior: "smooth" });
-}, [current]);
+  // sidebar scroll useEffect replace karo:
+  useEffect(() => {
+    if (!sidebarRef.current) return;
+    const card = sidebarRef.current.children[current] as HTMLElement;
+    if (!card) return;
+    const container = sidebarRef.current;
+    // Manual scroll — page scroll nahi karega
+    const cardTop = card.offsetTop;
+    container.scrollTo({ top: cardTop - 20, behavior: "smooth" });
+  }, [current]);
   // Auto play — empty deps, refs se stale closure nahi
   useEffect(() => {
     const interval = setInterval(() => {
@@ -71,9 +72,8 @@ useEffect(() => {
 
         {/* Header */}
         <div className="text-center mb-14">
-          <div className="inline-flex items-center gap-2 bg-yellow-100 border border-yellow-300 text-yellow-700 px-4 py-1.5 rounded-full text-sm font-semibold mb-4">
-            ⭐ Real Customer Stories
-          </div>
+          <SectionBadge text="Real Customer Stories" />
+
           <Heading level="h2" align="center" gradient>Hamare Happy Customers</Heading>
           <SubHeading align="center" className="mt-3 max-w-xl mx-auto">
             500+ families jo ab{" "}
@@ -96,11 +96,10 @@ useEffect(() => {
             >
               {stories.map((st, i) => (
                 <button aria-label={`View story from ${st.name}`} key={i} onClick={() => go(i)}
-                  className={`flex-shrink-0 flex items-center gap-3 rounded-2xl p-4 text-left border-2 transition-all duration-300 w-52 lg:w-full ${
-                    i === current
+                  className={`flex-shrink-0 flex items-center gap-3 rounded-2xl p-4 text-left border-2 transition-all duration-300 w-52 lg:w-full ${i === current
                       ? "bg-white border-yellow-300 shadow-lg scale-[1.02]"
                       : "bg-white/70 border-gray-100 hover:border-yellow-200 hover:shadow-md"
-                  }`}>
+                    }`}>
                   <span className="text-3xl flex-shrink-0">{st.avatar}</span>
                   <div className="min-w-0 flex-1">
                     <p className="text-gray-900 font-bold text-sm truncate">{st.name}</p>

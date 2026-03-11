@@ -5,6 +5,7 @@ import { Button } from "@/components/common/Button";
 import { FiCheckCircle, FiPhone, FiCalendar, FiSun } from "react-icons/fi";
 import { FaWhatsapp } from "react-icons/fa";
 import Link from "next/link";
+import SectionBadge from "@/components/common/SectionBadge/SectionBadge";
 
 const includes = [
   "Free roof & site analysis",
@@ -26,9 +27,11 @@ export const FreeConsultation: React.FC = () => {
 
           {/* LEFT */}
           <div className="flex flex-col gap-6">
-            <div className="inline-flex items-center gap-2 bg-green-100 border border-green-300 text-green-700 px-4 py-1.5 rounded-full text-sm font-semibold w-fit">
-              🎁 Bilkul Free — Koi Charge Nahi
+
+            <div>
+              <SectionBadge text="Bilkul Free — Koi Charge Nahi" />
             </div>
+
             <Heading level="h2" align="left" color="text-gray-900">
               Get Your{" "}
               <span className="bg-gradient-to-r from-green-500 to-blue-500 bg-clip-text text-transparent">

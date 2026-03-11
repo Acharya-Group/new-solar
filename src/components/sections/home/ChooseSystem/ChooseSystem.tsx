@@ -4,6 +4,7 @@ import { Heading } from "@/components/common/Heading";
 import { SubHeading } from "@/components/common/SubHeading";
 import { Button } from "@/components/common/Button";
 import { FiCheck, FiX, FiSun, FiBattery, FiZap } from "react-icons/fi";
+import SectionBadge from "@/components/common/SectionBadge/SectionBadge";
 
 const systems = [
   {
@@ -48,9 +49,7 @@ export const ChooseSystem: React.FC = () => {
 
         {/* Header */}
         <div className="text-center mb-12">
-          <div className="inline-flex items-center gap-2 bg-yellow-100 border border-yellow-300 text-yellow-700 px-4 py-1.5 rounded-full text-sm font-semibold mb-4">
-            ⚡ Apna System Choose Karo
-          </div>
+            <SectionBadge text="Apna System Choose Karo" />
           <Heading level="h2" align="center" gradient>Which System Is Right For You?</Heading>
           <SubHeading align="center" className="mt-3 max-w-2xl mx-auto">
             Teen types ke solar systems hain —{" "}

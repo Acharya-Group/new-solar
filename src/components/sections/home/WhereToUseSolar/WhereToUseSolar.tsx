@@ -3,6 +3,7 @@ import { Heading } from "@/components/common/Heading";
 import { SubHeading } from "@/components/common/SubHeading";
 import { Button } from "@/components/common/Button";
 import { FiHome, FiBriefcase, FiTruck, FiDroplet, FiBook, FiZap } from "react-icons/fi";
+import SectionBadge from "@/components/common/SectionBadge/SectionBadge";
 
 const useCases = [
   { icon: FiHome, title: "Residential", subtitle: "Ghar ke liye", desc: "Apne ghar ki chhat pe solar lagao aur bijli bill zero karo. 3kW–10kW systems best hain.", tag: "Most Popular", tagColor: "bg-yellow-500", color: "from-yellow-400 to-orange-400", bg: "bg-yellow-50", border: "border-yellow-200", savings: "₹4,000–₹12,000/month" },
@@ -21,9 +22,7 @@ export const WhereToUseSolar: React.FC = () => {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-12">
-          <div className="inline-flex items-center gap-2 bg-yellow-100 border border-yellow-300 text-yellow-700 px-4 py-1.5 rounded-full text-sm font-semibold mb-4">
-            🏠 Kahan Kahan Use Hota Hai
-          </div>
+           <SectionBadge text="Kahan Kahan Use Hota Hai" />
           <Heading level="h2" align="center" gradient>Where To Use Solar?</Heading>
           <SubHeading align="center" className="mt-3 max-w-2xl mx-auto">
             Ghar se factory tak —{" "}

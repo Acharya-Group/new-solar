@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { Heading } from "@/components/common/Heading";
 import { SubHeading } from "@/components/common/SubHeading";
 import { FiCheck, FiX, FiMinus } from "react-icons/fi";
+import SectionBadge from "@/components/common/SectionBadge/SectionBadge";
 
 const rows = [
   { feature: "Bijli Bill", ongrid: "90% Kam", offgrid: "Zero", hybrid: "Zero", solar: true },
@@ -35,9 +36,7 @@ export const GridComparison: React.FC = () => {
       <div className="absolute bottom-0 left-0 w-80 h-80 bg-green-50 rounded-full blur-3xl pointer-events-none" />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-12">
-          <div className="inline-flex items-center gap-2 bg-green-100 border border-green-300 text-green-700 px-4 py-1.5 rounded-full text-sm font-semibold mb-4">
-            📊 Side-by-Side Comparison
-          </div>
+                    <SectionBadge text="Side-by-Side Comparison" />
           <Heading level="h2" align="center" gradient>System Comparison</Heading>
           <SubHeading align="center" className="mt-3 max-w-xl mx-auto">
             Teeno systems ko compare karo aur <span className="text-green-600 font-semibold">apna best match</span> dhundo.

@@ -5,6 +5,7 @@ import { Button } from "@/components/common/Button";
 import { FiAward, FiStar, FiPhone } from "react-icons/fi";
 import { FaWhatsapp } from "react-icons/fa";
 import Link from "next/link";
+import SectionBadge from "@/components/common/SectionBadge/SectionBadge";
 
 const experts = [
   { name: "Arjun Mehta", role: "Senior Solar Engineer", exp: "8 Years", emoji: "👨‍💼", speciality: "On-Grid & Net Metering", rating: 4.9, reviews: 120 },
@@ -19,9 +20,7 @@ export const ExpertConsultation: React.FC = () => {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-12">
-          <div className="inline-flex items-center gap-2 bg-yellow-100 border border-yellow-300 text-yellow-700 px-4 py-1.5 rounded-full text-sm font-semibold mb-4">
-            👨‍💼 Hamare Experts Se Baat Karo
-          </div>
+          <SectionBadge text="Hamare Experts Se Baat Karo" />
           <Heading level="h2" align="center" gradient>Talk To Our Experts</Heading>
           <SubHeading align="center" className="mt-3 max-w-xl mx-auto">
             Certified solar engineers jo{" "}
