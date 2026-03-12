@@ -6,14 +6,14 @@ import { FiShield, FiTool, FiPhone, FiAward, FiUsers, FiClock, FiCheckCircle, Fi
 import SectionBadge from "@/components/common/SectionBadge/SectionBadge";
 
 const benefits = [
-  { icon: FiAward, title: "10+ Saal Ka Experience", desc: "Daskon saal mein 500+ installations — har type ke system pe expertise hai hamare paas.", color: "from-yellow-400 to-orange-400", bg: "bg-yellow-50", iconColor: "text-yellow-500" },
-  { icon: FiShield, title: "25 Saal Ki Warranty", desc: "Panels, inverter, aur installation — sab pe full warranty. Koi hidden charges nahi.", color: "from-blue-400 to-cyan-400", bg: "bg-blue-50", iconColor: "text-blue-500" },
-  { icon: FiTool, title: "Expert Installation Team", desc: "MNRE certified technicians — trained, experienced, aur professional team.", color: "from-green-400 to-emerald-400", bg: "bg-green-50", iconColor: "text-green-500" },
-  { icon: FiPhone, title: "24/7 After-Sales Support", desc: "Installation ke baad bhi hum saath hain — call karo, WhatsApp karo, hum ready hain.", color: "from-purple-400 to-violet-400", bg: "bg-purple-50", iconColor: "text-purple-500" },
-  { icon: FiUsers, title: "Free Site Survey", desc: "Ghar aate hain, site dekhte hain, free mein best plan banate hain — koi charge nahi.", color: "from-teal-400 to-cyan-400", bg: "bg-teal-50", iconColor: "text-teal-500" },
-  { icon: FiClock, title: "7 Din Mein Installation", desc: "Survey se installation tak sirf 7 din — India mein fastest solar installation service.", color: "from-orange-400 to-red-400", bg: "bg-orange-50", iconColor: "text-orange-500" },
-  { icon: FiCheckCircle, title: "PM Subsidy Assistance", desc: "₹78,000 tak PM Surya Ghar subsidy — hum poori application process mein help karte hain.", color: "from-rose-400 to-pink-400", bg: "bg-rose-50", iconColor: "text-rose-500" },
-  { icon: FiStar, title: "4.9★ Google Rating", desc: "500+ verified reviews — hamare customers hi haari sabse badi strength hain.", color: "from-amber-400 to-yellow-400", bg: "bg-amber-50", iconColor: "text-amber-500" },
+  { icon: FiAward, title: "10+ Years of Experience", desc: "Over a decade of expertise with 500+ installations — we have hands-on experience with every type of solar system.", color: "from-yellow-400 to-orange-400", bg: "bg-yellow-50", iconColor: "text-yellow-500" },
+  { icon: FiShield, title: "25-Year Warranty", desc: "Full warranty on panels, inverter, and installation — no hidden charges, no surprises.", color: "from-blue-400 to-cyan-400", bg: "bg-blue-50", iconColor: "text-blue-500" },
+  { icon: FiTool, title: "Expert Installation Team", desc: "MNRE certified technicians — trained, experienced, and fully professional at every step.", color: "from-green-400 to-emerald-400", bg: "bg-green-50", iconColor: "text-green-500" },
+  { icon: FiPhone, title: "24/7 After-Sales Support", desc: "We stay with you even after installation — call us or WhatsApp us anytime, we are always ready.", color: "from-purple-400 to-violet-400", bg: "bg-purple-50", iconColor: "text-purple-500" },
+  { icon: FiUsers, title: "Free Site Survey", desc: "We visit your home, check the site, and create the best solar plan for you — completely free of charge.", color: "from-teal-400 to-cyan-400", bg: "bg-teal-50", iconColor: "text-teal-500" },
+  { icon: FiClock, title: "Installation in 7 Days", desc: "From survey to full installation in just 7 days — one of the fastest solar installation services in India.", color: "from-orange-400 to-red-400", bg: "bg-orange-50", iconColor: "text-orange-500" },
+  { icon: FiCheckCircle, title: "PM Subsidy Assistance", desc: "Get up to ₹78,000 under PM Surya Ghar Yojana — we help you with the entire application process.", color: "from-rose-400 to-pink-400", bg: "bg-rose-50", iconColor: "text-rose-500" },
+  { icon: FiStar, title: "4.9★ Google Rating", desc: "500+ verified reviews — our happy customers are our biggest strength and proof of our quality.", color: "from-amber-400 to-yellow-400", bg: "bg-amber-50", iconColor: "text-amber-500" },
 ];
 
 export const NeoBenefits: React.FC = () => {
@@ -24,12 +24,12 @@ export const NeoBenefits: React.FC = () => {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-12">
-          <SectionBadge text="Neo Solar Kyun Choose Karein?" />
+          <SectionBadge text="Why Choose Neo Solar?" />
           <Heading level="h2" align="center" gradient>Why Choose Neo Solar?</Heading>
           <SubHeading align="center" className="mt-3 max-w-2xl mx-auto">
-            Sirf panels nahi — hum dete hain{" "}
+            Not just panels — we deliver a{" "}
             <span className="text-green-600 font-semibold">complete solar experience</span>
-            survey se lekar 25 saal ki service tak.
+            {" "}from the first survey all the way to 25 years of service.
           </SubHeading>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
@@ -49,11 +49,11 @@ export const NeoBenefits: React.FC = () => {
         <div className="mt-12 bg-gradient-to-r from-green-400 to-blue-500 rounded-3xl p-8 flex flex-col md:flex-row items-center justify-between gap-6 shadow-xl shadow-green-200">
           <div>
             <h3 className="text-2xl font-bold text-white mb-1">Ready to Go Solar?</h3>
-            <p className="text-white text-sm">Aaj hi free consultation lo — koi obligation nahi.</p>
+            <p className="text-white text-sm">Get a free consultation today — no obligation at all.</p>
           </div>
           <div className="flex gap-3 flex-shrink-0">
             <Button aria-label="Calculate solar savings" href="/solar-calculator" variant="ghost" size="md">Calculator →</Button>
-            <Button aria-label="Request free consultation" href="/contact" variant="primary" size="md">Free Consultation Lo</Button>
+            <Button aria-label="Request free consultation" href="/contact" variant="primary" size="md">Get Free Consultation</Button>
           </div>
         </div>
       </div>

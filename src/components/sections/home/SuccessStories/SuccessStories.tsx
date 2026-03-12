@@ -6,14 +6,14 @@ import { FiStar, FiMapPin, FiChevronLeft, FiChevronRight, FiTrendingDown } from 
 import SectionBadge from "@/components/common/SectionBadge/SectionBadge";
 
 const stories = [
-  { name: "Rajesh Sharma", location: "Delhi", system: "5 kW On-Grid", savings: "₹4,200/month", billBefore: "₹5,000", rating: 5, avatar: "👨‍💼", tag: "Ghar Wala", color: "from-yellow-400 to-orange-400", review: "Neo Solar ne hamari zindagi badal di! Pehle ₹5,000 ka bill aata tha, ab ZERO aata hai. Installation sirf 1 din mein complete — team ekdum professional hai." },
-  { name: "Priya Gupta", location: "Mumbai", system: "8 kW Hybrid", savings: "₹7,800/month", billBefore: "₹9,000", rating: 5, avatar: "👩‍🦱", tag: "Business Owner", color: "from-blue-400 to-cyan-500", review: "Hybrid system lagwaya — ab na bijli bill ki tension, na power cut ki. Neo Solar ne Zero Bill ki guarantee di aur poori kari. PM Subsidy mein bhi help ki!" },
-  { name: "Suresh Patel", location: "Ahmedabad", system: "3 kW On-Grid", savings: "₹2,800/month", billBefore: "₹3,200", rating: 5, avatar: "👨‍🌾", tag: "Farmer", color: "from-green-400 to-emerald-500", review: "Zero bill ki guarantee sach mein poori ki! 3 saal mein invest wapis aa jaayega. MNRE certified team — koi doubt nahi raha. Best decision of my life!" },
-  { name: "Anita Singh", location: "Chandigarh", system: "10 kW Hybrid", savings: "₹9,500/month", billBefore: "₹11,000", rating: 5, avatar: "👩‍💻", tag: "Office Owner", color: "from-purple-400 to-violet-500", review: "Office ka bijli bill ZERO ho gaya! After-sales support bhi bahut acha hai — jab bhi call karo, turant response milta hai. Neo Solar pe 100% trust." },
-  { name: "Vikram Joshi", location: "Pune", system: "15 kW On-Grid", savings: "₹14,000/month", billBefore: "₹16,000", rating: 5, avatar: "🧑‍🏫", tag: "School Principal", color: "from-orange-400 to-red-400", review: "School ka bill zero! PM Surya Ghar subsidy bhi mili. Neo Solar ki Zero Bill guarantee ne hi convince kiya — aur unhone wada nibhaya." },
-  { name: "Meera Jain", location: "Jaipur", system: "6 kW Hybrid", savings: "₹5,400/month", billBefore: "₹6,000", rating: 5, avatar: "👩‍🍳", tag: "Homemaker", color: "from-rose-400 to-pink-500", review: "Pehle darr tha itna invest karne ka, but Neo Solar ki Zero Bill guarantee ne confidence diya. Ab har mahine poora ₹6,000 bachta hai!" },
-  { name: "Arjun Mehta", location: "Surat", system: "20 kW On-Grid", savings: "₹18,000/month", billBefore: "₹20,000", rating: 5, avatar: "🧑‍🏭", tag: "Factory Owner", color: "from-teal-400 to-cyan-500", review: "Factory ka bijli bill ZERO kar diya Neo Solar ne. Industrial system ekdum perfect hai. ROI 2.5 saal mein milega. Highly recommended for businesses!" },
-  { name: "Sunita Verma", location: "Lucknow", system: "4 kW On-Grid", savings: "₹3,600/month", billBefore: "₹4,000", rating: 5, avatar: "👩‍🏫", tag: "Teacher", color: "from-amber-400 to-yellow-500", review: "Teacher hoon, budget limited hai — but Neo Solar ki EMI scheme aur Zero Bill guarantee ne possible kar diya. Ab bijli bill ZERO, savings maximum!" },
+  { name: "Rajesh Sharma", location: "Delhi", system: "5 kW On-Grid", savings: "₹4,200/month", billBefore: "₹5,000", rating: 5, avatar: "👨‍💼", tag: "Home Owner", color: "from-yellow-400 to-orange-400", review: "Neo Solar changed our life! Our bill used to be ₹5,000 every month — now it is ZERO. Installation was done in just 1 day and the team was completely professional." },
+  { name: "Priya Gupta", location: "Mumbai", system: "8 kW Hybrid", savings: "₹7,800/month", billBefore: "₹9,000", rating: 5, avatar: "👩‍🦱", tag: "Business Owner", color: "from-blue-400 to-cyan-500", review: "We got a Hybrid system — no more electricity bills, no more power cuts. Neo Solar delivered on their Zero Bill promise and even helped us with the PM Subsidy application!" },
+  { name: "Suresh Patel", location: "Ahmedabad", system: "3 kW On-Grid", savings: "₹2,800/month", billBefore: "₹3,200", rating: 5, avatar: "👨‍🌾", tag: "Farmer", color: "from-green-400 to-emerald-500", review: "They truly kept their Zero Bill promise! The full investment will come back in just 3 years. MNRE certified team — I had no doubts at all. Best decision of my life!" },
+  { name: "Anita Singh", location: "Chandigarh", system: "10 kW Hybrid", savings: "₹9,500/month", billBefore: "₹11,000", rating: 5, avatar: "👩‍💻", tag: "Office Owner", color: "from-purple-400 to-violet-500", review: "Our office electricity bill is now ZERO! The after-sales support is excellent too — whenever we call, we get an instant response. 100% trust in Neo Solar." },
+  { name: "Vikram Joshi", location: "Pune", system: "15 kW On-Grid", savings: "₹14,000/month", billBefore: "₹16,000", rating: 5, avatar: "🧑‍🏫", tag: "School Principal", color: "from-orange-400 to-red-400", review: "School bill is zero now! We also received the PM Surya Ghar subsidy. It was Neo Solar's Zero Bill guarantee that convinced us — and they kept their promise." },
+  { name: "Meera Jain", location: "Jaipur", system: "6 kW Hybrid", savings: "₹5,400/month", billBefore: "₹6,000", rating: 5, avatar: "👩‍🍳", tag: "Homemaker", color: "from-rose-400 to-pink-500", review: "I was scared to invest this much at first, but Neo Solar's Zero Bill guarantee gave me the confidence. Now I save the full ₹6,000 every single month!" },
+  { name: "Arjun Mehta", location: "Surat", system: "20 kW On-Grid", savings: "₹18,000/month", billBefore: "₹20,000", rating: 5, avatar: "🧑‍🏭", tag: "Factory Owner", color: "from-teal-400 to-cyan-500", review: "Neo Solar brought our factory electricity bill to ZERO. The industrial system is absolutely perfect. We will get full ROI in 2.5 years. Highly recommended for businesses!" },
+  { name: "Sunita Verma", location: "Lucknow", system: "4 kW On-Grid", savings: "₹3,600/month", billBefore: "₹4,000", rating: 5, avatar: "👩‍🏫", tag: "Teacher", color: "from-amber-400 to-yellow-500", review: "I am a teacher with a limited budget — but Neo Solar's EMI plan and Zero Bill guarantee made it possible. Now my electricity bill is ZERO and my savings are at the maximum!" },
 ];
 
 export const SuccessStories: React.FC = () => {
@@ -36,17 +36,15 @@ export const SuccessStories: React.FC = () => {
   const prev = () => go((current - 1 + stories.length) % stories.length);
   const next = () => go((current + 1) % stories.length);
 
-  // sidebar scroll useEffect replace karo:
   useEffect(() => {
     if (!sidebarRef.current) return;
     const card = sidebarRef.current.children[current] as HTMLElement;
     if (!card) return;
     const container = sidebarRef.current;
-    // Manual scroll — page scroll nahi karega
     const cardTop = card.offsetTop;
     container.scrollTo({ top: cardTop - 20, behavior: "smooth" });
   }, [current]);
-  // Auto play — empty deps, refs se stale closure nahi
+
   useEffect(() => {
     const interval = setInterval(() => {
       if (animatingRef.current) return;
@@ -73,15 +71,14 @@ export const SuccessStories: React.FC = () => {
         {/* Header */}
         <div className="text-center mb-14">
           <SectionBadge text="Real Customer Stories" />
-
-          <Heading level="h2" align="center" gradient>Hamare Happy Customers</Heading>
+          <Heading level="h2" align="center" gradient>Our Happy Customers</Heading>
           <SubHeading align="center" className="mt-3 max-w-xl mx-auto">
-            500+ families jo ab{" "}
-            <span className="text-yellow-600 font-semibold">ZERO bijli bill</span> de rahe hain —{" "}
-            <span className="text-orange-700 font-semibold">hum guarantee dete hain.</span>
+            500+ families who now pay{" "}
+            <span className="text-yellow-600 font-semibold">ZERO electricity bill</span> —{" "}
+            <span className="text-orange-700 font-semibold">we guarantee it.</span>
           </SubHeading>
           <div className="inline-flex items-center gap-2 bg-green-500 text-white px-5 py-2 rounded-full text-sm font-bold mt-4 shadow-lg shadow-green-200">
-            ✅ Zero Bijli Bill Ki Guarantee — Hum Dete Hain
+            ✅ Zero Electricity Bill — Guaranteed by Us
           </div>
         </div>
 
@@ -158,7 +155,7 @@ export const SuccessStories: React.FC = () => {
                 {/* Bill comparison */}
                 <div className="grid grid-cols-3 gap-3 mb-4">
                   <div className="bg-red-50 border border-red-100 rounded-2xl p-3 text-center">
-                    <p className="text-[10px] text-gray-400 mb-1">Pehle Ka Bill</p>
+                    <p className="text-[10px] text-gray-400 mb-1">Bill Before</p>
                     <p className="text-red-500 font-bold text-lg">{s.billBefore}</p>
                   </div>
                   <div className="flex items-center justify-center">
@@ -167,7 +164,7 @@ export const SuccessStories: React.FC = () => {
                     </div>
                   </div>
                   <div className="bg-green-50 border border-green-200 rounded-2xl p-3 text-center">
-                    <p className="text-[10px] text-gray-400 mb-1">Ab Ka Bill</p>
+                    <p className="text-[10px] text-gray-400 mb-1">Bill Now</p>
                     <p className="text-green-600 font-bold text-2xl">₹0</p>
                     <p className="text-[9px] text-green-500 font-bold">ZERO ✅</p>
                   </div>

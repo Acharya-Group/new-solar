@@ -6,12 +6,12 @@ import { FiPhone, FiMapPin, FiFileText, FiTool, FiZap, FiShield } from "react-ic
 import SectionBadge from "@/components/common/SectionBadge/SectionBadge";
 
 const steps = [
-  { icon: FiPhone, step: "01", title: "Free Consultation", desc: "Call ya WhatsApp karo — hamare expert aapki zarurat samjhenge aur best system suggest karenge.", duration: "Day 1", color: "from-blue-400 to-cyan-500", bg: "bg-blue-50", iconColor: "text-blue-500" },
-  { icon: FiMapPin, step: "02", title: "Free Site Survey", desc: "Hamare certified engineer ghar aayenge — roof check karenge, shadow analysis karenge, best placement decide karenge.", duration: "Day 2–3", color: "from-yellow-400 to-orange-400", bg: "bg-yellow-50", iconColor: "text-yellow-500" },
-  { icon: FiFileText, step: "03", title: "Custom Quotation", desc: "Site survey ke baad detailed quotation milega — system size, cost, savings estimate, ROI sab kuch.", duration: "Day 3–4", color: "from-purple-400 to-violet-500", bg: "bg-purple-50", iconColor: "text-purple-500" },
-  { icon: FiTool, step: "04", title: "Installation", desc: "MNRE certified team aayegi — panels, inverter, wiring sab professional tarike se install karegi. 1 din mein complete.", duration: "Day 5–6", color: "from-orange-400 to-red-400", bg: "bg-orange-50", iconColor: "text-orange-500" },
-  { icon: FiZap, step: "05", title: "Testing & Handover", desc: "Full system testing hogi — bijli generation check, app setup, aur aapko poora system samjhaya jaayega.", duration: "Day 7", color: "from-green-400 to-emerald-500", bg: "bg-green-50", iconColor: "text-green-500" },
-  { icon: FiShield, step: "06", title: "After-Sales Support", desc: "25 saal ki warranty activate hogi — annual maintenance, 24/7 support, aur app monitoring shuru.", duration: "Lifetime", color: "from-teal-400 to-cyan-400", bg: "bg-teal-50", iconColor: "text-teal-500" },
+  { icon: FiPhone, step: "01", title: "Free Consultation", desc: "Call or WhatsApp us — our expert will understand your needs and suggest the best system for you.", duration: "Day 1", color: "from-blue-400 to-cyan-500", bg: "bg-blue-50", iconColor: "text-blue-500" },
+  { icon: FiMapPin, step: "02", title: "Free Site Survey", desc: "Our certified engineer will visit your home — check the roof, analyse shade, and decide the best panel placement.", duration: "Day 2–3", color: "from-yellow-400 to-orange-400", bg: "bg-yellow-50", iconColor: "text-yellow-500" },
+  { icon: FiFileText, step: "03", title: "Custom Quotation", desc: "After the site survey you will get a detailed quote — system size, total cost, savings estimate, and ROI all included.", duration: "Day 3–4", color: "from-purple-400 to-violet-500", bg: "bg-purple-50", iconColor: "text-purple-500" },
+  { icon: FiTool, step: "04", title: "Installation", desc: "Our MNRE certified team will install panels, inverter, and wiring in a professional manner — completed in just 1 day.", duration: "Day 5–6", color: "from-orange-400 to-red-400", bg: "bg-orange-50", iconColor: "text-orange-500" },
+  { icon: FiZap, step: "05", title: "Testing & Handover", desc: "Full system testing is done — power generation check, app setup, and a complete walkthrough of your new system.", duration: "Day 7", color: "from-green-400 to-emerald-500", bg: "bg-green-50", iconColor: "text-green-500" },
+  { icon: FiShield, step: "06", title: "After-Sales Support", desc: "Your 25-year warranty is activated — annual maintenance, 24/7 support, and app monitoring all begin from day one.", duration: "Lifetime", color: "from-teal-400 to-cyan-400", bg: "bg-teal-50", iconColor: "text-teal-500" },
 ];
 
 export const InstallationProcess: React.FC = () => {
@@ -22,13 +22,11 @@ export const InstallationProcess: React.FC = () => {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-14">
-
-          <SectionBadge text="Sirf 7 Din Mein" />
-
+          <SectionBadge text="Done in Just 7 Days" />
           <Heading level="h2" align="center" gradient>Installation Process</Heading>
           <SubHeading align="center" className="mt-3 max-w-2xl mx-auto">
-            Call se lekar{" "}
-            <span className="text-yellow-600 font-semibold">solar system chalu hone tak</span> — sirf 7 din ka process.
+            From your first call to{" "}
+            <span className="text-yellow-600 font-semibold">your solar system going live</span> — the whole process takes just 7 days.
           </SubHeading>
         </div>
 
@@ -63,9 +61,9 @@ export const InstallationProcess: React.FC = () => {
         {/* CTA */}
         <div className="mt-14 text-center">
           <Button aria-label="Request free consultation" href="/contact" variant="primary" size="lg">
-            Abhi Start Karo — Free Consultation Lo →
+            Start Now — Get a Free Consultation →
           </Button>
-          <p className="text-gray-400 text-sm mt-3">Koi advance payment nahi — pehle survey, phir decision</p>
+          <p className="text-gray-400 text-sm mt-3">No advance payment — survey first, decision later</p>
         </div>
       </div>
     </section>

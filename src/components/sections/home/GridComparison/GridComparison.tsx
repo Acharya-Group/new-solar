@@ -6,9 +6,9 @@ import { FiCheck, FiX, FiMinus } from "react-icons/fi";
 import SectionBadge from "@/components/common/SectionBadge/SectionBadge";
 
 const rows = [
-  { feature: "Bijli Bill", ongrid: "90% Kam", offgrid: "Zero", hybrid: "Zero", solar: true },
+  { feature: "Electricity Bill", ongrid: "90% Less", offgrid: "Zero", hybrid: "Zero", solar: true },
   { feature: "Power Cut Protection", ongrid: false, offgrid: true, hybrid: true, solar: null },
-  { feature: "Net Metering (Units Becho)", ongrid: true, offgrid: false, hybrid: true, solar: null },
+  { feature: "Net Metering (Sell Units)", ongrid: true, offgrid: false, hybrid: true, solar: null },
   { feature: "Battery Backup", ongrid: false, offgrid: true, hybrid: true, solar: null },
   { feature: "PM Subsidy Eligible", ongrid: true, offgrid: false, hybrid: true, solar: null },
   { feature: "Installation Cost", ongrid: "Low", offgrid: "High", hybrid: "Highest", solar: null },
@@ -36,10 +36,10 @@ export const GridComparison: React.FC = () => {
       <div className="absolute bottom-0 left-0 w-80 h-80 bg-green-50 rounded-full blur-3xl pointer-events-none" />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-12">
-                    <SectionBadge text="Side-by-Side Comparison" />
+          <SectionBadge text="Side-by-Side Comparison" />
           <Heading level="h2" align="center" gradient>System Comparison</Heading>
           <SubHeading align="center" className="mt-3 max-w-xl mx-auto">
-            Teeno systems ko compare karo aur <span className="text-green-600 font-semibold">apna best match</span> dhundo.
+            Compare all three systems and <span className="text-green-600 font-semibold">find your best match.</span>
           </SubHeading>
         </div>
 

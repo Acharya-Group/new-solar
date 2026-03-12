@@ -35,8 +35,8 @@ export const CalculateSavings: React.FC = () => {
           <SectionBadge text="Free Solar Calculator" />
           <Heading level="h2" align="center" gradient>Calculate Your Savings</Heading>
           <SubHeading align="center" className="mt-3 max-w-xl mx-auto">
-            Apna monthly bijli bill enter karo aur dekhо kitna{" "}
-            <span className="text-yellow-600 font-semibold">bachat hogi har mahine.</span>
+            Enter your monthly electricity bill and see how much{" "}
+            <span className="text-yellow-600 font-semibold">you can save every month.</span>
           </SubHeading>
         </div>
 
@@ -44,10 +44,10 @@ export const CalculateSavings: React.FC = () => {
 
           {/* Input Form */}
           <div className="bg-white rounded-3xl border border-yellow-100 shadow-xl p-8 flex flex-col gap-5">
-            <h3 className="text-gray-900 font-bold text-xl">Apna Bill Enter Karo</h3>
+            <h3 className="text-gray-900 font-bold text-xl">Enter Your Bill Details</h3>
 
             <div className="flex flex-col gap-2">
-              <label className="text-sm font-semibold text-gray-700">Monthly Bijli Bill (₹)</label>
+              <label className="text-sm font-semibold text-gray-700">Monthly Electricity Bill (₹)</label>
               <input
                 type="number" value={bill} onChange={(e) => setBill(e.target.value)}
                 placeholder="e.g. 3000"
@@ -56,7 +56,7 @@ export const CalculateSavings: React.FC = () => {
             </div>
 
             <div className="flex flex-col gap-2">
-              <label className="text-sm font-semibold text-gray-700">Monthly Units (kWh)</label>
+              <label className="text-sm font-semibold text-gray-700">Monthly Units Used (kWh)</label>
               <input
                 type="number" value={units} onChange={(e) => setUnits(e.target.value)}
                 placeholder="e.g. 300"
@@ -76,7 +76,7 @@ export const CalculateSavings: React.FC = () => {
             {!result ? (
               <div className="bg-white rounded-3xl border-2 border-dashed border-yellow-200 p-10 flex flex-col items-center justify-center gap-4 text-center min-h-[320px]">
                 <div className="text-6xl">☀️</div>
-                <p className="text-gray-400 text-sm">Bill aur units enter karo — results yahan dikhenge</p>
+                <p className="text-gray-400 text-sm">Enter your bill and units — your results will appear here</p>
               </div>
             ) : (
               <>
@@ -107,7 +107,7 @@ export const CalculateSavings: React.FC = () => {
                 </div>
 
                 <Button aria-label="Request free quote" href="/contact" variant="primary" size="md" fullWidth>
-                  Is System Ka Quote Lo →
+                  Get a Quote for This System →
                 </Button>
               </>
             )}

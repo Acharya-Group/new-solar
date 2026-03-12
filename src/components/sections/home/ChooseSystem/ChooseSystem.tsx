@@ -8,34 +8,34 @@ import SectionBadge from "@/components/common/SectionBadge/SectionBadge";
 
 const systems = [
   {
-    icon: FiZap, type: "On-Grid", hindi: "Grid Se Connected",
-    desc: "Seedha bijli grid se connected — din mein solar use karo, raat mein grid se lo. Extra units becho.",
+    icon: FiZap, type: "On-Grid", hindi: "Connected to the Grid",
+    desc: "Directly connected to the electricity grid — use solar power during the day and draw from the grid at night. Sell your extra units back.",
     color: "from-blue-500 to-cyan-500", bg: "bg-blue-50", border: "border-blue-200",
     badge: "Most Popular", badgeColor: "bg-blue-600", iconColor: "text-blue-500",
-    price: "₹55,000 – ₹1,20,000", roi: "3–4 Saal",
-    pros: ["Sabse sasta system", "Net metering — units becho", "Low maintenance", "PM Subsidy eligible"],
-    cons: ["Power cut mein kaam nahi karta", "Battery nahi hoti"],
-    bestFor: "Jahan load shedding kam ho",
+    price: "₹55,000 – ₹1,20,000", roi: "3–4 Years",
+    pros: ["Most affordable system", "Net metering — sell extra units", "Low maintenance", "Eligible for PM Subsidy"],
+    cons: ["Does not work during power cuts", "No battery included"],
+    bestFor: "Areas with fewer power cuts",
   },
   {
     icon: FiBattery, type: "Off-Grid", hindi: "Completely Independent",
-    desc: "Grid se bilkul alag — battery backup ke saath 24/7 bijli. Remote areas ke liye best.",
+    desc: "Fully independent from the grid — get 24/7 electricity with battery backup. Best choice for remote and rural areas.",
     color: "from-green-500 to-emerald-500", bg: "bg-green-50", border: "border-green-200",
     badge: "Best for Rural", badgeColor: "bg-green-600", iconColor: "text-green-500",
-    price: "₹90,000 – ₹2,50,000", roi: "4–5 Saal",
-    pros: ["24/7 bijli milti hai", "Grid pe depend nahi", "Remote areas ke liye best", "Complete energy freedom"],
-    cons: ["Zyada expensive", "Battery replacement 8-10 saal mein"],
-    bestFor: "Jahan grid nahi ya load shedding zyada ho",
+    price: "₹90,000 – ₹2,50,000", roi: "4–5 Years",
+    pros: ["24/7 electricity supply", "No dependency on the grid", "Best for remote locations", "Complete energy freedom"],
+    cons: ["Higher upfront cost", "Battery replacement needed after 8–10 years"],
+    bestFor: "Areas with no grid or frequent power cuts",
   },
   {
     icon: FiSun, type: "Hybrid", hindi: "Best of Both Worlds",
-    desc: "On-grid + Off-grid dono ka fayda. Battery bhi, net metering bhi — complete solution.",
+    desc: "Combines the benefits of on-grid and off-grid — enjoy battery backup and net metering both. The most complete solar solution.",
     color: "from-yellow-500 to-orange-500", bg: "bg-yellow-50", border: "border-yellow-200",
     badge: "Recommended ⭐", badgeColor: "bg-yellow-500", iconColor: "text-yellow-500",
-    price: "₹1,20,000 – ₹3,50,000", roi: "4–5 Saal",
-    pros: ["Power cut mein bhi kaam kare", "Net metering benefit", "Battery backup available", "Future-ready system"],
-    cons: ["Sabse mehnga system", "Complex installation"],
-    bestFor: "Jo best performance chahte hain",
+    price: "₹1,20,000 – ₹3,50,000", roi: "4–5 Years",
+    pros: ["Works even during power cuts", "Net metering benefit included", "Battery backup available", "Future-ready system"],
+    cons: ["Most expensive system", "Complex installation process"],
+    bestFor: "Those who want the best performance",
   },
 ];
 
@@ -49,11 +49,11 @@ export const ChooseSystem: React.FC = () => {
 
         {/* Header */}
         <div className="text-center mb-12">
-            <SectionBadge text="Apna System Choose Karo" />
+          <SectionBadge text="Choose Your System" />
           <Heading level="h2" align="center" gradient>Which System Is Right For You?</Heading>
           <SubHeading align="center" className="mt-3 max-w-2xl mx-auto">
-            Teen types ke solar systems hain —{" "}
-            <span className="text-yellow-600 font-semibold">apni zarurat aur budget</span> ke hisaab se best choose karo.
+            There are three types of solar systems —{" "}
+            <span className="text-yellow-600 font-semibold">pick the best one for your needs and budget.</span>
           </SubHeading>
         </div>
 
@@ -97,14 +97,14 @@ export const ChooseSystem: React.FC = () => {
                   </p>
 
                   <Button aria-label="Request quote" href="/contact" variant="primary" size="sm">
-                    Quote Lo →
+                    Get a Quote →
                   </Button>
                 </div>
 
                 {/* Col 2 — Pros */}
                 <div className="lg:col-span-1">
                   <h4 className="text-gray-900 font-bold mb-3 flex items-center gap-2 text-sm">
-                    <FiCheck className="text-green-500" size={16} /> Fayde
+                    <FiCheck className="text-green-500" size={16} /> Advantages
                   </h4>
                   <ul className="flex flex-col gap-2">
                     {s.pros.map((p) => (

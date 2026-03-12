@@ -29,32 +29,36 @@ export const About: React.FC = () => {
 
           {/* LEFT */}
           <div className="flex flex-col gap-6">
-        
-                      <div>
-                        <SectionBadge text="About Neo Solar" />
-                      </div>
-            
+
+            <div>
+              <SectionBadge text="About Neo Solar" />
+            </div>
+
 
             <Heading level="h2" align="left" color="text-gray-900">
               Solar EPC Solutions
               <span className="bg-gradient-to-r from-green-500 to-emerald-500 bg-clip-text text-transparent">
-                <br />provider in india
+                <br />Provider in India
               </span>
             </Heading>
 
             {/* Bilingual description */}
             <div className="flex flex-col gap-3">
-          <p className="text-gray-600 text-base leading-relaxed">
-  Neo Solar mein hum innovation aur efficiency ko milaakar aapko clean energy ki taraf switch karne mein madad karte hain.
-  Our high-performance solar solutions are engineered to{" "}
-  <span className="text-yellow-600 font-semibold">reduce your costs</span> and your carbon footprint —{" "}
-  <span className="text-yellow-600 font-semibold">bijli bill kam karo</span> aur environment bachao.
-</p>
-<p className="text-gray-500 text-sm leading-relaxed border-l-4 border-yellow-400 pl-4 bg-yellow-50/50 py-2 rounded-r-xl">
-  At Neo Solar, we combine innovation and efficiency — hamare high-performance solar solutions aapki{" "}
-  <span className="text-orange-700 font-semibold">laagat 90% tak kam</span> karte hain aur carbon footprint ghataate hain.
-  Switch karo clean energy pe — <span className="text-orange-700 font-semibold">aaj hi shuru karo.</span>
-</p>
+              <p className="text-gray-600 text-base leading-relaxed">
+                At Neo Solar, we combine <span className="text-yellow-600 font-semibold">cutting-edge technology</span> with expert
+                solar installation services to deliver efficient and reliable solar power solutions.
+                Our advanced systems
+                <span className="text-yellow-600 font-semibold"> reduce their dependence on traditional electricity</span>.
+
+                Our solar solutions are ideal for <span className="text-yellow-600 font-semibold">homes, industries, schools, colleges, hospitals, and petrol pumps</span>,
+              </p>
+
+              <p className="text-gray-500 text-sm leading-relaxed border-l-4 border-yellow-400 pl-4 bg-yellow-50/50 py-2 rounded-r-xl">
+                You can
+                <span className="text-orange-700 font-semibold ps-1">reduce your electricity bills by up to 90%</span>
+                while contributing to a greener and more sustainable planet.
+                Start your journey toward clean energy and long-term savings today.
+              </p>
             </div>
 
             <div className="flex flex-wrap gap-3">
@@ -74,7 +78,6 @@ export const About: React.FC = () => {
 
           {/* RIGHT */}
           <div className="flex flex-col gap-5">
-
             {/* Mission Card */}
             <div className="relative bg-green-600 rounded-3xl p-6 overflow-hidden">
               <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -translate-y-8 translate-x-8" />
@@ -85,15 +88,13 @@ export const About: React.FC = () => {
                   </div>
                   <div>
                     <p className="text-white/60 text-xs font-medium uppercase tracking-wide">Our Mission</p>
-                    <h3 className="font-bold text-white text-lg leading-tight">Hamaara Lakshya</h3>
+                    <h3 className="font-bold text-white text-lg leading-tight">Our Goal</h3>
                   </div>
                 </div>
+
                 <p className="text-white/80 text-sm leading-relaxed">
-                  To make clean solar energy accessible to every Indian home and business —
-                  reducing electricity bills and building a greener nation.
-                </p>
-                <p className="text-white/60 text-xs mt-2 leading-relaxed">
-                  Har Indian ghar aur vyavsaay ko saaf solar urja dena — bijli ka bill kam karna aur ek hariyali rashtra banana.
+                  Our mission is to provide affordable and reliable <b>solar energy solutions</b> for homes and businesses
+                  across India, helping people reduce electricity bills and use clean energy.
                 </p>
                 <div className="mt-4 flex gap-2 flex-wrap">
                   {["🇮🇳 Make in India", "♻️ Green Energy", "💡 Innovation"].map((t) => (
@@ -102,7 +103,6 @@ export const About: React.FC = () => {
                 </div>
               </div>
             </div>
-
             {/* Vision Card */}
             <div className="relative bg-gradient-to-br from-blue-500 to-cyan-500 rounded-3xl p-6 overflow-hidden">
               <div className="absolute bottom-0 left-0 w-28 h-28 bg-white/10 rounded-full translate-y-8 -translate-x-8" />
@@ -113,34 +113,23 @@ export const About: React.FC = () => {
                   </div>
                   <div>
                     <p className="text-white/60 text-xs font-medium uppercase tracking-wide">Our Vision</p>
-                    <h3 className="font-bold text-white text-lg leading-tight">Hamaari Drishti</h3>
+                    <h3 className="font-bold text-white text-lg leading-tight">Our Future Vision</h3>
                   </div>
                 </div>
                 <p className="text-white/80 text-sm leading-relaxed">
-                  To become India&apos;s most trusted solar company by 2030 — powering 1 million homes
-                  with clean, renewable energy solutions.
-                </p>
-                <p className="text-white/60 text-xs mt-2 leading-relaxed">
-                  2030 tak India ki sabse bharosemand solar company banna — 10 lakh gharon ko clean energy se roshan karna.
+                  Our vision is to become one of India’s most trusted <b>solar energy companies</b> by helping thousands
+                  of homes and businesses switch to clean and renewable power.
                 </p>
               </div>
             </div>
-
             {/* Bottom 3 approval badges */}
-            <div className="grid grid-cols-2 gap-3">
-        
-              <div className="bg-white border-2 border-orange-200 rounded-2xl px-3 py-3 flex flex-col items-center gap-1.5 hover:shadow-md hover:border-orange-300 transition-all text-center">
-                <span className="text-xl">🇮🇳</span>
-                <p className="text-gray-900 font-bold text-xs">Make in India</p>
-                <p className="text-gray-400 text-[10px]">BIS Approved</p>
-              </div>
+            <div className="grid grid-cols-1">
               <div className="bg-white border-2 border-blue-200 rounded-2xl px-3 py-3 flex flex-col items-center gap-1.5 hover:shadow-md hover:border-blue-300 transition-all text-center">
                 <span className="text-xl">⚡</span>
                 <p className="text-gray-900 font-bold text-xs">MNRE Approved</p>
                 <p className="text-gray-400 text-[10px]">Govt. certified</p>
               </div>
             </div>
-
           </div>
         </div>
       </div>

@@ -28,12 +28,11 @@ export const Projects: React.FC = () => {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-10">
-          <SectionBadge text="Hamare Kaam Ki Jhalkee" />
-
+          <SectionBadge text="A Glimpse of Our Work" />
           <Heading level="h2" align="center" gradient>Our Projects</Heading>
           <SubHeading align="center" className="mt-3 max-w-xl mx-auto">
-            500+ installations mein se kuch{" "}
-            <span className="text-green-600 font-semibold">best projects</span> — ghar se factory tak.
+            A few of our{" "}
+            <span className="text-green-600 font-semibold">best projects</span> from 500+ installations — homes to factories.
           </SubHeading>
         </div>
 
@@ -93,7 +92,7 @@ export const Projects: React.FC = () => {
         </div>
 
         <div className="mt-10 text-center">
-          <Button href="/projects" variant="primary" size="lg">Saare Projects Dekho →</Button>
+          <Button href="/projects" variant="primary" size="lg">View All Projects →</Button>
         </div>
       </div>
     </section>

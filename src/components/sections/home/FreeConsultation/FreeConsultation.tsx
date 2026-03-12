@@ -29,7 +29,7 @@ export const FreeConsultation: React.FC = () => {
           <div className="flex flex-col gap-6">
 
             <div>
-              <SectionBadge text="Bilkul Free — Koi Charge Nahi" />
+              <SectionBadge text="Completely Free — No Charges" />
             </div>
 
             <Heading level="h2" align="left" color="text-gray-900">
@@ -39,8 +39,8 @@ export const FreeConsultation: React.FC = () => {
               </span>
             </Heading>
             <SubHeading align="left" className="!text-gray-600">
-              Hamare solar expert ghar aayenge — roof dekhenge, savings calculate karenge,
-              aur aapke liye best system suggest karenge. Bilkul free.
+              Our solar expert will visit your home — check your roof, calculate your savings,
+              and suggest the best system for you. Completely free of charge.
             </SubHeading>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -55,7 +55,7 @@ export const FreeConsultation: React.FC = () => {
             <div className="flex flex-col sm:flex-row gap-3 mt-2">
               <Link aria-label="Chat on WhatsApp" href="https://wa.me/919991777218" target="_blank" rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 bg-green-500 text-white font-bold px-6 py-3.5 rounded-xl hover:bg-green-600 transition-all hover:scale-105 shadow-lg shadow-green-200">
-                <FaWhatsapp size={20} /> WhatsApp Karo
+                <FaWhatsapp size={20} /> Chat on WhatsApp
               </Link>
               <Button aria-label="Book site survey" href="/contact" variant="primary" size="md">Book Site Survey →</Button>
             </div>
@@ -66,9 +66,9 @@ export const FreeConsultation: React.FC = () => {
             <div className="bg-gradient-to-br from-green-400 to-blue-500 rounded-3xl p-8 text-black relative overflow-hidden">
               <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -translate-y-8 translate-x-8" />
               <FiSun size={40} className="text-black/40 mb-4" />
-              <h3 className="font-bold text-2xl text-white mb-2">Aaj Hi Call Karo</h3>
+              <h3 className="font-bold text-2xl text-white mb-2">Call Us Today</h3>
               <p className="text-black/70 text-sm mb-4 leading-relaxed">
-                Monday to Saturday, 9 AM – 7 PM — hamare solar experts ready hain.
+                Monday to Saturday, 9 AM – 7 PM — our solar experts are ready to help you.
               </p>
               <Link aria-label="Call us" href="tel:+919991777218"
                 className="inline-flex items-center gap-2 bg-black text-green-400 font-bold px-5 py-3 rounded-xl hover:bg-gray-900 transition-all">
@@ -78,8 +78,8 @@ export const FreeConsultation: React.FC = () => {
 
             <div className="grid grid-cols-3 gap-3">
               {[
-                { icon: FiCalendar, title: "Same Day", desc: "Response milti hai" },
-                { icon: FiPhone, title: "Free Call", desc: "Koi charge nahi" },
+                { icon: FiCalendar, title: "Same Day", desc: "Response guaranteed" },
+                { icon: FiPhone, title: "Free Call", desc: "No charges at all" },
                 { icon: FiCheckCircle, title: "No Pressure", desc: "Zero obligation" },
               ].map(({ icon: Icon, title, desc }) => (
                 <div key={title} className="bg-white border border-gray-100 rounded-2xl p-4 text-center shadow-sm hover:shadow-md hover:border-yellow-200 transition-all">

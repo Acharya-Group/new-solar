@@ -44,11 +44,11 @@ export const Contact: React.FC = () => {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-12">
-          <SectionBadge text="Hum Se Baat Karo" />
+          <SectionBadge text="Get in Touch" />
           <Heading level="h2" align="center" gradient>Contact Us</Heading>
           <SubHeading align="center" className="mt-3 max-w-xl mx-auto">
-            Koi bhi sawaal ho — <span className="text-green-600 font-semibold">hum yahan hain.</span>{" "}
-            Form bharo ya seedha call karo.
+            Have any questions? <span className="text-green-600 font-semibold">We are right here.</span>{" "}
+            Fill the form or call us directly.
           </SubHeading>
         </div>
 
@@ -59,36 +59,36 @@ export const Contact: React.FC = () => {
             <h3 className="text-gray-900 font-bold text-xl mb-6">Send Us a Message</h3>
             <form onSubmit={handleSubmit} className="flex flex-col gap-4">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <input className={inputClass} placeholder="Aapka Naam *" value={form.name} onChange={(e) => setForm({ ...form, name: e.target.value })} required />
+                <input className={inputClass} placeholder="Your Name *" value={form.name} onChange={(e) => setForm({ ...form, name: e.target.value })} required />
                 <input className={inputClass} placeholder="Phone Number *" value={form.phone} onChange={(e) => setForm({ ...form, phone: e.target.value })} required />
               </div>
               <input type="email" className={inputClass} placeholder="Email Address" value={form.email} onChange={(e) => setForm({ ...form, email: e.target.value })} />
-              <select aria-label="Select your state" className={inputClass} value={form.service} onChange={(e) => setForm({ ...form, service: e.target.value })}>
-                <option value="">Service Select Karo</option>
+              <select aria-label="Select your service" className={inputClass} value={form.service} onChange={(e) => setForm({ ...form, service: e.target.value })}>
+                <option value="">Select a Service</option>
                 <option value="on-grid">On-Grid System</option>
                 <option value="off-grid">Off-Grid System</option>
                 <option value="hybrid">Hybrid System</option>
                 <option value="subsidy">PM Subsidy Help</option>
                 <option value="maintenance">Maintenance</option>
               </select>
-              <textarea className={`${inputClass} resize-none`} rows={4} placeholder="Aapka message ya sawaal..." value={form.message} onChange={(e) => setForm({ ...form, message: e.target.value })} />
+              <textarea className={`${inputClass} resize-none`} rows={4} placeholder="Your message or question..." value={form.message} onChange={(e) => setForm({ ...form, message: e.target.value })} />
 
               <button aria-label="Send message" type="submit" disabled={loading}
                 className="w-full inline-flex items-center justify-center gap-2 bg-gradient-to-r from-green-400 to-blue-500 text-white font-bold py-3.5 rounded-xl hover:scale-[1.02] transition-all disabled:opacity-50 shadow-lg shadow-green-200">
                 <FiSend size={18} />
-                {loading ? "Bhej rahe hain..." : "Message Bhejo"}
+                {loading ? "Sending..." : "Send Message"}
               </button>
 
-              {status === "success" && <p className="text-green-600 text-sm text-center">✅ Message mil gaya! Hum jald contact karenge.</p>}
-              {status === "error" && <p className="text-red-500 text-sm text-center">❌ Kuch error aaya. Dobara try karo.</p>}
+              {status === "success" && <p className="text-green-600 text-sm text-center">✅ Message received! We will get back to you shortly.</p>}
+              {status === "error" && <p className="text-red-500 text-sm text-center">❌ Something went wrong. Please try again.</p>}
             </form>
           </div>
 
           {/* RIGHT — Info */}
           <div className="flex flex-col gap-5">
             <div className="bg-gradient-to-br from-green-400 to-blue-500 rounded-3xl p-6">
-              <h3 className="text-white font-bold text-xl mb-1">Seedha Baat Karo</h3>
-              <p className="text-white/70 text-sm mb-4">Form se zyada fast — call ya WhatsApp karo.</p>
+              <h3 className="text-white font-bold text-xl mb-1">Talk to Us Directly</h3>
+              <p className="text-white/70 text-sm mb-4">Faster than the form — just call or WhatsApp us.</p>
               <div className="flex flex-col sm:flex-row gap-3">
                 <Link aria-label="Call us" href="tel:+919991777219"
                   className="flex-1 inline-flex items-center justify-center gap-2 bg-black text-green-500 font-bold px-4 py-3 rounded-xl hover:bg-gray-900 transition-all">

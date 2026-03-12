@@ -113,17 +113,17 @@ export const Footer: React.FC = () => {
             <span className="text-2xl">🇮🇳</span>
             <div>
               <p className="text-white font-bold text-sm">PM Surya Ghar Yojana</p>
-              <p className="text-white/60 text-xs">₹78,000 tak subsidy — hum poori help karte hain</p>
+              <p className="text-white/60 text-xs">Get up to ₹78,000 in subsidy — we help you through the entire process</p>
             </div>
           </div>
           <Link href="/contact" className="bg-green-400 text-white text-xs font-bold px-4 py-2 rounded-xl hover:bg-green-300 transition-all whitespace-nowrap flex-shrink-0">
-            Subsidy Apply Karo →
+            Apply for Subsidy →
           </Link>
         </div>
 
         {/* Bottom bar */}
         <div className="border-t border-white/15 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3">
-          <p className="text-white/40 text-center text-xs">© {year} Neo Solar. All rights reserved. | India Ka #1 Trusted Solar Company</p>
+          <p className="text-white/40 text-center text-xs">© {year} Neo Solar. All rights reserved. | India's #1 Trusted Solar Company</p>
           <div className="flex gap-5">
             <Link href="/terms-and-conditions" className="text-white/40 hover:text-white text-xs transition-colors">Terms & Conditions</Link>
             <Link href="/privacy-policy" className="text-white/40 hover:text-white text-xs transition-colors">Privacy Policy</Link>

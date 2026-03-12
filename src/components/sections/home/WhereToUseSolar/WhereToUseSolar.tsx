@@ -6,12 +6,12 @@ import { FiHome, FiBriefcase, FiTruck, FiDroplet, FiBook, FiZap } from "react-ic
 import SectionBadge from "@/components/common/SectionBadge/SectionBadge";
 
 const useCases = [
-  { icon: FiHome, title: "Residential", subtitle: "Ghar ke liye", desc: "Apne ghar ki chhat pe solar lagao aur bijli bill zero karo. 3kW–10kW systems best hain.", tag: "Most Popular", tagColor: "bg-yellow-500", color: "from-yellow-400 to-orange-400", bg: "bg-yellow-50", border: "border-yellow-200", savings: "₹4,000–₹12,000/month" },
-  { icon: FiBriefcase, title: "Commercial", subtitle: "Office & Shop", desc: "Apni dukaan ya office ka bijli kharcha 80% tak kam karo. ROI 3 saal mein.", tag: "Best ROI", tagColor: "bg-blue-500", color: "from-blue-400 to-cyan-400", bg: "bg-blue-50", border: "border-blue-200", savings: "₹20,000–₹80,000/month" },
-  { icon: FiZap, title: "Industrial", subtitle: "Factory & Plant", desc: "Heavy machinery ke liye high-capacity solar systems. 100kW se 1MW tak.", tag: "High Capacity", tagColor: "bg-purple-500", color: "from-purple-400 to-violet-500", bg: "bg-purple-50", border: "border-purple-200", savings: "₹1L–₹10L/month" },
-  { icon: FiBook, title: "Educational", subtitle: "School & College", desc: "Institutions ke liye special solar packages — subsidized rates pe.", tag: "Subsidized", tagColor: "bg-green-500", color: "from-green-400 to-emerald-500", bg: "bg-green-50", border: "border-green-200", savings: "₹15,000–₹50,000/month" },
-  { icon: FiDroplet, title: "Agriculture", subtitle: "Khet & Pump", desc: "Solar water pumps aur irrigation systems — kisan ke liye best investment.", tag: "Kisan Special", tagColor: "bg-teal-500", color: "from-teal-400 to-cyan-400", bg: "bg-teal-50", border: "border-teal-200", savings: "₹5,000–₹25,000/month" },
-  { icon: FiTruck, title: "EV Charging", subtitle: "Electric Vehicles", desc: "Apna solar EV charging station banao — ghar pe free charging har roz.", tag: "Future Ready", tagColor: "bg-rose-500", color: "from-rose-400 to-pink-500", bg: "bg-rose-50", border: "border-rose-200", savings: "₹3,000–₹8,000/month" },
+  { icon: FiHome, title: "Residential", subtitle: "For Your Home", desc: "Install solar on your rooftop and bring your electricity bill to zero. 3kW–10kW systems work best for homes.", tag: "Most Popular", tagColor: "bg-yellow-500", color: "from-yellow-400 to-orange-400", bg: "bg-yellow-50", border: "border-yellow-200", savings: "₹4,000–₹12,000/month" },
+  { icon: FiBriefcase, title: "Commercial", subtitle: "Office & Shop", desc: "Cut your shop or office electricity costs by up to 80%. Get your full return on investment in just 3 years.", tag: "Best ROI", tagColor: "bg-blue-500", color: "from-blue-400 to-cyan-400", bg: "bg-blue-50", border: "border-blue-200", savings: "₹20,000–₹80,000/month" },
+  { icon: FiZap, title: "Industrial", subtitle: "Factory & Plant", desc: "High-capacity solar systems built for heavy machinery. Available from 100kW all the way up to 1MW.", tag: "High Capacity", tagColor: "bg-purple-500", color: "from-purple-400 to-violet-500", bg: "bg-purple-50", border: "border-purple-200", savings: "₹1L–₹10L/month" },
+  { icon: FiBook, title: "Educational", subtitle: "School & College", desc: "Special solar packages for schools and colleges — available at subsidized rates for institutions.", tag: "Subsidized", tagColor: "bg-green-500", color: "from-green-400 to-emerald-500", bg: "bg-green-50", border: "border-green-200", savings: "₹15,000–₹50,000/month" },
+  { icon: FiDroplet, title: "Agriculture", subtitle: "Farm & Water Pump", desc: "Solar water pumps and irrigation systems — the best investment a farmer can make today.", tag: "Farmer Special", tagColor: "bg-teal-500", color: "from-teal-400 to-cyan-400", bg: "bg-teal-50", border: "border-teal-200", savings: "₹5,000–₹25,000/month" },
+  { icon: FiTruck, title: "EV Charging", subtitle: "Electric Vehicles", desc: "Set up your own solar EV charging station at home — charge your vehicle for free every single day.", tag: "Future Ready", tagColor: "bg-rose-500", color: "from-rose-400 to-pink-500", bg: "bg-rose-50", border: "border-rose-200", savings: "₹3,000–₹8,000/month" },
 ];
 
 export const WhereToUseSolar: React.FC = () => {
@@ -22,12 +22,12 @@ export const WhereToUseSolar: React.FC = () => {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-12">
-           <SectionBadge text="Kahan Kahan Use Hota Hai" />
+          <SectionBadge text="Where Can Solar Be Used?" />
           <Heading level="h2" align="center" gradient>Where To Use Solar?</Heading>
           <SubHeading align="center" className="mt-3 max-w-2xl mx-auto">
-            Ghar se factory tak —{" "}
-            <span className="text-yellow-600 font-semibold">har jagah solar possible hai.</span>{" "}
-            Apni zarurat ke hisaab se system choose karo.
+            From homes to factories —{" "}
+            <span className="text-yellow-600 font-semibold">solar works everywhere.</span>{" "}
+            Choose the right system based on your needs.
           </SubHeading>
         </div>
 
@@ -56,7 +56,7 @@ export const WhereToUseSolar: React.FC = () => {
         </div>
 
         <div className="mt-10 text-center">
-          <Button aria-label="Request quote for your use case" href="/contact" variant="primary" size="lg">Apne Use Case Ke Liye Quote Lo →</Button>
+          <Button aria-label="Request quote for your use case" href="/contact" variant="primary" size="lg">Get a Quote for Your Use Case →</Button>
         </div>
       </div>
     </section>

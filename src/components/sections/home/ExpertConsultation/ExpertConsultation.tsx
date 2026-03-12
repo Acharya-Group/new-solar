@@ -20,11 +20,11 @@ export const ExpertConsultation: React.FC = () => {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-12">
-          <SectionBadge text="Hamare Experts Se Baat Karo" />
+          <SectionBadge text="Talk to Our Experts" />
           <Heading level="h2" align="center" gradient>Talk To Our Experts</Heading>
           <SubHeading align="center" className="mt-3 max-w-xl mx-auto">
-            Certified solar engineers jo{" "}
-            <span className="text-yellow-600 font-semibold">aapki har query ka jawab</span> denge — free mein.
+            Certified solar engineers who will{" "}
+            <span className="text-yellow-600 font-semibold">answer every question you have</span> — completely free.
           </SubHeading>
         </div>
 
@@ -65,7 +65,7 @@ export const ExpertConsultation: React.FC = () => {
         {/* Bottom CTA */}
         <div className="bg-gradient-to-r from-green-400 to-blue-500 rounded-3xl p-8 flex flex-col md:flex-row items-center justify-between gap-6">
           <div>
-            <h3 className="text-2xl font-bold text-white mb-1">Abhi Expert Se Baat Karo</h3>
+            <h3 className="text-2xl font-bold text-white mb-1">Talk to an Expert Right Now</h3>
             <p className="text-white/70 text-sm">Monday–Saturday · 9AM–7PM · Free Consultation</p>
           </div>
           <div className="flex gap-3 flex-shrink-0 flex-wrap">

@@ -7,14 +7,14 @@ import { FiPlus, FiMinus } from "react-icons/fi";
 import SectionBadge from "@/components/common/SectionBadge/SectionBadge";
 
 const faqs = [
-  { q: "Solar lagwane mein kitna kharcha aata hai?", a: "3 kW On-Grid system ₹55,000–₹90,000 mein aata hai. PM Surya Ghar subsidy ke baad ₹78,000 tak discount milta hai — matlab 3 kW system almost free ho jaata hai eligible customers ke liye." },
-  { q: "PM Surya Ghar Yojana subsidy kaise milegi?", a: "Hum poori process mein help karte hain — form fill karna, documents submit karna, inspection karwana sab hum karte hain. Subsidy seedha aapke bank account mein aati hai 30–60 din mein." },
-  { q: "Kitne saal mein investment wapis aayega?", a: "On-Grid system ka payback period 3–4 saal hai. Subsidy ke baad 2–3 saal bhi ho sakta hai. System 25 saal chalta hai — matlab 20+ saal free bijli milti hai." },
-  { q: "Power cut mein solar kaam karega?", a: "On-Grid system mein nahi karega. Off-Grid aur Hybrid system mein battery backup hoti hai — power cut mein bhi bijli milti rahegi. Hum aapki zarurat ke hisaab se best system suggest karenge." },
-  { q: "Maintenance kitni baar karni padti hai?", a: "Saaal mein ek baar professional cleaning aur inspection kaafi hai. Panels pe koi moving parts nahi hote — isliye breakdown ka risk almost zero hai. Hum free annual maintenance dete hain pehle saal." },
-  { q: "Kya flat roof pe bhi solar lag sakta hai?", a: "Bilkul lag sakta hai! Flat roof pe adjustable mounting structure use hoti hai jo optimal angle pe panels set karti hai. Har type ki roof pe — RCC, tin, tiles — solar installation possible hai." },
-  { q: "Net metering kya hota hai?", a: "Net metering mein aap extra bijli grid ko bechte hain. Jab aapka solar zyada bijli banata hai toh meter ulta chalta hai — mahine ke end mein sirf net difference pay karna padta hai ya credit milta hai." },
-  { q: "Installation mein kitna waqt lagta hai?", a: "Survey se lekar installation tak sirf 7 din. Installation khud sirf 1 din mein complete ho jaati hai. Hamaari MNRE certified team fast aur professional hai — koi mess nahi, koi delay nahi." },
+  { q: "How much does it cost to install solar?", a: "A 3 kW On-Grid system costs between ₹55,000–₹90,000. After the PM Surya Ghar subsidy of up to ₹78,000, eligible customers can get a 3 kW system for almost free." },
+  { q: "How do I get the PM Surya Ghar Yojana subsidy?", a: "We help you through the entire process — filling the form, submitting documents, and arranging the inspection. The subsidy is credited directly to your bank account within 30–60 days." },
+  { q: "How many years will it take to get my investment back?", a: "An On-Grid system has a payback period of 3–4 years. After subsidy it can be as low as 2–3 years. The system runs for 25 years — meaning you get 20+ years of free electricity." },
+  { q: "Will solar work during a power cut?", a: "An On-Grid system will not work during a power cut. Off-Grid and Hybrid systems have battery backup — so you get electricity even when there is no grid power. We will suggest the best system based on your needs." },
+  { q: "How often does the system need maintenance?", a: "Professional cleaning and inspection once a year is enough. Panels have no moving parts — so the risk of breakdown is almost zero. We provide free annual maintenance in the first year." },
+  { q: "Can solar be installed on a flat roof?", a: "Absolutely! Flat roofs use adjustable mounting structures that set the panels at the optimal angle. Solar installation is possible on every type of roof — RCC, tin, or tiles." },
+  { q: "What is net metering?", a: "With net metering you can sell your extra electricity back to the grid. When your solar generates more than you use, the meter runs backwards — at the end of the month you either pay only the net difference or receive a credit." },
+  { q: "How long does the installation take?", a: "From survey to installation, the entire process takes just 7 days. The actual installation itself is completed in just 1 day. Our MNRE certified team is fast and professional — no mess, no delays." },
 ];
 
 export const FAQ: React.FC = () => {
@@ -26,11 +26,11 @@ export const FAQ: React.FC = () => {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-12">
-          <SectionBadge text="Aksar Pooche Jaane Wale Sawaal" />
+          <SectionBadge text="Frequently Asked Questions" />
           <Heading level="h2" align="center" gradient>Frequently Asked Questions</Heading>
           <SubHeading align="center" className="mt-3 max-w-xl mx-auto">
-            Solar ke baare mein koi bhi sawaal ho —{" "}
-            <span className="text-green-600 font-semibold">yahan jawab milega.</span>
+            Have any questions about solar?{" "}
+            <span className="text-green-600 font-semibold">You will find all the answers right here.</span>
           </SubHeading>
         </div>
 
@@ -57,9 +57,9 @@ export const FAQ: React.FC = () => {
         </div>
 
         <div className="mt-10 text-center">
-          <p className="text-gray-400 text-sm mb-4">Aur koi sawaal hai? Hum se seedha poochho.</p>
+          <p className="text-gray-400 text-sm mb-4">Have more questions? Ask us directly.</p>
           <div className="flex justify-center gap-3">
-            <Button aria-label="Chat on WhatsApp" href="https://wa.me/919991777218" variant="primary" size="md">WhatsApp Karo</Button>
+            <Button aria-label="Chat on WhatsApp" href="https://wa.me/919991777218" variant="primary" size="md">Chat on WhatsApp</Button>
             <Button aria-label="Contact us" href="/contact" variant="outline" size="md">Contact Us</Button>
           </div>
         </div>
