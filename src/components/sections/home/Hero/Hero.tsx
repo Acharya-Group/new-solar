@@ -522,7 +522,7 @@ export const Hero: React.FC = () => {
                   <p className="text-4xl font-bold bg-gradient-to-r from-blue-500 to-green-500 bg-clip-text text-transparent">
                     ₹78,000
                   </p>
-                  <p className="text-xs text-gray-500 mt-1">PM SGMBY</p>
+                  <p className="text-xs text-gray-500 mt-1">PM-SGMBY</p>
                 </div>
 
                 {/* Subsidy breakdown */}
