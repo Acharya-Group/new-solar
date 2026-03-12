@@ -8,7 +8,7 @@ import { FiArrowDown, FiSun, FiZap, FiShield, FiCheckCircle } from "react-icons/
 import Link from "next/link";
 
 const typewriterWords = [
-  "Solar is for Houses",
+  "Solar is for Home",
   "Solar is for Hospitals",
   "Solar is for Schools",
   "Solar is for Colleges",
@@ -24,7 +24,7 @@ const stats = [
 const subsidyPoints = [
   "1-2 kW pe ₹30,000 subsidy",
   "3 kW pe ₹78,000 subsidy",
-  "3kW se upar ₹78,000 fixed",
+  "3kW se upar ₹78,000",
   "300 unit/month FREE bijli",
 ];
 
@@ -442,11 +442,10 @@ export const Hero: React.FC = () => {
             {/* Badge */}
             <div className="inline-flex items-center gap-2 bg-green-400/20 border border-green-400/50 text-green-700 lg:text-white px-4 py-2 rounded-full text-sm font-semibold shadow-sm backdrop-blur-sm">
               <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
-              India Ka #1 Trusted Solar Company
+              India’s Most Trusted Solar Company 
             </div>
-
             {/* Heading + Typewriter */}
-            <Heading level="h1" align="center">Neo Solar Se</Heading>
+            <Heading level="h1" align="center">Neo Solar</Heading>
             <div className="flex flex-col gap-1">
               <div className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight tracking-tight min-h-[1.3em]">
                 <span className="bg-gradient-to-r from-green-500 to-blue-500 bg-clip-text text-transparent">
@@ -460,14 +459,13 @@ export const Hero: React.FC = () => {
             <p
               className="max-w-m !text-xl !text-white [text-shadow:1px_1px_0_green,-1px_1px_0_green,1px_-1px_0_green,-1px_-1px_0_green,3px_3px_6px_rgba(0,0,0,0.35)]"
             >
-              Premium solar panels, expert installation aur{" "}
-              25 saal ki warranty ke saath apna bijli bill 90% tak kam karo.
+              Premium solar panels, expert installation, and a 25-year warranty — reduce your electricity bill by up to 90%.
             </p>
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row items-center lg:items-start gap-3 mt-1">
               <Button aria-label="Request free consultation" href="/contact" variant="primary" size="lg">
-                Free Consultation Lo
+                Free Consultation 
               </Button>
               <Link
                 aria-label="Explore our products"
@@ -484,13 +482,13 @@ export const Hero: React.FC = () => {
                 className="inline-flex items-center gap-2 bg-green-500 text-white hover:bg-green-600 px-7 py-4 rounded-xl font-semibold transition-all duration-300 hover:scale-105 shadow-lg"
               >
                 <FaWhatsapp size={20} />
-                WhatsApp Karo
+                Connect via WhatsApp
               </Link>
             </div>
 
             {/* Trust badges */}
             <div className="flex flex-wrap items-center justify-center lg:justify-start gap-2 mt-1">
-              {["✅ Free Site Survey", "✅ EMI Available", "✅ Net Metering Help", "✅ After-Sales Support"].map((item) => (
+              {["✅ Free Site Survey", "✅ Finance / EMI", "✅ Net Metering Help", "✅ After-Sales Support"].map((item) => (
                 <span key={item} className="text-xs text-gray-500 bg-white/90 border border-gray-200 px-3 py-1.5 rounded-full shadow-sm">
                   {item}
                 </span>
@@ -509,7 +507,7 @@ export const Hero: React.FC = () => {
                     🇮🇳
                   </div>
                   <div>
-                    <p className="text-white/80 text-xs font-medium uppercase tracking-wide">Government Scheme</p>
+                    <p className="text-white/80 text-xs font-medium uppercase tracking-wide">Government Subsidy Scheme</p>
                     <h2 className="text-white font-bold text-lg leading-tight">PM Surya Ghar Yojana</h2>
                   </div>
                 </div>
@@ -524,7 +522,7 @@ export const Hero: React.FC = () => {
                   <p className="text-4xl font-bold bg-gradient-to-r from-blue-500 to-green-500 bg-clip-text text-transparent">
                     ₹78,000
                   </p>
-                  <p className="text-xs text-gray-500 mt-1">Central Government Se Direct</p>
+                  <p className="text-xs text-gray-500 mt-1">PM SGMBY</p>
                 </div>
 
                 {/* Subsidy breakdown */}
@@ -542,17 +540,17 @@ export const Hero: React.FC = () => {
                   <div className="text-2xl">⚡</div>
                   <div>
                     <p className="text-sm font-bold text-green-700">300 Units FREE Har Mahine</p>
-                    <p className="text-xs text-green-700">Net Metering se extra units becho bhi</p>
+                    <p className="text-xs text-green-700">Sell Extra Units Through Net Metering</p>
                   </div>
                 </div>
 
                 {/* CTA */}
                 <Button aria-label="Apply for subsidy" href="/contact" variant="primary" size="md" fullWidth>
-                  Subsidy Ke Liye Apply Karo →
+                Apply For Subsidy →
                 </Button>
 
                 <p className="text-[11px] text-gray-400 text-center">
-                  Hum aapki poori application process mein help karenge
+                 Complete guidance for a fast and easy application.
                 </p>
               </div>
             </div>

@@ -24,16 +24,14 @@ export const NeoBenefits: React.FC = () => {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-12">
-                              <SectionBadge text="Neo Solar Kyun Choose Karein?" />
-
+          <SectionBadge text="Neo Solar Kyun Choose Karein?" />
           <Heading level="h2" align="center" gradient>Why Choose Neo Solar?</Heading>
           <SubHeading align="center" className="mt-3 max-w-2xl mx-auto">
             Sirf panels nahi — hum dete hain{" "}
-            <span className="text-green-600 font-semibold">complete solar experience</span>{" "}
+            <span className="text-green-600 font-semibold">complete solar experience</span>
             survey se lekar 25 saal ki service tak.
           </SubHeading>
         </div>
-
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
           {benefits.map(({ icon: Icon, title, desc, color, bg, iconColor }, i) => (
             <div key={i} className="group relative bg-white border-2 border-gray-100 rounded-3xl p-5 hover:shadow-xl hover:-translate-y-2 hover:border-green-200 transition-all duration-300 overflow-hidden">

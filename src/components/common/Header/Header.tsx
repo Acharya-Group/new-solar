@@ -86,7 +86,7 @@ export const Header: React.FC = () => {
           {/* Desktop CTA */}
           <div className="hidden lg:flex items-center gap-3">
             <Button aria-label="Open solar calculator" href="/solar-calculator" variant="outline" size="sm">
-              Calculator
+             Solar Calculator
             </Button>
 
             <Button aria-label="Request free quote" href="/contact" variant="primary" size="sm">

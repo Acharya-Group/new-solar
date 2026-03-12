@@ -8,16 +8,15 @@ import Link from "next/link";
 import SectionBadge from "@/components/common/SectionBadge/SectionBadge";
 
 const stats = [
-  { icon: FiThumbsUp, value: 98, suffix: "%", label: "Customer Satisfaction", desc: "Har customer khush hai", color: "from-yellow-400 to-orange-400", bg: "bg-yellow-50", border: "border-yellow-200", iconColor: "text-yellow-500" },
-  { icon: FaSolarPanel, value: 500, suffix: "+", label: "Successful Installations", desc: "Ghar aur office dono mein", color: "from-blue-400 to-cyan-400", bg: "bg-blue-50", border: "border-blue-200", iconColor: "text-blue-500" },
-  { icon: FiUsers, value: 450, suffix: "+", label: "Happy Families", desc: "Bijli bill se azaad", color: "from-green-400 to-emerald-400", bg: "bg-green-50", border: "border-green-200", iconColor: "text-green-500" },
-  { icon: FiAward, value: 10, suffix: "+ Yr", label: "Industry Experience", desc: "Daskon saal ka bharosa", color: "from-purple-400 to-violet-400", bg: "bg-purple-50", border: "border-purple-200", iconColor: "text-purple-500" },
-  { icon: FiZap, value: 99, suffix: "%", label: "On-Time Delivery", desc: "Koi delay nahi", color: "from-orange-400 to-red-400", bg: "bg-orange-50", border: "border-orange-200", iconColor: "text-orange-500" },
-  { icon: FiShield, value: 100, suffix: "%", label: "Warranty Honored", desc: "25 saal — kabhi na tooti", color: "from-teal-400 to-cyan-400", bg: "bg-teal-50", border: "border-teal-200", iconColor: "text-teal-500" },
-  { icon: FiTrendingUp, value: 90, suffix: "%", label: "Bill Reduction", desc: "Average bijli bachat", color: "from-pink-400 to-rose-400", bg: "bg-pink-50", border: "border-pink-200", iconColor: "text-pink-500" },
-  { icon: FiStar, value: 4.9, suffix: "/5", label: "Google Rating", desc: "500+ verified reviews", color: "from-amber-400 to-yellow-400", bg: "bg-amber-50", border: "border-amber-200", iconColor: "text-amber-500" },
+  { icon: FiThumbsUp, value: 98, suffix: "%", label: "Customer Satisfaction", desc: "Every customer is happy", color: "from-yellow-400 to-orange-400", bg: "bg-yellow-50", border: "border-yellow-200", iconColor: "text-yellow-500" },
+  { icon: FaSolarPanel, value: 500, suffix: "+", label: "Successful Installations", desc: "For homes and offices", color: "from-blue-400 to-cyan-400", bg: "bg-blue-50", border: "border-blue-200", iconColor: "text-blue-500" },
+  { icon: FiUsers, value: 450, suffix: "+", label: "Happy Families", desc: "Saving on electricity bills", color: "from-green-400 to-emerald-400", bg: "bg-green-50", border: "border-green-200", iconColor: "text-green-500" },
+  { icon: FiAward, value: 10, suffix: "+ Yr", label: "Industry Experience", desc: "Years of trusted service", color: "from-purple-400 to-violet-400", bg: "bg-purple-50", border: "border-purple-200", iconColor: "text-purple-500" },
+  { icon: FiZap, value: 99, suffix: "%", label: "On-Time Delivery", desc: "No delays in work", color: "from-orange-400 to-red-400", bg: "bg-orange-50", border: "border-orange-200", iconColor: "text-orange-500" },
+  { icon: FiShield, value: 100, suffix: "%", label: "Warranty Honored", desc: "25 years strong warranty", color: "from-teal-400 to-cyan-400", bg: "bg-teal-50", border: "border-teal-200", iconColor: "text-teal-500" },
+  { icon: FiTrendingUp, value: 90, suffix: "%", label: "Bill Reduction", desc: "Average electricity savings", color: "from-pink-400 to-rose-400", bg: "bg-pink-50", border: "border-pink-200", iconColor: "text-pink-500" },
+  { icon: FiStar, value: 4.9, suffix: "/5", label: "Google Rating", desc: "500+ real customer reviews", color: "from-amber-400 to-yellow-400", bg: "bg-amber-50", border: "border-amber-200", iconColor: "text-amber-500" },
 ];
-
 const Counter: React.FC<{ value: number; suffix: string; started: boolean }> = ({ value, suffix, started }) => {
   const [count, setCount] = useState(0);
   useEffect(() => {
@@ -84,12 +83,12 @@ export const SuccessRate: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
 
         <div className="text-center mb-12">
-          <SectionBadge text="Hamare Numbers Bolte Hain" />
+          <SectionBadge text="Trusted by Thousands" />
 
-          <Heading level="h2" align="center" gradient>Our Success Rate</Heading>
+          <Heading level="h2" align="center" gradient>Results That Speak</Heading>
           <SubHeading align="center" className="mt-3 max-w-2xl mx-auto">
-            Sirf baatein nahi — yeh hain hamare{" "}
-            <span className="text-green-600 font-semibold">asli numbers</span> jo hamare kaam ki quality bayan karte hain.
+            Numbers
+            <span className="text-green-600 font-semibold"> that show</span> our growth.
           </SubHeading>
         </div>
 
@@ -123,16 +122,16 @@ export const SuccessRate: React.FC = () => {
 
         <div className="mt-12 bg-gradient-to-r from-green-400 to-blue-500 rounded-3xl p-8 flex flex-col md:flex-row items-center justify-between gap-6 shadow-xl shadow-green-200">
           <div>
-            <h3 className="text-2xl font-bold text-white mb-1">Aap Bhi In Numbers Ka Hissa Bano</h3>
-            <p className="text-black/70 text-sm">Free consultation lo aur apna solar journey shuru karo aaj hi.</p>
+            <h3 className="text-2xl font-bold text-white mb-1">Power Your Home with Nature’s Energy</h3>
+            <p className="text-black/70 text-sm">Get a free consultation and start your solar journey today.</p>
           </div>
           <div className="flex gap-3 flex-shrink-0">
             <Link aria-label="Chat with us on WhatsApp" href="https://wa.me/919991777218" target="_blank" rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-black text-green-400 font-bold px-6 py-3 rounded-xl hover:bg-gray-900 transition-all hover:scale-105">
-              WhatsApp Karo
+              WhatsApp Support 
             </Link>
             <Link aria-label="Request a free quote" href="/contact" className="inline-flex items-center gap-2 bg-white text-black font-bold px-6 py-3 rounded-xl hover:bg-gray-50 transition-all hover:scale-105 shadow">
-              Free Quote Lo →
+              Free Quote →
             </Link>
           </div>
         </div>

@@ -17,17 +17,16 @@ export const navItems: NavItem[] = [
     ],
   },
   { label: "Projects", href: "/projects" },
-  { label: "Gallery", href: "/gallery" },
-  { label: "Solar Calculator", href: "/solar-calculator" },
+  { label: "Products", href: "/products" },
   { label: "FAQ", href: "/faq" },
-  { label: "Contact", href: "/contact" },
+  { label: "Contact Us", href: "/contact" },
 ];
 
 export const footerLinks = {
   company: [
     { label: "About Us", href: "/about" },
     { label: "Projects", href: "/projects" },
-    { label: "Gallery", href: "/gallery" },
+
     { label: "Terms & Conditions", href: "/terms-and-conditions" },
   ],
   services: [
