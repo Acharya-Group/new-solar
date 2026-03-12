@@ -36,9 +36,9 @@ export const About: React.FC = () => {
             
 
             <Heading level="h2" align="left" color="text-gray-900">
-              Innovation Aur Efficiency Ka{" "}
+              Solar EPC Solutions
               <span className="bg-gradient-to-r from-green-500 to-emerald-500 bg-clip-text text-transparent">
-                Sahi Combination
+                <br />provider in india
               </span>
             </Heading>
 
