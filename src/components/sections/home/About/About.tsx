@@ -68,14 +68,11 @@ export const About: React.FC = () => {
                 </div>
               ))}
             </div>
-
-
             <div className="flex gap-3 mt-2">
               <Button aria-label="Request free consultation" href="/contact" variant="primary" size="md">Free Consultation</Button>
               <Button aria-label="View our projects" href="/projects" variant="outline" size="md">Our Projects →</Button>
             </div>
           </div>
-
           {/* RIGHT */}
           <div className="flex flex-col gap-5">
             {/* Mission Card */}

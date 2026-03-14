@@ -8,7 +8,7 @@ export const siteConfig = {
     phone: process.env.NEXT_PUBLIC_PHONE || "+91 99917-77218",
     email: process.env.NEXT_PUBLIC_EMAIL || "neosolarco@gmail.com",
     whatsapp: process.env.NEXT_PUBLIC_WHATSAPP || "919991777218",
-    address: "Plot 42, Solar Park, Sector 18, Hisar, Haryana - 125001",
+    address: "Plot No. 01, Near Blessing Marriage Palace, Hisar-125001 (Haryana), India",
   },
   social: {
     facebook: "https://facebook.com/neosolar",
