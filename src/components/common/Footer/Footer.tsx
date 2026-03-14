@@ -50,7 +50,7 @@ export const Footer: React.FC = () => {
             </p>
 
             <div className="flex flex-wrap gap-2 mb-6">
-              {["🇮🇳 Make in India", "⚡ MNRE Approved", "✅ ISO Certified"].map((b) => (
+              {["⚡ MNRE Approved"].map((b) => (
                 <span key={b} className="bg-white/10 text-white/80 text-xs font-medium px-3 py-1 rounded-full border border-white/20">{b}</span>
               ))}
             </div>
@@ -110,7 +110,6 @@ export const Footer: React.FC = () => {
         {/* PM Surya Ghar banner */}
         <div className="bg-gradient-to-r from-green-400/20 to-blue-400/20 border border-green-400/30 rounded-2xl px-5 py-4 flex flex-col sm:flex-row items-center justify-between gap-3 mb-8">
           <div className="flex items-center gap-3">
-            <span className="text-2xl">🇮🇳</span>
             <div>
               <p className="text-white font-bold text-sm">PM Surya Ghar Yojana</p>
               <p className="text-white/60 text-xs">Get up to ₹78,000 in subsidy — we help you through the entire process</p>
