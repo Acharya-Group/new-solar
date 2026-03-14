@@ -37,8 +37,8 @@ const reasons = [
   },
   {
     icon: FiZap,
-    title: "Fast Installation",
-    desc: "Our trained team installs your complete solar system in just 1–2 days with zero disruption to your home.",
+    title: "Smooth & Quick Installation",
+    desc: "Fast, reliable solar installation done by our certified team.",
     color: "from-teal-400 to-cyan-400",
     bg: "bg-teal-50",
     border: "border-teal-200",
@@ -46,8 +46,8 @@ const reasons = [
   },
   {
     icon: FiCreditCard,
-    title: "Easy EMI Options",
-    desc: "Go solar without any financial stress — flexible EMI plans that fit your budget starting at just ₹0 down.",
+    title: "Finance / EMI Options",
+    desc: "Switch to solar easily with flexible EMI and finance options available.",
     color: "from-pink-400 to-rose-500",
     bg: "bg-pink-50",
     border: "border-pink-200",
@@ -55,7 +55,7 @@ const reasons = [
   },
   {
     icon: FiCheckCircle,
-    title: "Full Process Support",
+    title: "Subsidy Process Made Easy",
     desc: "From subsidy application to final switch-on — we guide you through every single step without any hassle.",
     color: "from-indigo-400 to-blue-500",
     bg: "bg-indigo-50",

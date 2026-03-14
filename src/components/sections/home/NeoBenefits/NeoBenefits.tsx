@@ -25,11 +25,9 @@ export const NeoBenefits: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-12">
           <SectionBadge text="Why Choose Neo Solar?" />
-          <Heading level="h2" align="center" gradient>Why Choose Neo Solar?</Heading>
+          <Heading level="h2" align="center" gradient>Why Go with Neo Solar</Heading>
           <SubHeading align="center" className="mt-3 max-w-2xl mx-auto">
-            Not just panels — we deliver a{" "}
-            <span className="text-green-600 font-semibold">complete solar experience</span>
-            {" "}from the first survey all the way to 25 years of service.
+         Your solar journey made simple with Your trusted partner for the entire solar journey.
           </SubHeading>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
