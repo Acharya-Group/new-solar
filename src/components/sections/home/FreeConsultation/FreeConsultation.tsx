@@ -67,7 +67,7 @@ export const FreeConsultation: React.FC = () => {
               <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -translate-y-8 translate-x-8" />
               <FiSun size={40} className="text-black/40 mb-4" />
               <h3 className="font-bold text-2xl text-white mb-2">Call Us Today</h3>
-              <p className="text-black/70 text-sm mb-4 leading-relaxed">
+              <p className="text-white text-sm mb-4 leading-relaxed">
                 Monday to Saturday, 9 AM – 7 PM — our solar experts are ready to help you.
               </p>
               <Link aria-label="Call us" href="tel:+919991777218"
