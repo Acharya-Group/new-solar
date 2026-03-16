@@ -44,7 +44,7 @@ export const Contact: React.FC = () => {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-12">
-          <SectionBadge text="Get in Touch" />
+          <SectionBadge text="Send Us a Message" />
           <Heading level="h2" align="center" gradient>Contact Us</Heading>
           <SubHeading align="center" className="mt-3 max-w-xl mx-auto">
             Have any questions? <span className="text-green-600 font-semibold">We are right here.</span>{" "}

@@ -1,8 +1,8 @@
 export const siteConfig = {
   name: "Neo Solar",
-  tagline: "India Ka #1 Trusted Solar Energy Company",
+  tagline: "India’s Most Trusted Solar Company",
   description:
-    "Neo Solar provides premium solar energy solutions for homes and businesses across India. Expert installation, top-brand panels, PM Surya Ghar subsidy assistance, aur 25 saal ki warranty.",
+    "Neo Solar provides premium solar energy solutions for homes and businesses across India. Expert installation, top-brand panels, PM Surya Ghar subsidy assistance, 25 year's warranty.",
   url: process.env.NEXT_PUBLIC_SITE_URL || "https://neosolar.in",
   contact: {
     phone: process.env.NEXT_PUBLIC_PHONE || "+91 99917-77218",
