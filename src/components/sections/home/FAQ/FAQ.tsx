@@ -26,7 +26,7 @@ export const FAQ: React.FC = () => {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-12">
-          <SectionBadge text="Frequently Asked Questions" />
+          <SectionBadge text="FAQ's" />
           <Heading level="h2" align="center" gradient>Frequently Asked Questions</Heading>
           <SubHeading align="center" className="mt-3 max-w-xl mx-auto">
             Have any questions about solar?{" "}

@@ -29,7 +29,7 @@ export const FreeConsultation: React.FC = () => {
           <div className="flex flex-col gap-6">
 
             <div>
-              <SectionBadge text="Completely Free — No Charges" />
+              <SectionBadge text="Get a Free Consultation" />
             </div>
 
             <Heading level="h2" align="left" color="text-gray-900">

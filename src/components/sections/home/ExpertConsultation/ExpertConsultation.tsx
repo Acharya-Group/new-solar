@@ -20,7 +20,7 @@ export const ExpertConsultation: React.FC = () => {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-12">
-          <SectionBadge text="Talk to Our Experts" />
+          <SectionBadge text="Get Expert Advice" />
           <Heading level="h2" align="center" gradient>Talk To Our Experts</Heading>
           <SubHeading align="center" className="mt-3 max-w-xl mx-auto">
             Certified solar engineers who will{" "}

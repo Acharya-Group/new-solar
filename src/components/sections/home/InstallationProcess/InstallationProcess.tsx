@@ -22,11 +22,11 @@ export const InstallationProcess: React.FC = () => {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-14">
-          <SectionBadge text="Done in Just 7 Days" />
-          <Heading level="h2" align="center" gradient>Installation Process</Heading>
+          <SectionBadge text="Quick Installation" />
+          <Heading level="h2" align="center" gradient>Solar Installation Process</Heading>
           <SubHeading align="center" className="mt-3 max-w-2xl mx-auto">
             From your first call to{" "}
-            <span className="text-yellow-600 font-semibold">your solar system going live</span> — the whole process takes just 7 days.
+            <span className="text-yellow-600 font-semibold">your solar system going live</span> — the whole process takes Up to 7 days.
           </SubHeading>
         </div>
 

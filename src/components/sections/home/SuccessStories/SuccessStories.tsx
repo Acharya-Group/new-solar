@@ -70,7 +70,7 @@ export const SuccessStories: React.FC = () => {
 
         {/* Header */}
         <div className="text-center mb-14">
-          <SectionBadge text="Real Customer Stories" />
+          <SectionBadge text="Trusted by Our Customers" />
           <Heading level="h2" align="center" gradient>Our Happy Customers</Heading>
           <SubHeading align="center" className="mt-3 max-w-xl mx-auto">
             500+ families who now pay{" "}
