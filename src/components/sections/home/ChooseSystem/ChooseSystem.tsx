@@ -3,11 +3,42 @@ import React from "react";
 import { Heading } from "@/components/common/Heading";
 import { SubHeading } from "@/components/common/SubHeading";
 import { Button } from "@/components/common/Button";
-import { FiCheck, FiX, FiSun, FiBattery, FiZap } from "react-icons/fi";
+import { FiCheck, FiX, FiSun, FiBattery, FiZap, FiActivity, FiSettings, FiBatteryCharging } from "react-icons/fi";
 import SectionBadge from "@/components/common/SectionBadge/SectionBadge";
+
+const services = [
+  {
+    id: "net-metering",
+    icon: FiActivity,
+    title: "Net Metering",
+    desc: "Sell your excess solar energy back to the grid and earn credits on your electricity bill.",
+    badge: "Earn From Solar",
+    badgeColor: "text-green-600",
+    features: ["Grid export setup", "Meter installation", "Bill credit system", "Government approved"],
+  },
+  {
+    id: "inverter-installation",
+    icon: FiSettings,
+    title: "Solar Inverter Installation",
+    desc: "Professional installation of high-efficiency solar inverters for optimal power conversion.",
+    badge: "98% Efficiency",
+    badgeColor: "text-green-600",
+    features: ["Hybrid inverter setup", "Grid-tie installation", "1kW–50kW solutions", "Expert configuration"],
+  },
+  {
+    id: "battery-installation",
+    icon: FiBatteryCharging,
+    title: "Solar Battery Installation",
+    desc: "Professional installation of high-quality solar batteries for reliable energy storage.",
+    badge: "24/7 Backup",
+    badgeColor: "text-green-600",
+    features: ["Lithium & lead acid batteries", "Backup power design", "Professional setup", "Warranty support"],
+  },
+];
 
 const systems = [
   {
+    id: "on-grid",
     icon: FiZap, type: "On-Grid", hindi: "Connected to the Grid",
     desc: "Directly connected to the electricity grid — use solar power during the day and draw from the grid at night. Sell your extra units back.",
     color: "from-blue-500 to-cyan-500", bg: "bg-blue-50", border: "border-blue-200",
@@ -18,6 +49,7 @@ const systems = [
     bestFor: "Areas with fewer power cuts",
   },
   {
+    id: "off-grid",
     icon: FiBattery, type: "Off-Grid", hindi: "Completely Independent",
     desc: "Fully independent from the grid — get 24/7 electricity with battery backup. Best choice for remote and rural areas.",
     color: "from-green-500 to-emerald-500", bg: "bg-green-50", border: "border-green-200",
@@ -28,6 +60,7 @@ const systems = [
     bestFor: "Areas with no grid or frequent power cuts",
   },
   {
+    id: "hybrid",
     icon: FiSun, type: "Hybrid", hindi: "Best of Both Worlds",
     desc: "Combines the benefits of on-grid and off-grid — enjoy battery backup and net metering both. The most complete solar solution.",
     color: "from-yellow-500 to-orange-500", bg: "bg-yellow-50", border: "border-yellow-200",
@@ -47,20 +80,24 @@ export const ChooseSystem: React.FC = () => {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
 
-        {/* Header */}
+        {/* Services Header */}
         <div className="text-center mb-12">
-          <SectionBadge text="Choose Your System" />
-          <Heading level="h2" align="center" gradient>Which System Is Right For You?</Heading>
+          <SectionBadge text="Our Services" />
+          <Heading level="h2" align="center" gradient>What We Offer</Heading>
           <SubHeading align="center" className="mt-3 max-w-2xl mx-auto">
-            There are three types of solar systems —{" "}
-            <span className="text-yellow-600 font-semibold">pick the best one for your needs and budget.</span>
+            Complete solar solutions —{" "}
+            <span className="text-yellow-600 font-semibold">from installation to maintenance, we've got you covered.</span>
           </SubHeading>
         </div>
 
-        {/* 3 Full Width Cards */}
+        {/* 3 Full Width System Cards */}
         <div className="flex flex-col gap-6">
           {systems.map((s, i) => (
-            <div key={i} className={`bg-white border-2 ${s.border} rounded-3xl p-6 md:p-8 shadow-md hover:shadow-xl transition-all duration-300`}>
+            <div
+              key={i}
+              id={s.id}
+              className={`bg-white border-2 ${s.border} rounded-3xl p-6 md:p-8 shadow-md hover:shadow-xl transition-all duration-300 scroll-mt-24`}
+            >
               <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 lg:gap-8">
 
                 {/* Col 1 — Info */}
@@ -146,6 +183,41 @@ export const ChooseSystem: React.FC = () => {
                   </div>
                 </div>
 
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Services Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-16">
+          {services.map((s, i) => (
+            <div
+              key={i}
+              id={s.id}
+              className="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col gap-4 scroll-mt-24"
+            >
+              <div className="flex items-start gap-3">
+                <div className="w-10 h-10 bg-gray-50 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <s.icon size={20} className="text-gray-700" />
+                </div>
+                <div>
+                  <h3 className="text-gray-900 font-bold text-base leading-tight">{s.title}</h3>
+                  <p className="text-gray-500 text-sm mt-1 leading-relaxed">{s.desc}</p>
+                </div>
+              </div>
+
+              <p className={`text-sm font-semibold ${s.badgeColor}`}>{s.badge}</p>
+
+              <ul className="flex flex-col gap-1.5">
+                {s.features.map((f) => (
+                  <li key={f} className="flex items-center gap-2 text-sm text-gray-600">
+                    <FiCheck size={13} className="text-green-500 flex-shrink-0" />{f}
+                  </li>
+                ))}
+              </ul>
+
+              <div className="flex gap-2 mt-auto pt-2">
+                <Button href="/services" variant="primary" size="sm" className="flex-1">Learn More →</Button>
               </div>
             </div>
           ))}

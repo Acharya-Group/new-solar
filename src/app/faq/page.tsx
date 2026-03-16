@@ -1,3 +1,4 @@
+import { FAQ } from "@/components/sections/home";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -8,7 +9,7 @@ export const metadata: Metadata = {
 export default function FaqPage() {
   return (
     <main className="min-h-screen">
-      {/* TODO: Add Faq page content */}
+      <FAQ/>
     </main>
   );
 }

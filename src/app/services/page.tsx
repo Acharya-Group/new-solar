@@ -1,3 +1,4 @@
+import { ChooseSystem } from "@/components/sections/home";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -8,7 +9,7 @@ export const metadata: Metadata = {
 export default function ServicesPage() {
   return (
     <main className="min-h-screen">
-      {/* TODO: Add Services page content */}
+      <ChooseSystem/>
     </main>
   );
 }

@@ -1,3 +1,4 @@
+import { Projects } from "@/components/sections/home";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -8,7 +9,7 @@ export const metadata: Metadata = {
 export default function ProjectsPage() {
   return (
     <main className="min-h-screen">
-      {/* TODO: Add Projects page content */}
+      <Projects/>
     </main>
   );
 }
