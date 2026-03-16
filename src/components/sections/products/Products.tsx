@@ -4,15 +4,16 @@ import { usePathname } from "next/navigation";
 import { Heading } from "@/components/common/Heading";
 import { SubHeading } from "@/components/common/SubHeading";
 import { Button } from "@/components/common/Button";
-import { FiSun, FiZap, FiBattery, FiArrowRight, FiStar, FiShield, FiCheck } from "react-icons/fi";
+import { FiSun, FiZap, FiBattery, FiArrowRight, FiStar, FiShield, FiCheck, FiAnchor } from "react-icons/fi";
 import SectionBadge from "@/components/common/SectionBadge/SectionBadge";
 
-type Category = "panels" | "inverters" | "batteries";
+type Category = "panels" | "inverters" | "batteries" | "earthing";
 
 const categories = [
   { id: "panels" as Category, label: "Solar Panels", icon: FiSun, activeBg: "bg-yellow-500" },
   { id: "inverters" as Category, label: "Inverters", icon: FiZap, activeBg: "bg-blue-500" },
   { id: "batteries" as Category, label: "Batteries", icon: FiBattery, activeBg: "bg-green-500" },
+  { id: "earthing" as Category, label: "Earthing Material", icon: FiAnchor, activeBg: "bg-orange-500" },
 ];
 
 const products: Record<Category, {
@@ -83,28 +84,52 @@ const products: Record<Category, {
       badgeBg: "bg-emerald-50 border-emerald-200", gradient: "from-emerald-500 to-cyan-500", iconColor: "text-emerald-500",
     },
   ],
+  earthing: [
+    {
+      name: "GI Earthing Plate 600x600mm", tag: "Most Used", tagColor: "text-orange-600",
+      price: "₹2,800", oldPrice: "₹3,500", wattage: "GI", efficiency: "Low Resistance", warranty: "10 Years",
+      highlights: ["600x600x3mm GI plate", "Suitable for all soil types", "IS 3043 compliant", "Easy installation"],
+      badge: "🔥 Best Seller", badgeBg: "bg-orange-50 border-orange-200",
+      gradient: "from-orange-400 to-amber-400", iconColor: "text-orange-500",
+    },
+    {
+      name: "Copper Earthing Plate 600x600mm", tag: "Premium", tagColor: "text-amber-600",
+      price: "₹8,500", wattage: "Copper", efficiency: "Ultra Low Resistance", warranty: "15 Years",
+      highlights: ["99.9% pure copper", "Corrosion resistant", "Best conductivity", "Long service life"],
+      badge: "⭐ Premium", badgeBg: "bg-amber-50 border-amber-200",
+      gradient: "from-amber-400 to-orange-500", iconColor: "text-amber-500",
+    },
+    {
+      name: "Chemical Earthing Kit 3m", tag: "Modern Solution", tagColor: "text-red-600",
+      price: "₹4,200", wattage: "Chemical", efficiency: "Very Low Resistance", warranty: "10 Years",
+      highlights: ["Maintenance-free design", "Works in dry soil", "Includes backfill compound", "IS 3043 certified"],
+      badgeBg: "bg-red-50 border-red-200",
+      gradient: "from-red-400 to-orange-400", iconColor: "text-red-500",
+    },
+  ],
 };
 
 const specLabels: Record<Category, [string, string, string]> = {
-  panels:    ["Wattage", "Efficiency", "Warranty"],
-  inverters: ["Capacity", "Efficiency", "Warranty"],
-  batteries: ["Capacity", "Round-trip Eff.", "Warranty"],
+  panels:    ["Wattage",   "Efficiency",        "Warranty"],
+  inverters: ["Capacity",  "Efficiency",        "Warranty"],
+  batteries: ["Capacity",  "Round-trip Eff.",   "Warranty"],
+  earthing:  ["Material",  "Resistance",        "Warranty"],
 };
 
 const hashToCategory: Record<string, Category> = {
-  "#panels": "panels",
-  "#inverters": "inverters",
-  "#batteries": "batteries",
+  "#panels":   "panels",
+  "#inverters":"inverters",
+  "#batteries":"batteries",
+  "#earthing": "earthing",
 };
 
 const Products = () => {
   const [active, setActive] = useState<Category>("panels");
-  const pathname = usePathname(); // re-renders when Next.js navigates
+  const pathname = usePathname();
 
   const list = products[active];
   const specs = specLabels[active];
 
-  // Reads hash and activates correct tab + scrolls
   const syncFromHash = useCallback(() => {
     const hash = window.location.hash;
     const matched = hashToCategory[hash];
@@ -116,15 +141,11 @@ const Products = () => {
     }
   }, []);
 
-  // Runs on:
-  // 1. First load
-  // 2. Every time pathname changes (Next.js client navigation)
-  // 3. hashchange (browser back/forward)
   useEffect(() => {
     syncFromHash();
     window.addEventListener("hashchange", syncFromHash);
     return () => window.removeEventListener("hashchange", syncFromHash);
-  }, [pathname, syncFromHash]); // <-- pathname dependency is the key fix
+  }, [pathname, syncFromHash]);
 
   return (
     <section id="products" className="py-16 md:py-24 bg-gradient-to-br from-slate-50 via-white to-gray-100 relative overflow-hidden">
@@ -145,7 +166,7 @@ const Products = () => {
 
         {/* Category Tabs */}
         <div id="products-tabs" className="flex justify-center mb-10 scroll-mt-24">
-          <div className="inline-flex bg-white border border-gray-200 rounded-2xl p-1.5 shadow-sm gap-1">
+          <div className="inline-flex flex-wrap justify-center bg-white border border-gray-200 rounded-2xl p-1.5 shadow-sm gap-1">
             {categories.map((cat) => (
               <button
                 key={cat.id}
@@ -175,6 +196,7 @@ const Products = () => {
                   {active === "panels"    && <FiSun     size={32} className="text-white/90" />}
                   {active === "inverters" && <FiZap     size={32} className="text-white/90" />}
                   {active === "batteries" && <FiBattery size={32} className="text-white/90" />}
+                  {active === "earthing"  && <FiAnchor  size={32} className="text-white/90" />}
                   <div>
                     <p className="text-white/70 text-xs">{product.tag}</p>
                     <p className="text-white font-bold text-base leading-tight">{product.name}</p>
