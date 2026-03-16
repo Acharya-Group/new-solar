@@ -24,19 +24,24 @@ export const pageSEO = {
     description: "Contact Neo Solar for a free consultation. Call, WhatsApp or visit our office. Expert solar advisors ready to help.",
     keywords: ["contact neo solar", "solar consultation India", "free solar quote"],
   },
-  gallery: {
-    title: "Solar Installation Gallery – Before & After Photos | Neo Solar",
-    description: "Browse Neo Solar's installation gallery. See real before and after photos of solar panel installations across India.",
-    keywords: ["solar gallery India", "solar installation photos", "rooftop solar photos"],
-  },
+ products: {
+  title: "Solar Products – Panels, Inverters, Batteries & Earthing | Neo Solar",
+  description: "Explore Neo Solar's range of solar products including panels, inverters, batteries, and earthing materials. Best prices with warranty guaranteed.",
+  keywords: ["solar panels India", "solar inverters", "solar batteries", "earthing material", "buy solar products"],
+},
   "solar-calculator": {
     title: "Solar Savings Calculator – Calculate Your Solar ROI | Neo Solar",
     description: "Use Neo Solar's free calculator to estimate your solar savings, payback period, and ROI. Enter your monthly bill and get instant results.",
     keywords: ["solar calculator India", "solar savings calculator", "solar ROI calculator"],
   },
-  "terms-and-conditions": {
-    title: "Terms & Conditions | Neo Solar India",
-    description: "Read Neo Solar's terms and conditions for solar panel purchases, installations, warranties, and after-sales service.",
-    keywords: ["neo solar terms conditions", "solar warranty terms"],
-  },
+"terms-and-conditions": {
+  title: "Terms & Conditions | Neo Solar India",
+  description: "Read Neo Solar's terms and conditions for solar panel purchases, installations, warranties, and after-sales service.",
+  keywords: ["neo solar terms conditions", "solar warranty terms"],
+},
+"privacy-policy": {
+  title: "Privacy Policy | Neo Solar India",
+  description: "Learn how Neo Solar collects, uses, and protects your personal information. Your privacy is our priority.",
+  keywords: ["neo solar privacy policy", "solar company data policy", "neo solar personal information"],
+},
 };
