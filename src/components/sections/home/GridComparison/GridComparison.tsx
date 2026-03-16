@@ -6,7 +6,7 @@ import { FiCheck, FiX, FiMinus } from "react-icons/fi";
 import SectionBadge from "@/components/common/SectionBadge/SectionBadge";
 
 const rows = [
-  { feature: "Electricity Bill", ongrid: "90% Less", offgrid: "Zero", hybrid: "Zero", solar: true },
+  { feature: "Electricity Bill", ongrid: "Zero", offgrid: "Zero", hybrid: "Zero", solar: true },
   { feature: "Power Cut Protection", ongrid: false, offgrid: true, hybrid: true, solar: null },
   { feature: "Net Metering (Sell Units)", ongrid: true, offgrid: false, hybrid: true, solar: null },
   { feature: "Battery Backup", ongrid: false, offgrid: true, hybrid: true, solar: null },
