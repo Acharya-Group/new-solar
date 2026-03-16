@@ -1,3 +1,4 @@
+import CommonHero from "@/components/common/CommonHero/CommonHero";
 import Products from "@/components/sections/products/Products";
 import type { Metadata } from "next";
 
@@ -10,6 +11,7 @@ export const metadata: Metadata = {
 export default function ProductsPage() {
   return (
     <main className="min-h-screen">
+        <CommonHero/>
       <Products/>
     </main>
   );

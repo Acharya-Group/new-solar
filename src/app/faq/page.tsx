@@ -1,3 +1,4 @@
+import CommonHero from "@/components/common/CommonHero/CommonHero";
 import { FAQ } from "@/components/sections/home";
 import type { Metadata } from "next";
 
@@ -9,6 +10,7 @@ export const metadata: Metadata = {
 export default function FaqPage() {
   return (
     <main className="min-h-screen">
+      <CommonHero/>
       <FAQ/>
     </main>
   );

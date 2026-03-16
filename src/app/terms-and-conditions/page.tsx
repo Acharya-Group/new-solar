@@ -1,3 +1,4 @@
+import CommonHero from "@/components/common/CommonHero/CommonHero";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -8,7 +9,7 @@ export const metadata: Metadata = {
 export default function TermsAndConditionsPage() {
   return (
     <main className="min-h-screen">
-      {/* TODO: Add TermsAndConditions page content */}
+      <CommonHero/>
     </main>
   );
 }

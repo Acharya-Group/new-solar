@@ -1,3 +1,4 @@
+import CommonHero from "@/components/common/CommonHero/CommonHero";
 import { ChooseSystem } from "@/components/sections/home";
 import type { Metadata } from "next";
 
@@ -9,6 +10,7 @@ export const metadata: Metadata = {
 export default function ServicesPage() {
   return (
     <main className="min-h-screen">
+      <CommonHero/>
       <ChooseSystem/>
     </main>
   );
