@@ -11,7 +11,7 @@ const rows = [
   { feature: "Net Metering (Sell Units)", ongrid: true, offgrid: false, hybrid: true, solar: null },
   { feature: "Battery Backup", ongrid: false, offgrid: true, hybrid: true, solar: null },
   { feature: "PM Subsidy Eligible", ongrid: true, offgrid: false, hybrid: true, solar: null },
-  { feature: "Installation Cost", ongrid: "Low", offgrid: "High", hybrid: "Highest", solar: null },
+  // { feature: "Installation Cost", ongrid: "Low", offgrid: "High", hybrid: "Highest", solar: null },
   { feature: "Maintenance", ongrid: "Minimal", offgrid: "Medium", hybrid: "Medium", solar: null },
   { feature: "Best For", ongrid: "Urban Areas", offgrid: "Rural/Remote", hybrid: "Everyone", solar: null },
 ];
@@ -37,9 +37,9 @@ export const GridComparison: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-12">
           <SectionBadge text="Side-by-Side Comparison" />
-          <Heading level="h2" align="center" gradient>System Comparison</Heading>
+          <Heading level="h2" align="center" gradient>Compare Solar Systems</Heading>
           <SubHeading align="center" className="mt-3 max-w-xl mx-auto">
-            Compare all three systems and <span className="text-green-600 font-semibold">find your best match.</span>
+            Choose the perfect solar system based on your needs and budget. 
           </SubHeading>
         </div>
 
