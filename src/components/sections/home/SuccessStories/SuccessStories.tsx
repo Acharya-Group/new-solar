@@ -94,8 +94,8 @@ export const SuccessStories: React.FC = () => {
               {stories.map((st, i) => (
                 <button aria-label={`View story from ${st.name}`} key={i} onClick={() => go(i)}
                   className={`flex-shrink-0 flex items-center gap-3 rounded-2xl p-4 text-left border-2 transition-all duration-300 w-52 lg:w-full ${i === current
-                      ? "bg-white border-yellow-300 shadow-lg scale-[1.02]"
-                      : "bg-white/70 border-gray-100 hover:border-yellow-200 hover:shadow-md"
+                    ? "bg-white border-yellow-300 shadow-lg scale-[1.02]"
+                    : "bg-white/70 border-gray-100 hover:border-yellow-200 hover:shadow-md"
                     }`}>
                   <span className="text-3xl flex-shrink-0">{st.avatar}</span>
                   <div className="min-w-0 flex-1">
@@ -181,8 +181,17 @@ export const SuccessStories: React.FC = () => {
             <div className="flex items-center justify-between mt-5">
               <div className="flex gap-1.5 flex-wrap">
                 {stories.map((_, i) => (
-                  <button key={i} onClick={() => go(i)}
-                    className={`rounded-full transition-all duration-300 ${i === current ? "w-7 h-2.5 bg-yellow-500" : "w-2.5 h-2.5 bg-gray-300 hover:bg-yellow-400"}`} />
+                  <button
+                    key={i}
+                    onClick={() => go(i)}
+                    aria-label={`Go to slide ${i + 1}`}
+                    className="w-11 h-11 flex items-center justify-center"
+                  >
+                    <span
+                      className={`rounded-full transition-all duration-300 ${i === current ? "w-7 h-2.5 bg-yellow-500" : "w-2.5 h-2.5 bg-gray-300 hover:bg-yellow-400"
+                        }`}
+                    />
+                  </button>
                 ))}
               </div>
               <div className="flex gap-2">

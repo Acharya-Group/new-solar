@@ -245,10 +245,10 @@ const Products = () => {
                 </div>
 
                 <div className="flex gap-2 mt-auto">
-                  <Button href="/contact" variant="primary" size="sm" className="flex-1">
+                  <Button aria-label="Get quote" href="/contact" variant="primary" size="sm" className="flex-1">
                     Get Quote <FiArrowRight size={13} className="inline ml-1" />
                   </Button>
-                  <Button href="/products" variant="outline" size="sm" className="flex-1">
+                  <Button aria-label="Learn more" href="/products" variant="outline" size="sm" className="flex-1">
                     Learn More
                   </Button>
                 </div>
@@ -259,7 +259,7 @@ const Products = () => {
 
         <div className="mt-12 text-center">
           <p className="text-gray-500 text-sm mb-4">Looking for a complete system package?</p>
-          <Button href="/contact" variant="primary" size="md">
+          <Button aria-label="Get a free consultation" href="/contact" variant="primary" size="md">
             Get a Free Consultation →
           </Button>
         </div>
