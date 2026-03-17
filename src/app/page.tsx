@@ -20,20 +20,20 @@ export default function HomePage() {
   return (
     <>
     <Hero />                
-      <SuccessRate />           
       <About />              
       <WhySolar />         
       <WhereToUseSolar />      
       <ChooseSystem />        
       <GridComparison />       
       <CalculateSavings />     
+      <FreeConsultation />     
       <NeoBenefits />         
       <InstallationProcess />   
       <Projects />            
       <SuccessStories />        
       <FAQ />                 
-      <FreeConsultation />     
       <ExpertConsultation />  
+      <SuccessRate />           
       <Contact />   
     </>
   );
