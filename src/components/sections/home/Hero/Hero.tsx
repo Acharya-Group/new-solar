@@ -10,7 +10,7 @@ import Link from "next/link";
 // ── CONFIG ──────────────────────────────────────────────
 const WORDS = ["Solar is for Home", "Solar is for Hospitals", "Solar is for Schools", "Solar is for Colleges"];
 const BG_IMAGES = [
-  "/images/common/hero-bg.jpg",
+  // "/images/common/hero-bg.jpg",
   "/images/common/hero-bg2.jpg",
   "/images/common/hero-bg3.jpg",
   "/images/common/hero-bg4.jpg",
@@ -46,7 +46,7 @@ const BgSlider: React.FC = () => {
   const goTo = (i: number) => { setPrev(cur); setTransitioning(true); setCur(i); };
 
   return (
-    <div className="absolute inset-0 overflow-hidden hidden lg:block">
+    <div className="absolute inset-0 overflow-hidden">
       {prev !== null && (
         <Image key={`p-${prev}`} src={BG_IMAGES[prev]} alt="" fill priority={prev === 0}
           className="object-cover object-center" sizes="100vw" style={{ zIndex: 1 }} />

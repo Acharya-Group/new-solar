@@ -4,6 +4,7 @@ import { SubHeading } from "@/components/common/SubHeading";
 import { Button } from "@/components/common/Button";
 import { FiHome, FiBriefcase, FiTruck, FiDroplet, FiBook, FiZap } from "react-icons/fi";
 import SectionBadge from "@/components/common/SectionBadge/SectionBadge";
+import Image from "next/image";
 
 const useCases = [
   { icon: FiHome, title: "Residential", subtitle: "For Your Home", desc: "Install solar on your rooftop and bring your electricity bill to zero. 3kW–10kW systems work best for homes.", tag: "Most Popular", tagColor: "bg-yellow-500", color: "from-yellow-400 to-orange-400", bg: "bg-yellow-50", border: "border-yellow-200", savings: "₹4,000–₹12,000/month" },
@@ -21,7 +22,26 @@ export const WhereToUseSolar: React.FC = () => {
       <div className="absolute bottom-0 right-0 w-96 h-96 bg-orange-50 rounded-full blur-3xl pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="text-center mb-12">
+        <div className="text-center mb-12 relative">
+
+          {/* Left solar panel — rotated anticlockwise */}
+          <Image
+            src="/images/common/solar-pannel.png"
+            alt="solar panel"
+            width={90}
+            height={90}
+            className="absolute -left-4 bottom-0 hover:scale-110 transition-all duration-300 rotate-[-25deg] hover:rotate-0 opacity-30 lg:opacity-90"
+          />
+
+          {/* Right solar panel — rotated clockwise */}
+          <Image
+            src="/images/common/solar-pannel.png"
+            alt="solar panel"
+            width={90}
+            height={90}
+            className="absolute -right-4 bottom-0 hover:scale-110 transition-all duration-300 rotate-[25deg] hover:rotate-0 opacity-30 lg:opacity-90"
+          />
+
           <SectionBadge text="Where Can Solar Be Used?" />
           <Heading level="h2" align="center" gradient>Where To Use Solar?</Heading>
           <SubHeading align="center" className="mt-3 max-w-2xl mx-auto">

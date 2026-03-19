@@ -5,6 +5,7 @@ import { Button } from "@/components/common/Button";
 import { FiCheckCircle, FiAward, FiUsers, FiZap, FiSettings, FiTarget, FiEye } from "react-icons/fi";
 import { FaLeaf } from "react-icons/fa";
 import SectionBadge from "@/components/common/SectionBadge/SectionBadge";
+import Image from "next/image";
 
 const features = [
   { icon: FiAward, title: "Expertise & Experience", desc: "10+ saal ka field experience aur 500+ successful installations" },
@@ -28,12 +29,30 @@ export const About: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
 
           {/* LEFT */}
-          <div className="flex flex-col gap-6">
+          <div className="flex flex-col gap-6 relative">
 
-            <div>
-              <SectionBadge text="About Neo Solar" />
+            {/* ✅ Rotating sun — left column ke bg mein */}
+            <div className="absolute inset-0 flex items-center justify-center pointer-events-none select-none overflow-hidden">
+              <Image
+                src="/images/common/about-sun.png"
+                alt=""
+                width={420}
+                height={420}
+                className="opacity-[0.2]"
+                style={{ animation: "spinSlow 15s linear infinite" }}
+              />
             </div>
 
+            <style>{`
+              @keyframes spinSlow {
+                from { transform: rotate(0deg); }
+                to   { transform: rotate(360deg); }
+              }
+            `}</style>
+
+            <div className="relative z-10">
+              <SectionBadge text="About Neo Solar" />
+            </div>
 
             <Heading level="h2" align="left" color="text-gray-900">
               Solar EPC Solutions
@@ -55,7 +74,7 @@ export const About: React.FC = () => {
 
               <p className="text-gray-500 text-sm leading-relaxed border-l-4 border-yellow-400 pl-4 bg-yellow-50/50 py-2 rounded-r-xl">
                 You can
-                <span className="text-orange-700 font-semibold ps-1">reduce your electricity bills by up to 90%</span>
+                <span className="text-orange-700 font-semibold ps-1">make your electricity bill ₹0</span>
                 while contributing to a greener and more sustainable planet.
                 Start your journey toward clean energy and long-term savings today.
               </p>
@@ -73,6 +92,7 @@ export const About: React.FC = () => {
               <Button aria-label="View our projects" href="/projects" variant="outline" size="md">Our Projects →</Button>
             </div>
           </div>
+
           {/* RIGHT */}
           <div className="flex flex-col gap-5">
             {/* Mission Card */}
@@ -88,7 +108,6 @@ export const About: React.FC = () => {
                     <h3 className="font-bold text-white text-lg leading-tight">Our Goal</h3>
                   </div>
                 </div>
-
                 <p className="text-white/80 text-sm leading-relaxed">
                   Our mission is to provide affordable and reliable <b>solar energy solutions</b> for homes and businesses
                   across India, helping people reduce electricity bills and use clean energy.
@@ -100,6 +119,7 @@ export const About: React.FC = () => {
                 </div>
               </div>
             </div>
+
             {/* Vision Card */}
             <div className="relative bg-gradient-to-br from-blue-500 to-cyan-500 rounded-3xl p-6 overflow-hidden">
               <div className="absolute bottom-0 left-0 w-28 h-28 bg-white/10 rounded-full translate-y-8 -translate-x-8" />
@@ -114,12 +134,13 @@ export const About: React.FC = () => {
                   </div>
                 </div>
                 <p className="text-white/80 text-sm leading-relaxed">
-                  Our vision is to become one of India’s most trusted <b>solar energy companies</b> by helping thousands
+                  Our vision is to become one of India's most trusted <b>solar energy companies</b> by helping thousands
                   of homes and businesses switch to clean and renewable power.
                 </p>
               </div>
             </div>
-            {/* Bottom 3 approval badges */}
+
+            {/* Bottom approval badge */}
             <div className="grid grid-cols-1">
               <div className="bg-white border-2 border-blue-200 rounded-2xl px-3 py-3 flex flex-col items-center gap-1.5 hover:shadow-md hover:border-blue-300 transition-all text-center">
                 <span className="text-xl">⚡</span>
@@ -128,6 +149,7 @@ export const About: React.FC = () => {
               </div>
             </div>
           </div>
+
         </div>
       </div>
     </section>
