@@ -57,7 +57,7 @@ const BgSlider: React.FC = () => {
         style={{ zIndex: 2, animation: "bgFade 1.2s ease-in-out forwards" }} />
 
       {/* ✅ Dark overlay — content clearly visible */}
-      <div className="absolute inset-0 bg-black/55" style={{ zIndex: 3 }} />
+      <div className="absolute inset-0 bg-black/80 lg:bg-black/60" style={{ zIndex: 3 }} />
 
       {/* Dot indicators */}
       <div className="absolute bottom-20 left-1/2 -translate-x-1/2 flex gap-2" style={{ zIndex: 10 }}>
