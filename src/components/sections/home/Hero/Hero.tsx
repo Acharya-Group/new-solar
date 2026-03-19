@@ -190,7 +190,7 @@ export const Hero: React.FC = () => {
 
             <Heading level="h1" align="center">Neo Solar</Heading>
 
-            <div className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight min-h-[1.3em]">
+            <div className="text-3xl sm:text-4xl md:text-5xl lg:text-[58px] font-bold leading-tight min-h-[1.3em]">
               <span className="bg-gradient-to-r from-green-400 to-blue-400 bg-clip-text text-transparent">
                 {text}
                 <span className="inline-block w-[3px] h-[0.85em] bg-green-400 ml-1 align-middle animate-pulse" />
@@ -198,7 +198,7 @@ export const Hero: React.FC = () => {
             </div>
 
             <p className="max-w-lg text-xl text-white/90 font-medium drop-shadow-lg">
-              Premium solar panels, expert installation, and a 25-year warranty — reduce your electricity bill by up to 90%.
+              Premium solar panels, expert installation, and a 25-year warranty — make your electricity bill ₹0 every month.
             </p>
 
             <div className="flex flex-col sm:flex-row items-center lg:items-start gap-3 mt-1">
@@ -226,7 +226,6 @@ export const Hero: React.FC = () => {
           <div className="w-full lg:w-[380px] flex-shrink-0">
             <div className="bg-white/95 backdrop-blur-md border border-green-200 rounded-3xl shadow-2xl overflow-hidden">
               <div className="bg-gradient-to-r from-blue-500 to-green-500 px-6 py-5 flex items-center gap-3">
-                <div className="w-12 h-12 bg-white/20 rounded-2xl flex items-center justify-center text-2xl">🇮🇳</div>
                 <div>
                   <p className="text-white/80 text-xs font-medium uppercase tracking-wide">Government Subsidy Scheme</p>
                   <h2 className="text-white font-bold text-lg leading-tight">PM Surya Ghar Yojana</h2>
