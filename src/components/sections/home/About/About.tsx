@@ -38,8 +38,8 @@ export const About: React.FC = () => {
                 alt=""
                 width={420}
                 height={420}
-                className="opacity-[0.2]"
-                style={{ animation: "spinSlow 15s linear infinite" }}
+                className="opacity-[0.1]"
+                style={{ animation: "spinSlow 60s linear infinite" }}
               />
             </div>
 
