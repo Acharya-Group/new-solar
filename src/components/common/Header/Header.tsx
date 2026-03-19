@@ -157,7 +157,7 @@ export const Header: React.FC = () => {
                       className={cn(
                         "overflow-hidden transition-all duration-300",
                         openDropdown === item.href
-                          ? "max-h-40 opacity-100"
+                          ? "max-h-44 opacity-100"
                           : "max-h-0 opacity-0"
                       )}
                     >
