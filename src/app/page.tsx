@@ -19,22 +19,22 @@ import { Contact } from "@/components/sections/home/Contact";
 export default function HomePage() {
   return (
     <>
-    <Hero />                
-      <About />              
-      <WhySolar />         
-      <WhereToUseSolar />      
-      <ChooseSystem />        
-      <GridComparison />       
-      <CalculateSavings />     
-      <FreeConsultation />     
-      <NeoBenefits />         
-      <InstallationProcess />   
-      <Projects />            
-      <SuccessStories />        
-      <FAQ />                 
-      <ExpertConsultation />  
-      <SuccessRate />           
-      <Contact />   
+      <Hero />
+      <About />
+      <WhySolar />
+      <WhereToUseSolar />
+      <ChooseSystem />
+      <GridComparison />
+      <CalculateSavings />
+      <FreeConsultation />
+      <NeoBenefits />
+      <InstallationProcess />
+      <Projects />
+      <SuccessStories />
+      <FAQ />
+      <ExpertConsultation />
+      <SuccessRate />
+      <Contact />
     </>
   );
 }
