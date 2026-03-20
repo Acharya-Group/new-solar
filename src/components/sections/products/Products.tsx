@@ -17,48 +17,95 @@ const categories = [
 ];
 
 const products: Record<Category, {
-  name: string; tag: string; tagColor: string; price: string; oldPrice?: string;
+  name: string; tag: string; tagColor: string; price?: string; oldPrice?: string;
   wattage: string; efficiency: string; warranty: string; highlights: string[];
-  badge?: string; badgeBg: string; gradient: string; iconColor: string;
+  badge?: string; badgeBg: string; gradient: string; iconColor: string; brand?: string;
 }[]> = {
   panels: [
+    // UTL Panels
     {
-      name: "Mono PERC 440W Panel", tag: "Best Seller", tagColor: "text-yellow-600",
-      price: "₹18,500", oldPrice: "₹21,000", wattage: "440W", efficiency: "21.5%", warranty: "25 Years",
-      highlights: ["Anti-reflective coating", "Low light performance", "IP68 rated junction box", "Tier-1 manufacturer"],
-      badge: "🔥 Hot Deal", badgeBg: "bg-yellow-50 border-yellow-200",
-      gradient: "from-yellow-400 to-orange-400", iconColor: "text-yellow-500",
-    },
-    {
-      name: "Bifacial 550W Panel", tag: "Premium", tagColor: "text-orange-600",
-      price: "₹26,000", wattage: "550W", efficiency: "22.8%", warranty: "30 Years",
+      name: "UTL 525W Panel", tag: "Premium", tagColor: "text-orange-600",
+      wattage: "525W", efficiency: "22.5%", warranty: "25 Years",
       highlights: ["Dual-side energy capture", "High wind resistance", "Excellent shading tolerance", "N-type cell technology"],
       badgeBg: "bg-orange-50 border-orange-200", gradient: "from-orange-400 to-red-400", iconColor: "text-orange-500",
+      brand: "UTL",
     },
     {
-      name: "Polycrystalline 330W Panel", tag: "Budget Pick", tagColor: "text-blue-600",
-      price: "₹12,000", wattage: "330W", efficiency: "17.2%", warranty: "20 Years",
-      highlights: ["Cost-effective solution", "Proven technology", "Good thermal coefficient", "Wide availability"],
+      name: "UTL 580W Panel", tag: "Premium", tagColor: "text-orange-600",
+      wattage: "580W", efficiency: "23.1%", warranty: "25 Years",
+      highlights: ["Dual-side energy capture", "High wind resistance", "Excellent shading tolerance", "N-type cell technology"],
+      badgeBg: "bg-orange-50 border-orange-200", gradient: "from-orange-400 to-red-400", iconColor: "text-orange-500",
+      brand: "UTL",
+    },
+    {
+      name: "UTL 590W Panel", tag: "Premium", tagColor: "text-orange-600",
+      wattage: "590W", efficiency: "23.2%", warranty: "25 Years",
+      highlights: ["Dual-side energy capture", "High wind resistance", "Excellent shading tolerance", "N-type cell technology"],
+      badgeBg: "bg-orange-50 border-orange-200", gradient: "from-orange-400 to-red-400", iconColor: "text-orange-500",
+      brand: "UTL",
+    },
+    // Adani Panels
+    {
+      name: "Adani 540W Panel", tag: "Premium", tagColor: "text-blue-600",
+      wattage: "540W", efficiency: "22.6%", warranty: "25 Years",
+      highlights: ["Dual-side energy capture", "High wind resistance", "Excellent shading tolerance", "N-type cell technology"],
       badgeBg: "bg-blue-50 border-blue-200", gradient: "from-blue-400 to-cyan-400", iconColor: "text-blue-500",
+      brand: "Adani",
+    },
+    {
+      name: "Adani 580W Panel", tag: "Premium", tagColor: "text-blue-600",
+      wattage: "580W", efficiency: "23.1%", warranty: "25 Years",
+      highlights: ["Dual-side energy capture", "High wind resistance", "Excellent shading tolerance", "N-type cell technology"],
+      badgeBg: "bg-blue-50 border-blue-200", gradient: "from-blue-400 to-cyan-400", iconColor: "text-blue-500",
+      brand: "Adani",
+    },
+    {
+      name: "Adani 620W Panel", tag: "Premium", tagColor: "text-blue-600",
+      wattage: "620W", efficiency: "23.5%", warranty: "25 Years",
+      highlights: ["Dual-side energy capture", "High wind resistance", "Excellent shading tolerance", "N-type cell technology"],
+      badgeBg: "bg-blue-50 border-blue-200", gradient: "from-blue-400 to-cyan-400", iconColor: "text-blue-500",
+      brand: "Adani",
+    },
+    // Waaree Panels
+    {
+      name: "Waaree 540W Panel", tag: "Premium", tagColor: "text-green-600",
+      wattage: "540W", efficiency: "22.6%", warranty: "25 Years",
+      highlights: ["Dual-side energy capture", "High wind resistance", "Excellent shading tolerance", "N-type cell technology"],
+      badgeBg: "bg-green-50 border-green-200", gradient: "from-green-400 to-emerald-400", iconColor: "text-green-500",
+      brand: "Waaree",
+    },
+    {
+      name: "Waaree 580W Panel", tag: "Premium", tagColor: "text-green-600",
+      wattage: "580W", efficiency: "23.1%", warranty: "25 Years",
+      highlights: ["Dual-side energy capture", "High wind resistance", "Excellent shading tolerance", "N-type cell technology"],
+      badgeBg: "bg-green-50 border-green-200", gradient: "from-green-400 to-emerald-400", iconColor: "text-green-500",
+      brand: "Waaree",
+    },
+    {
+      name: "Waaree 615W Panel", tag: "Premium", tagColor: "text-green-600",
+      wattage: "615W", efficiency: "23.4%", warranty: "25 Years",
+      highlights: ["Dual-side energy capture", "High wind resistance", "Excellent shading tolerance", "N-type cell technology"],
+      badgeBg: "bg-green-50 border-green-200", gradient: "from-green-400 to-emerald-400", iconColor: "text-green-500",
+      brand: "Waaree",
     },
   ],
   inverters: [
     {
       name: "Hybrid Inverter 5kW", tag: "Most Popular", tagColor: "text-blue-600",
-      price: "₹45,000", oldPrice: "₹52,000", wattage: "5000W", efficiency: "98.4%", warranty: "5 Years",
-      highlights: ["Battery + grid compatible", "WiFi monitoring app", "MPPT solar charger", "Anti-islanding protection"],
+      price: "₹52,700", oldPrice: "₹52,000", wattage: "5000W", efficiency: "98.4%", warranty: "5 Years",
+      highlights: ["Battery + grid compatible", "WiFi monitoring app", "rMPPT solar charger", "Anti-islanding protection"],
       badge: "⭐ Top Rated", badgeBg: "bg-blue-50 border-blue-200",
       gradient: "from-blue-500 to-indigo-500", iconColor: "text-blue-500",
     },
     {
       name: "On-Grid Inverter 3kW", tag: "Best Value", tagColor: "text-cyan-600",
-      price: "₹22,000", wattage: "3000W", efficiency: "97.6%", warranty: "5 Years",
+      price: "₹15,600", wattage: "3000W", efficiency: "97.6%", warranty: "5 Years",
       highlights: ["Net metering ready", "Single phase output", "LCD display", "Compact design"],
       badgeBg: "bg-cyan-50 border-cyan-200", gradient: "from-cyan-400 to-blue-400", iconColor: "text-cyan-500",
     },
     {
       name: "Off-Grid Inverter 10kW", tag: "Heavy Duty", tagColor: "text-indigo-600",
-      price: "₹85,000", wattage: "10000W", efficiency: "96.5%", warranty: "7 Years",
+      price: "₹97,000", wattage: "10000W", efficiency: "96.5%", warranty: "5 Years",
       highlights: ["3-phase output", "Parallel operation up to 6 units", "Generator compatible", "Industrial grade"],
       badgeBg: "bg-indigo-50 border-indigo-200", gradient: "from-indigo-500 to-purple-500", iconColor: "text-indigo-500",
     },
@@ -66,45 +113,25 @@ const products: Record<Category, {
   batteries: [
     {
       name: "Lithium LiFePO4 100Ah", tag: "Recommended", tagColor: "text-green-600",
-      price: "₹38,000", oldPrice: "₹44,000", wattage: "5.12kWh", efficiency: "95%", warranty: "10 Years",
+      price: "₹25,000", oldPrice: "₹44,000", wattage: "24v", efficiency: "95%", warranty: "5 Years",
       highlights: ["4000+ charge cycles", "BMS protection built-in", "Fast charging support", "Compact & lightweight"],
       badge: "✅ Best Choice", badgeBg: "bg-green-50 border-green-200",
       gradient: "from-green-500 to-emerald-500", iconColor: "text-green-500",
     },
     {
       name: "Lead Acid Tubular 150Ah", tag: "Budget Friendly", tagColor: "text-teal-600",
-      price: "₹14,500", wattage: "1.8kWh", efficiency: "80%", warranty: "5 Years",
+      price: "₹10,000", wattage: "12v", efficiency: "90%", warranty: "5 Years",
       highlights: ["Low upfront cost", "Widely serviceable", "Proven technology", "Deep discharge resistant"],
       badgeBg: "bg-teal-50 border-teal-200", gradient: "from-teal-400 to-green-400", iconColor: "text-teal-500",
-    },
-    {
-      name: "Lithium NMC 200Ah", tag: "High Capacity", tagColor: "text-emerald-600",
-      price: "₹72,000", wattage: "10.24kWh", efficiency: "97%", warranty: "10 Years",
-      highlights: ["High energy density", "Smart BMS with app", "Stackable design", "IP55 weatherproof"],
-      badgeBg: "bg-emerald-50 border-emerald-200", gradient: "from-emerald-500 to-cyan-500", iconColor: "text-emerald-500",
     },
   ],
   earthing: [
     {
-      name: "GI Earthing Plate 600x600mm", tag: "Most Used", tagColor: "text-orange-600",
-      price: "₹2,800", oldPrice: "₹3,500", wattage: "GI", efficiency: "Low Resistance", warranty: "10 Years",
-      highlights: ["600x600x3mm GI plate", "Suitable for all soil types", "IS 3043 compliant", "Easy installation"],
-      badge: "🔥 Best Seller", badgeBg: "bg-orange-50 border-orange-200",
-      gradient: "from-orange-400 to-amber-400", iconColor: "text-orange-500",
-    },
-    {
-      name: "Copper Earthing Plate 600x600mm", tag: "Premium", tagColor: "text-amber-600",
-      price: "₹8,500", wattage: "Copper", efficiency: "Ultra Low Resistance", warranty: "15 Years",
-      highlights: ["99.9% pure copper", "Corrosion resistant", "Best conductivity", "Long service life"],
+      name: "Earthing Rod/Lightning Arrester/Chemical Bag", tag: "Premium", tagColor: "text-amber-600",
+      price: "₹1,800", wattage: "Copper", efficiency: "Ultra Low Resistance", warranty: "5 Years",
+      highlights: ["Best Quality", "Corrosion resistant", "Best conductivity", "Long service life"],
       badge: "⭐ Premium", badgeBg: "bg-amber-50 border-amber-200",
       gradient: "from-amber-400 to-orange-500", iconColor: "text-amber-500",
-    },
-    {
-      name: "Chemical Earthing Kit 3m", tag: "Modern Solution", tagColor: "text-red-600",
-      price: "₹4,200", wattage: "Chemical", efficiency: "Very Low Resistance", warranty: "10 Years",
-      highlights: ["Maintenance-free design", "Works in dry soil", "Includes backfill compound", "IS 3043 certified"],
-      badgeBg: "bg-red-50 border-red-200",
-      gradient: "from-red-400 to-orange-400", iconColor: "text-red-500",
     },
   ],
 };
@@ -117,18 +144,37 @@ const specLabels: Record<Category, [string, string, string]> = {
 };
 
 const hashToCategory: Record<string, Category> = {
-  "#panels":   "panels",
-  "#inverters":"inverters",
-  "#batteries":"batteries",
-  "#earthing": "earthing",
+  "#panels":    "panels",
+  "#inverters": "inverters",
+  "#batteries": "batteries",
+  "#earthing":  "earthing",
+};
+
+// Brand config for the panels filter pills
+const brandConfig: Record<string, { label: string; activeClass: string; dotClass: string }> = {
+  All:    { label: "All Brands",  activeClass: "bg-gray-800 text-white",        dotClass: "bg-gray-400" },
+  UTL:    { label: "UTL",         activeClass: "bg-orange-500 text-white",      dotClass: "bg-orange-400" },
+  Adani:  { label: "Adani",       activeClass: "bg-blue-500 text-white",        dotClass: "bg-blue-400" },
+  Waaree: { label: "Waaree",      activeClass: "bg-emerald-500 text-white",     dotClass: "bg-emerald-400" },
 };
 
 const Products = () => {
   const [active, setActive] = useState<Category>("panels");
+  const [brandFilter, setBrandFilter] = useState<string>("All");
   const pathname = usePathname();
 
-  const list = products[active];
   const specs = specLabels[active];
+
+  // Reset brand filter when switching away from panels
+  useEffect(() => {
+    if (active !== "panels") setBrandFilter("All");
+  }, [active]);
+
+  const rawList = products[active];
+  const list =
+    active === "panels" && brandFilter !== "All"
+      ? rawList.filter((p) => p.brand === brandFilter)
+      : rawList;
 
   const syncFromHash = useCallback(() => {
     const hash = window.location.hash;
@@ -165,7 +211,7 @@ const Products = () => {
         </div>
 
         {/* Category Tabs */}
-        <div id="products-tabs" className="flex justify-center mb-10 scroll-mt-24">
+        <div id="products-tabs" className="flex justify-center mb-6 scroll-mt-24">
           <div className="inline-flex flex-wrap justify-center bg-white border border-gray-200 rounded-2xl p-1.5 shadow-sm gap-1">
             {categories.map((cat) => (
               <button
@@ -184,13 +230,36 @@ const Products = () => {
           </div>
         </div>
 
+        {/* Brand Filter Pills — only shown for panels */}
+        {active === "panels" && (
+          <div className="flex justify-center mb-8">
+            <div className="inline-flex flex-wrap justify-center gap-2">
+              {Object.entries(brandConfig).map(([brand, cfg]) => (
+                <button
+                  key={brand}
+                  onClick={() => setBrandFilter(brand)}
+                  className={`flex items-center gap-1.5 px-4 py-1.5 rounded-full text-sm font-medium border transition-all duration-200
+                    ${brandFilter === brand
+                      ? `${cfg.activeClass} border-transparent shadow`
+                      : "bg-white text-gray-500 border-gray-200 hover:border-gray-300 hover:text-gray-700"
+                    }`}
+                >
+                  <span className={`w-2 h-2 rounded-full ${brandFilter === brand ? "bg-white/70" : cfg.dotClass}`} />
+                  {cfg.label}
+                </button>
+              ))}
+            </div>
+          </div>
+        )}
+
         {/* Product Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {list.map((product, i) => (
             <div
-              key={`${active}-${i}`}
+              key={`${active}-${brandFilter}-${i}`}
               className={`bg-white border-2 ${product.badgeBg} rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col`}
             >
+              {/* Card Header */}
               <div className={`bg-gradient-to-r ${product.gradient} px-6 py-5 flex items-center justify-between`}>
                 <div className="flex items-center gap-3">
                   {active === "panels"    && <FiSun     size={32} className="text-white/90" />}
@@ -210,14 +279,18 @@ const Products = () => {
               </div>
 
               <div className="p-6 flex flex-col gap-4 flex-1">
-                <div className="flex items-end gap-2">
-                  <span className="text-gray-900 font-bold text-2xl">{product.price}</span>
-                  {product.oldPrice && (
-                    <span className="text-gray-400 text-sm line-through mb-0.5">{product.oldPrice}</span>
-                  )}
-                  <span className="text-gray-400 text-xs mb-0.5">/ unit</span>
-                </div>
 
+                {/* Price row — hidden for panels */}
+                {active !== "panels" && product.price && (
+                  <div className="flex items-end gap-2">
+                    <span className="text-gray-900 font-bold text-2xl">{product.price}</span>
+                    {product.oldPrice && (
+                      <span className="text-gray-400 text-sm line-through mb-0.5">{product.oldPrice}</span>
+                    )}
+                  </div>
+                )}
+
+                {/* Spec grid */}
                 <div className="grid grid-cols-3 gap-2">
                   {[
                     { label: specs[0], value: product.wattage },
@@ -231,6 +304,7 @@ const Products = () => {
                   ))}
                 </div>
 
+                {/* Highlights */}
                 <ul className="flex flex-col gap-1.5">
                   {product.highlights.map((h) => (
                     <li key={h} className="flex items-center gap-2 text-sm text-gray-600">
@@ -239,11 +313,13 @@ const Products = () => {
                   ))}
                 </ul>
 
+                {/* Footer meta */}
                 <div className="flex items-center gap-3 text-xs text-gray-400 border-t border-gray-100 pt-3">
                   <span className="flex items-center gap-1"><FiShield size={12} className="text-green-400" /> Warranty Included</span>
                   <span className="flex items-center gap-1"><FiStar size={12} className="text-yellow-400" /> Top Rated</span>
                 </div>
 
+                {/* Actions */}
                 <div className="flex gap-2 mt-auto">
                   <Button aria-label="Get quote" href="/contact" variant="primary" size="sm" className="flex-1">
                     Get Quote <FiArrowRight size={13} className="inline ml-1" />
