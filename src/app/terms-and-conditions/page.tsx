@@ -96,7 +96,7 @@ const sections = [
     title: "Dispute Resolution & Governing Law",
     content: [
       "These Terms & Conditions shall be governed by and construed in accordance with the laws of India. Any disputes arising out of or in connection with these terms shall first be attempted to be resolved amicably through written notice and good-faith negotiation within 30 days.",
-      "In the event amicable resolution is not achieved, disputes shall be subject to the exclusive jurisdiction of courts in Jaipur, Rajasthan, India.",
+      "In the event amicable resolution is not achieved, disputes shall be subject to the exclusive jurisdiction of courts in Hisar(125001), Haryana, India.",
     ],
   },
   {

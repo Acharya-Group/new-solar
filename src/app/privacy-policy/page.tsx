@@ -36,7 +36,7 @@ const sections = [
     id: "04",
     title: "Finance & EMI Data Handling",
     content: [
-      "For customers availing zero-cost EMI, subsidised loans, or finance options, your financial data including PAN, Aadhaar, income proof, and bank details are shared only with RBI-regulated financial institutions for credit assessment and disbursal purposes. All such sharing is conducted over encrypted, secure channels in compliance with applicable RBI and data protection guidelines.",
+      "For customers availing EMI, subsidised loans, or finance options, your financial data including PAN, Aadhaar, income proof, and bank details are shared only with RBI-regulated financial institutions for credit assessment and disbursal purposes. All such sharing is conducted over encrypted, secure channels in compliance with applicable RBI and data protection guidelines.",
     ],
   },
   {

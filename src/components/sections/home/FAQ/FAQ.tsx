@@ -28,7 +28,7 @@ const faqs = [
   // --- Finance / EMI ---
   {
     q: "Kya bina paise ke bhi solar laga sakte hain? EMI/loan milta hai?",
-    a: "Haan! SBI, Canara Bank, Indian Bank, aur Union Bank jaise banks PM Surya Ghar Yojana ke tahat collateral-free solar loan dete hain. Loan up to ₹6 lakhs, repayment tenure up to 10 saal, aur interest rate 7–8.5% per annum (CIBIL ke hisaab se). EMI aapke monthly electricity bill se kam ho sakti hai — matlab pehle din se saving shuru."
+    a: "Haan! SBI, Canara Bank, Indian Bank, aur Union Bank jaise banks PM Surya Ghar Yojana ke tahat collateral-free solar loan dete hain. Loan up to ₹6 lakhs, repayment tenure up to 10 saal, aur interest rate 6–7% per annum (CIBIL ke hisaab se). EMI aapke monthly electricity bill se kam ho sakti hai — matlab pehle din se saving shuru."
   },
   {
     q: "Loan ke liye kya documents chahiye aur process kitna lamba hai?",
