@@ -43,7 +43,7 @@ export const Header: React.FC = () => {
           
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2">
-           <Image src="/images/common/logo.jpg" alt="Neo Solar Logo" width={150} height={150} className="object-contain" />
+           <Image src="/images/common/logo.jpg" unoptimized alt="Neo Solar Logo" width={150} height={150} className="object-contain" />
           </Link>
 
           {/* Desktop Nav */}

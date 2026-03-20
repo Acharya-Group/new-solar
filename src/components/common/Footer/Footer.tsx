@@ -39,6 +39,7 @@ export const Footer: React.FC = () => {
                   src="/images/common/logo.jpg"
                   alt="Neo Solar Logo"
                   width={120}
+                  unoptimized
                   height={40}
                   className="object-contain h-10 w-auto"
                 />
