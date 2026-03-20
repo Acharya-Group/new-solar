@@ -8,9 +8,9 @@ import Link from "next/link";
 import SectionBadge from "@/components/common/SectionBadge/SectionBadge";
 
 const experts = [
-  { name: "Arjun Mehta", role: "Senior Solar Engineer", exp: "8 Years", emoji: "👨‍💼", speciality: "On-Grid & Net Metering", rating: 4.9, reviews: 120 },
-  { name: "Pooja Sharma", role: "Energy Consultant", exp: "6 Years", emoji: "👩‍💼", speciality: "Residential & Subsidy", rating: 5.0, reviews: 98 },
-  { name: "Ravi Kumar", role: "Technical Lead", exp: "10 Years", emoji: "👨‍🔧", speciality: "Industrial & Hybrid", rating: 4.8, reviews: 145 },
+  { name: "Abhisekh", role: "SolarConsultant", exp: "8 Years", emoji: "👨‍💼", speciality: "On-Grid & Net Metering", rating: 4.9, reviews: 120, contact: "https://wa.me/919991777218" },
+  { name: "Nupur", role: "Solar Consultant", exp: "6 Years", emoji: "👩‍💼", speciality: "Residential & Subsidy", rating: 5.0, reviews: 98, contact: "https://wa.me/919991777219" },
+  { name: "Vijaylakshmi", role: "Solar Consultant", exp: "10 Years", emoji: "👨‍🔧", speciality: "Industrial & Hybrid", rating: 4.8, reviews: 145, contact: "https://wa.me/919991777218" },
 ];
 
 export const ExpertConsultation: React.FC = () => {
@@ -54,7 +54,8 @@ export const ExpertConsultation: React.FC = () => {
                 </div>
               </div>
 
-              <Link aria-label="Chat with expert" href="https://wa.me/919991777218" target="_blank" rel="noopener noreferrer"
+              {/* <Link aria-label="Chat with expert" href="https://wa.me/919991777218" target="_blank" rel="noopener noreferrer" */}
+              <Link aria-label="Chat with expert" href={e.contact} target="_blank" rel="noopener noreferrer"
                 className="w-full inline-flex items-center justify-center gap-2 bg-green-500 text-white text-sm font-bold px-4 py-2.5 rounded-xl hover:bg-green-600 transition-all">
                 <FaWhatsapp size={16} /> Chat Now
               </Link>
