@@ -8,9 +8,9 @@ import Link from "next/link";
 import SectionBadge from "@/components/common/SectionBadge/SectionBadge";
 
 const experts = [
-  { name: "Abhisekh", role: "SolarConsultant", exp: "8 Years", emoji: "👨‍💼", speciality: "On-Grid & Net Metering", rating: 4.9, reviews: 120, contact: "https://wa.me/919991777218" },
+  { name: "Abhisekh", role: "Solar Consultant", exp: "8 Years", emoji: "👨‍💼", speciality: "On-Grid & Net Metering", rating: 4.9, reviews: 120, contact: "https://wa.me/919991777218" },
   { name: "Nupur", role: "Solar Consultant", exp: "6 Years", emoji: "👩‍💼", speciality: "Residential & Subsidy", rating: 5.0, reviews: 98, contact: "https://wa.me/919991777219" },
-  { name: "Vijaylakshmi", role: "Solar Consultant", exp: "10 Years", emoji: "👨‍🔧", speciality: "Industrial & Hybrid", rating: 4.8, reviews: 145, contact: "https://wa.me/919991777218" },
+  { name: "Vijay Lakshmi", role: "Solar Consultant", exp: "10 Years", emoji: "👨‍🔧", speciality: "Industrial & Hybrid", rating: 4.8, reviews: 145, contact: "https://wa.me/919991777218" },
 ];
 
 export const ExpertConsultation: React.FC = () => {
