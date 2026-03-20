@@ -2,7 +2,7 @@ import { Hero } from "@/components/sections/home/Hero";
 import { About } from "@/components/sections/home/About";
 import { WhySolar } from "@/components/sections/home/WhySolar";
 import { CalculateSavings } from "@/components/sections/home/CalculateSavings";
-import { PanelCompanies } from "@/components/sections/home/PanelCompanies";
+// import { PanelCompanies } from "@/components/sections/home/PanelCompanies";
 import { ChooseSystem } from "@/components/sections/home/ChooseSystem";
 import { WhereToUseSolar } from "@/components/sections/home/WhereToUseSolar";
 import { NeoBenefits } from "@/components/sections/home/NeoBenefits";
@@ -33,7 +33,7 @@ export default function HomePage() {
       <SuccessStories />
       <FAQ />
       <ExpertConsultation />
-      <SuccessRate />
+      {/* <SuccessRate /> */}
       <Contact />
     </>
   );

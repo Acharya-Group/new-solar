@@ -1,9 +1,10 @@
 "use client";
 import React, { useState } from "react";
+import { usePathname } from "next/navigation";
 import { Heading } from "@/components/common/Heading";
 import { SubHeading } from "@/components/common/SubHeading";
 import { Button } from "@/components/common/Button";
-import { FiMapPin, FiZap, FiTrendingDown } from "react-icons/fi";
+import { FiMapPin, FiZap, FiTrendingDown, FiChevronDown, FiChevronUp } from "react-icons/fi";
 import SectionBadge from "@/components/common/SectionBadge/SectionBadge";
 
 const projects = [
@@ -17,9 +18,26 @@ const projects = [
 
 const filters = ["All", "residential", "commercial", "industrial"];
 
+const HOME_PREVIEW_COUNT = 3; // cards shown on homepage before "Show More"
+
 export const Projects: React.FC = () => {
+  const pathname = usePathname();
+  const isProjectsPage = pathname === "/projects";
+
   const [active, setActive] = useState("All");
+  const [showAll, setShowAll] = useState(false);
+
   const filtered = projects.filter((p) => active === "All" || p.category === active);
+
+  // On /projects page → show all filtered cards always
+  // On home (or any other page) → respect showAll toggle
+  const visibleProjects = isProjectsPage
+    ? filtered
+    : showAll
+    ? filtered
+    : filtered.slice(0, HOME_PREVIEW_COUNT);
+
+  const hasMore = !isProjectsPage && filtered.length > HOME_PREVIEW_COUNT;
 
   return (
     <section id="projects" className="py-16 md:py-24 bg-white relative overflow-hidden">
@@ -39,11 +57,19 @@ export const Projects: React.FC = () => {
         {/* Filters */}
         <div className="flex justify-center gap-3 mb-8 flex-wrap">
           {filters.map((f) => (
-            <button aria-label={`Filter by ${f}`} key={f} onClick={() => setActive(f)}
-              className={`px-5 py-2 rounded-full text-sm font-semibold border-2 capitalize transition-all duration-300 ${active === f
+            <button
+              aria-label={`Filter by ${f}`}
+              key={f}
+              onClick={() => {
+                setActive(f);
+                setShowAll(false); // reset expansion on filter change
+              }}
+              className={`px-5 py-2 rounded-full text-sm font-semibold border-2 capitalize transition-all duration-300 ${
+                active === f
                   ? "bg-green-600 text-white border-transparent shadow-md"
-                  : "bg-blue text-gray-600 border-gray-200 hover:border-green-300"
-                }`}>
+                  : "bg-white text-gray-600 border-gray-200 hover:border-green-300"
+              }`}
+            >
               {f}
             </button>
           ))}
@@ -51,8 +77,11 @@ export const Projects: React.FC = () => {
 
         {/* Cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filtered.map((p, i) => (
-            <div key={i} className="group bg-white border-2 border-gray-100 rounded-3xl overflow-hidden hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
+          {visibleProjects.map((p, i) => (
+            <div
+              key={i}
+              className="group bg-white border-2 border-gray-100 rounded-3xl overflow-hidden hover:shadow-xl hover:-translate-y-2 transition-all duration-300"
+            >
               {/* Top colored banner */}
               <div className={`bg-gradient-to-r ${p.color} h-32 flex items-center justify-center relative overflow-hidden`}>
                 <div className="absolute inset-0 bg-black/10" />
@@ -91,8 +120,32 @@ export const Projects: React.FC = () => {
           ))}
         </div>
 
-        <div className="mt-10 text-center">
-          <Button href="/projects" variant="primary" size="lg">View All Projects →</Button>
+        {/* Footer Actions */}
+        <div className="mt-10 text-center flex flex-col items-center gap-4">
+          {/* Show More / Show Less — only on homepage when there are hidden cards */}
+          {hasMore && (
+            <button
+              onClick={() => setShowAll((prev) => !prev)}
+              className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full border-2 border-green-600 text-green-600 font-semibold text-sm hover:bg-green-50 transition-all duration-300"
+            >
+              {showAll ? (
+                <>
+                  Show Less <FiChevronUp size={16} />
+                </>
+              ) : (
+                <>
+                  Show More ({filtered.length - HOME_PREVIEW_COUNT} more) <FiChevronDown size={16} />
+                </>
+              )}
+            </button>
+          )}
+
+          {/* "View All Projects" button — shown on homepage only */}
+          {!isProjectsPage && (
+            <Button href="/projects" variant="primary" size="lg">
+              View All Projects →
+            </Button>
+          )}
         </div>
       </div>
     </section>

@@ -9,65 +9,64 @@ import SectionBadge from "@/components/common/SectionBadge/SectionBadge";
 const faqs = [
   // --- Subsidy: PM Surya Ghar Yojana ---
   {
-    q: "PM Surya Ghar Yojana subsidy kitni milti hai?",
-    a: "Subsidy system ki capacity ke hisaab se milti hai: 1 kW par ₹30,000, 2 kW par ₹60,000, aur 3 kW par ₹78,000 (maximum). 2 kW tak 60% cost cover hoti hai aur 2–3 kW ke beech 40% extra cost covered hoti hai. North-East states, Himachal, Uttarakhand, J&K, Andaman, aur Lakshadweep ko 10% additional subsidy milti hai."
+    q: "How much subsidy is available under PM Surya Ghar Yojana?",
+    a: "The subsidy is based on system capacity: ₹30,000 for 1 kW, ₹60,000 for 2 kW, and ₹78,000 (maximum) for 3 kW. Up to 2 kW, 60% of the cost is covered, and between 2–3 kW, an additional 40% of the extra cost is covered. North-East states, Himachal Pradesh, Uttarakhand, J&K, Andaman, and Lakshadweep receive an additional 10% subsidy."
   },
   {
-    q: "PM Surya Ghar Yojana ke liye kaun apply kar sakta hai?",
-    a: "Koi bhi Indian resident jiske paas apna ghar aur valid electricity connection hai woh apply kar sakta hai — urban aur rural dono. Zaruri hai ki pehle koi solar subsidy na li ho aur rooftop installation ke liye jagah ho. RWA (Residential Welfare Associations) bhi eligible hain."
+    q: "Who is eligible to apply for PM Surya Ghar Yojana?",
+    a: "Any Indian resident who owns a home and has a valid electricity connection can apply — both urban and rural. Requirements include no prior solar subsidy and available rooftop space for installation. Residential Welfare Associations (RWAs) are also eligible."
   },
   {
-    q: "Subsidy apply karne ka process kya hai?",
-    a: "Apply karne ke liye pmsuryaghar.gov.in par jaayein ya mobile app download karein. Mobile number, Aadhaar, aur email se register karein, DISCOM se approval lein, MNRE-registered vendor se installation karwaayein, aur phir inspection ke baad subsidy directly aapke bank account mein 30–45 din mein aa jaati hai. Hum poore process mein aapki madad karte hain."
+    q: "What is the process to apply for the subsidy?",
+    a: "Visit pmsuryaghar.gov.in or download the mobile app. Register with your mobile number, Aadhaar, and email, get approval from your DISCOM, have the system installed by an MNRE-registered vendor, and after inspection, the subsidy is credited directly to your bank account within 30–45 days. We assist you throughout the entire process."
   },
   {
-    q: "Subsidy ke baad system kitne mein padega?",
-    a: "3 kW On-Grid system ki total cost ₹55,000–₹90,000 hoti hai. ₹78,000 ki maximum subsidy ke baad eligible customers ko 3 kW system lagbhag muft mil sakta hai. 1 kW system par ₹30,000 ki subsidy milti hai jo small households ke liye kaafi hoti hai."
+    q: "What will the system cost after the subsidy?",
+    a: "A 3 kW On-Grid system has a total cost of ₹55,000–₹90,000. With the maximum subsidy of ₹78,000, eligible customers can get a 3 kW system for virtually free. For 1 kW systems, the ₹30,000 subsidy is substantial enough for small households."
   },
 
   // --- Finance / EMI ---
   {
-    q: "Kya bina paise ke bhi solar laga sakte hain? EMI/loan milta hai?",
-    a: "Haan! SBI, Canara Bank, Indian Bank, aur Union Bank jaise banks PM Surya Ghar Yojana ke tahat collateral-free solar loan dete hain. Loan up to ₹6 lakhs, repayment tenure up to 10 saal, aur interest rate 6–7% per annum (CIBIL ke hisaab se). EMI aapke monthly electricity bill se kam ho sakti hai — matlab pehle din se saving shuru."
+    q: "Can I get solar installed without upfront payment? Is an EMI or loan available?",
+    a: "Yes! Banks like SBI, Canara Bank, Indian Bank, and Union Bank offer collateral-free solar loans under PM Surya Ghar Yojana. Loans up to ₹6 lakhs, repayment tenure up to 10 years, and interest rates of 6–7% per annum (based on CIBIL score). Your EMI can be lower than your monthly electricity bill — meaning savings start from day one."
   },
   {
-    q: "Loan ke liye kya documents chahiye aur process kitna lamba hai?",
-    a: "Basic KYC documents (Aadhaar, PAN), electricity bill, aur property proof chahiye. Nationalized banks mein ₹2 lakh tak ke loan ke liye minimum CIBIL score bhi nahi chahiye. Loan approve hone mein 3–7 din lagte hain aur disbursement directly vendor ko hoti hai. Subsidy credit hone ke baad EMI automatically reduce ho jaati hai."
+    q: "What documents are required for the loan and how long does the process take?",
+    a: "Basic KYC documents (Aadhaar, PAN), electricity bill, and property proof are required. For loans up to ₹2 lakhs at nationalized banks, no minimum CIBIL score is needed. Loan approval takes 3–7 days and disbursement is made directly to the vendor. Once the subsidy is credited, your EMI is automatically reduced."
   },
   {
-    q: "Kya EMI se solar lena financially samajhdari hai?",
-    a: "Bilkul! Ek 3 kW system ki monthly EMI ₹1,500–₹2,500 ke aaspaas hoti hai, jabki aapki electricity bill saving ₹2,000–₹3,500+ ho sakti hai. Matlab aap EMI bhar rahe ho aur phir bhi bachaa rahe ho. Loan tenure khatam hone ke baad 15+ saal ki free electricity alag se milti hai."
+    q: "Is it financially wise to go solar on EMI?",
+    a: "Absolutely! A 3 kW system's monthly EMI is around ₹1,500–₹2,500, while your electricity bill savings can be ₹2,000–₹3,500+. That means you're paying the EMI and still saving money. After the loan tenure ends, you get 15+ years of free electricity on top of that."
   },
 
   // --- Basics ---
   {
-    q: "Solar system kitne kW ka lagwana chahiye?",
-    a: "Yeh aapki monthly consumption par depend karta hai: 100–150 units/month ke liye 1 kW, 150–300 units ke liye 2 kW, aur 300+ units ke liye 3 kW kaafi hota hai. Subsidy sirf 3 kW tak milti hai residential customers ko. Hum free site survey karke sahi capacity suggest karte hain."
+    q: "What kW system should I install?",
+    a: "It depends on your monthly consumption: 1 kW for 100–150 units/month, 2 kW for 150–300 units, and 3 kW for 300+ units. Subsidy is available only up to 3 kW for residential customers. We conduct a free site survey to recommend the right capacity for you."
   },
   {
-    q: "On-Grid, Off-Grid aur Hybrid mein kya fark hai?",
-    a: "On-Grid: Grid se connected, no battery — power cut mein band. Sabse sasta, best ROI, net metering available. Off-Grid: Battery backup, grid se independent — remote areas ke liye. Hybrid: Grid + Battery dono — power cut mein bhi chalta hai, city mein sabse reliable. Hum aapki zaroorat ke hisaab se best option suggest karenge."
+    q: "What is the difference between On-Grid, Off-Grid, and Hybrid systems?",
+    a: "On-Grid: Connected to the grid, no battery — shuts down during power cuts. Cheapest option, best ROI, net metering available. Off-Grid: Battery backup, independent of the grid — ideal for remote areas. Hybrid: Both grid and battery — works even during power cuts, most reliable for city use. We'll suggest the best option based on your needs."
   },
   {
-    q: "Power cut mein solar kaam karta hai?",
-    a: "On-Grid system power cut mein band ho jaata hai (safety requirement). Off-Grid aur Hybrid systems mein battery backup hoti hai — toh power cut mein bhi electricity milti hai. Agar aapke area mein zyada power cuts aate hain toh Hybrid system best choice hai."
-  },
-
-  {
-    q: "Installation mein kitna time lagta hai?",
-    a: "Survey se lekar installation tak sirf 7 din ka process hai. Actual installation ek hi din mein complete ho jaati hai. Hamaari MNRE certified team fast aur professional hai — koi mess nahi, koi delay nahi."
+    q: "Does solar work during a power cut?",
+    a: "An On-Grid system shuts down during power cuts (a safety requirement). Off-Grid and Hybrid systems have battery backup — so electricity is available even during outages. If your area has frequent power cuts, a Hybrid system is the best choice."
   },
   {
-    q: "Kya flat roof par solar lag sakta hai?",
-    a: "Bilkul! Flat roofs par adjustable mounting structures use hote hain jo panels ko optimal angle par set karte hain. RCC, tin ya tiles — har tarah ki roof par solar installation possible hai."
+    q: "How long does installation take?",
+    a: "The entire process from survey to installation takes just 7 days. The actual installation is completed in a single day. Our MNRE-certified team is fast and professional — no mess, no delays."
   },
   {
-    q: "Maintenance kitni hogi aur system kitne saal chalega?",
-    a: "Saal mein ek baar professional cleaning aur inspection kaafi hai. Panels mein koi moving parts nahi hote — breakdown ka risk almost zero hai. Pehle saal ki free maintenance hum dete hain. System 25 saal tak chalta hai — yaani 20+ saal ki free electricity guaranteed."
+    q: "Can solar be installed on a flat roof?",
+    a: "Absolutely! Flat roofs use adjustable mounting structures that set the panels at the optimal angle. Whether it's RCC, tin, or tiles — solar installation is possible on all roof types."
   },
   {
-    q: "Investment kitne saal mein wapas milega?",
-    a: "On-Grid system ka payback period 3–4 saal hai. Subsidy ke baad yeh 2–3 saal tak aa sakta hai. System 25 saal chalega — matlab 20+ saal bilkul free electricity. ROI 400–500% tak ho sakta hai poori life mein."
+    q: "How much maintenance is required and how long will the system last?",
+    a: "One professional cleaning and inspection per year is sufficient. Panels have no moving parts — the risk of breakdown is almost zero. We provide free maintenance for the first year. The system lasts 25 years — meaning 20+ years of free electricity is guaranteed."
+  },
+  {
+    q: "How many years will it take to recover my investment?",
+    a: "The payback period for an On-Grid system is 3–4 years. After the subsidy, this can come down to 2–3 years. The system lasts 25 years — meaning 20+ years of completely free electricity. The ROI can reach 400–500% over its entire lifetime."
   },
 ];
 
