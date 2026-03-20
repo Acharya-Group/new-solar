@@ -281,14 +281,14 @@ const Products = () => {
               <div className="p-6 flex flex-col gap-4 flex-1">
 
                 {/* Price row — hidden for panels */}
-                {active !== "panels" && product.price && (
+                {/* {active !== "panels" && product.price && (
                   <div className="flex items-end gap-2">
                     <span className="text-gray-900 font-bold text-2xl">{product.price}</span>
                     {product.oldPrice && (
                       <span className="text-gray-400 text-sm line-through mb-0.5">{product.oldPrice}</span>
                     )}
                   </div>
-                )}
+                )} */}
 
                 {/* Spec grid */}
                 <div className="grid grid-cols-3 gap-2">
