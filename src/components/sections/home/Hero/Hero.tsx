@@ -169,7 +169,11 @@ export const Hero: React.FC = () => {
   return (
     <section id="hero" className="relative min-h-screen flex flex-col justify-center overflow-hidden">
       <BgSlider />
-      {showCanvas && <SolarCanvas />}
+      {showCanvas && (
+  <div className="hidden lg:block">
+    <SolarCanvas />
+  </div>
+)}
 
       {/* Gradient overlays */}
       <div className="absolute inset-0 pointer-events-none" style={{ zIndex: 5 }}>
