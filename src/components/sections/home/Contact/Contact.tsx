@@ -8,7 +8,7 @@ import Link from "next/link";
 import SectionBadge from "@/components/common/SectionBadge/SectionBadge";
 
 // ✅ WhatsApp number (country code + number, no +)
-const WHATSAPP_NUMBER = "918930300623";
+const WHATSAPP_NUMBER = "919991777218";
 
 const contactInfo = [
   { icon: FiPhone, label: "Phone", value: "+91 99917-77219", href: "tel:+919991777219" },
