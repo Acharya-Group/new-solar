@@ -2,14 +2,10 @@
 import React, { useState } from "react";
 import { Heading } from "@/components/common/Heading";
 import { SubHeading } from "@/components/common/SubHeading";
-import { FiPhone, FiMail, FiMapPin, FiClock, FiSend } from "react-icons/fi";
+import { FiPhone, FiMail, FiMapPin, FiClock } from "react-icons/fi";
 import { FaWhatsapp } from "react-icons/fa";
 import Link from "next/link";
 import SectionBadge from "@/components/common/SectionBadge/SectionBadge";
-
-// ✅ Google Apps Script URL — Sheet me data save hoga
-const APPS_SCRIPT_URL =
-  "https://script.google.com/macros/s/AKfycbw76Gv5tzQmecX-vpE2hwJ65ohEp59JnBAuyGbWkcBk6j4qNLmQvRs8AOOQ2wrEphDJqA/exec";
 
 // ✅ WhatsApp number (country code + number, no +)
 const WHATSAPP_NUMBER = "918930300623";
@@ -27,20 +23,11 @@ export const Contact: React.FC = () => {
   const [loading, setLoading] = useState(false);
   const [status, setStatus] = useState<"idle" | "success" | "error">("idle");
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
 
     try {
-      // ✅ 1. Google Sheet me data save karo
-      await fetch(APPS_SCRIPT_URL, {
-        method: "POST",
-        mode: "no-cors",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(form),
-      });
-
-      // ✅ 2. WhatsApp pe pre-filled message bhejo
       const message = `🌞 *New Inquiry - Neo Solar*
 
 👤 *Name:* ${form.name}
@@ -85,7 +72,6 @@ export const Contact: React.FC = () => {
           {/* LEFT — Form */}
           <div className="bg-white border border-gray-100 rounded-3xl shadow-xl p-8">
             <h3 className="text-gray-900 font-bold text-xl mb-2">Send Us a Message</h3>
-            {/* ✅ WhatsApp badge */}
             <p className="text-sm text-green-600 font-medium mb-5 flex items-center gap-1">
               <FaWhatsapp size={15} /> Form submit hone pe WhatsApp pe message aayega
             </p>
@@ -141,7 +127,7 @@ export const Contact: React.FC = () => {
                 className="w-full inline-flex items-center justify-center gap-2 bg-gradient-to-r from-green-400 to-blue-500 text-white font-bold py-3.5 rounded-xl hover:scale-[1.02] transition-all disabled:opacity-50 shadow-lg shadow-green-200"
               >
                 <FaWhatsapp size={18} />
-                {loading ? "Sending..." : "Send via WhatsApp"}
+                {loading ? "Opening..." : "Send via WhatsApp"}
               </button>
 
               {status === "success" && (
