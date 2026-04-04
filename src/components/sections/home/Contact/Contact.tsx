@@ -2,11 +2,17 @@
 import React, { useState } from "react";
 import { Heading } from "@/components/common/Heading";
 import { SubHeading } from "@/components/common/SubHeading";
-import { Button } from "@/components/common/Button";
 import { FiPhone, FiMail, FiMapPin, FiClock, FiSend } from "react-icons/fi";
 import { FaWhatsapp } from "react-icons/fa";
 import Link from "next/link";
 import SectionBadge from "@/components/common/SectionBadge/SectionBadge";
+
+// ✅ Google Apps Script URL — Sheet me data save hoga
+const APPS_SCRIPT_URL =
+  "https://script.google.com/macros/s/AKfycbw76Gv5tzQmecX-vpE2hwJ65ohEp59JnBAuyGbWkcBk6j4qNLmQvRs8AOOQ2wrEphDJqA/exec";
+
+// ✅ WhatsApp number (country code + number, no +)
+const WHATSAPP_NUMBER = "918930300623";
 
 const contactInfo = [
   { icon: FiPhone, label: "Phone", value: "+91 99917-77219", href: "tel:+919991777219" },
@@ -24,18 +30,39 @@ export const Contact: React.FC = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
+
     try {
-      const res = await fetch("/api/contact", {
-        method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(form),
+      // ✅ 1. Google Sheet me data save karo
+      await fetch(APPS_SCRIPT_URL, {
+        method: "POST",
+        mode: "no-cors",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
       });
-      const data = await res.json();
-      setStatus(data.success ? "success" : "error");
-      if (data.success) setForm({ name: "", phone: "", email: "", service: "", message: "" });
-    } catch { setStatus("error"); }
-    finally { setLoading(false); }
+
+      // ✅ 2. WhatsApp pe pre-filled message bhejo
+      const message = `🌞 *New Inquiry - Neo Solar*
+
+👤 *Name:* ${form.name}
+📞 *Phone:* ${form.phone}
+📧 *Email:* ${form.email || "N/A"}
+⚡ *Service:* ${form.service || "N/A"}
+💬 *Message:* ${form.message || "N/A"}`;
+
+      const encodedMessage = encodeURIComponent(message);
+      window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodedMessage}`, "_blank");
+
+      setStatus("success");
+      setForm({ name: "", phone: "", email: "", service: "", message: "" });
+    } catch {
+      setStatus("error");
+    } finally {
+      setLoading(false);
+    }
   };
 
-  const inputClass = "bg-gray-50 border-2 border-gray-200 focus:border-green-400 rounded-xl px-4 py-3 text-gray-900 placeholder-gray-400 outline-none transition-colors text-sm w-full";
+  const inputClass =
+    "bg-gray-50 border-2 border-gray-200 focus:border-green-400 rounded-xl px-4 py-3 text-gray-900 placeholder-gray-400 outline-none transition-colors text-sm w-full";
 
   return (
     <section id="contact" className="py-16 md:py-24 bg-white relative overflow-hidden">
@@ -47,7 +74,8 @@ export const Contact: React.FC = () => {
           <SectionBadge text="Send Us a Message" />
           <Heading level="h2" align="center" gradient>Contact Us</Heading>
           <SubHeading align="center" className="mt-3 max-w-xl mx-auto">
-            Have any questions? <span className="text-green-600 font-semibold">We are right here.</span>{" "}
+            Have any questions?{" "}
+            <span className="text-green-600 font-semibold">We are right here.</span>{" "}
             Fill the form or call us directly.
           </SubHeading>
         </div>
@@ -56,31 +84,76 @@ export const Contact: React.FC = () => {
 
           {/* LEFT — Form */}
           <div className="bg-white border border-gray-100 rounded-3xl shadow-xl p-8">
-            <h3 className="text-gray-900 font-bold text-xl mb-6">Send Us a Message</h3>
+            <h3 className="text-gray-900 font-bold text-xl mb-2">Send Us a Message</h3>
+            {/* ✅ WhatsApp badge */}
+            <p className="text-sm text-green-600 font-medium mb-5 flex items-center gap-1">
+              <FaWhatsapp size={15} /> Form submit hone pe WhatsApp pe message aayega
+            </p>
             <form onSubmit={handleSubmit} className="flex flex-col gap-4">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <input className={inputClass} placeholder="Your Name *" value={form.name} onChange={(e) => setForm({ ...form, name: e.target.value })} required />
-                <input className={inputClass} placeholder="Phone Number *" value={form.phone} onChange={(e) => setForm({ ...form, phone: e.target.value })} required />
+                <input
+                  className={inputClass}
+                  placeholder="Your Name *"
+                  value={form.name}
+                  onChange={(e) => setForm({ ...form, name: e.target.value })}
+                  required
+                />
+                <input
+                  className={inputClass}
+                  placeholder="Phone Number *"
+                  value={form.phone}
+                  onChange={(e) => setForm({ ...form, phone: e.target.value })}
+                  required
+                />
               </div>
-              <input type="email" className={inputClass} placeholder="Email Address" value={form.email} onChange={(e) => setForm({ ...form, email: e.target.value })} />
-              <select aria-label="Select your service" className={inputClass} value={form.service} onChange={(e) => setForm({ ...form, service: e.target.value })}>
+              <input
+                type="email"
+                className={inputClass}
+                placeholder="Email Address"
+                value={form.email}
+                onChange={(e) => setForm({ ...form, email: e.target.value })}
+              />
+              <select
+                aria-label="Select your service"
+                className={inputClass}
+                value={form.service}
+                onChange={(e) => setForm({ ...form, service: e.target.value })}
+              >
                 <option value="">Select a Service</option>
-                <option value="on-grid">On-Grid System</option>
-                <option value="off-grid">Off-Grid System</option>
-                <option value="hybrid">Hybrid System</option>
-                <option value="subsidy">PM Subsidy Help</option>
-                <option value="maintenance">Maintenance</option>
+                <option value="On-Grid System">On-Grid System</option>
+                <option value="Off-Grid System">Off-Grid System</option>
+                <option value="Hybrid System">Hybrid System</option>
+                <option value="PM Subsidy Help">PM Subsidy Help</option>
+                <option value="Maintenance">Maintenance</option>
               </select>
-              <textarea className={`${inputClass} resize-none`} rows={4} placeholder="Your message or question..." value={form.message} onChange={(e) => setForm({ ...form, message: e.target.value })} />
+              <textarea
+                className={`${inputClass} resize-none`}
+                rows={4}
+                placeholder="Your message or question..."
+                value={form.message}
+                onChange={(e) => setForm({ ...form, message: e.target.value })}
+              />
 
-              <button aria-label="Send message" type="submit" disabled={loading}
-                className="w-full inline-flex items-center justify-center gap-2 bg-gradient-to-r from-green-400 to-blue-500 text-white font-bold py-3.5 rounded-xl hover:scale-[1.02] transition-all disabled:opacity-50 shadow-lg shadow-green-200">
-                <FiSend size={18} />
-                {loading ? "Sending..." : "Send Message"}
+              <button
+                aria-label="Send message"
+                type="submit"
+                disabled={loading}
+                className="w-full inline-flex items-center justify-center gap-2 bg-gradient-to-r from-green-400 to-blue-500 text-white font-bold py-3.5 rounded-xl hover:scale-[1.02] transition-all disabled:opacity-50 shadow-lg shadow-green-200"
+              >
+                <FaWhatsapp size={18} />
+                {loading ? "Sending..." : "Send via WhatsApp"}
               </button>
 
-              {status === "success" && <p className="text-green-600 text-sm text-center">✅ Message received! We will get back to you shortly.</p>}
-              {status === "error" && <p className="text-red-500 text-sm text-center">❌ Something went wrong. Please try again.</p>}
+              {status === "success" && (
+                <p className="text-green-600 text-sm text-center">
+                  ✅ WhatsApp khul gaya! Message send karo — hum turant reply karenge.
+                </p>
+              )}
+              {status === "error" && (
+                <p className="text-red-500 text-sm text-center">
+                  ❌ Something went wrong. Please try again.
+                </p>
+              )}
             </form>
           </div>
 
@@ -88,14 +161,24 @@ export const Contact: React.FC = () => {
           <div className="flex flex-col gap-5">
             <div className="bg-gradient-to-br from-green-400 to-blue-500 rounded-3xl p-6">
               <h3 className="text-white font-bold text-xl mb-1">Talk to Us Directly</h3>
-              <p className="text-white/70 text-sm mb-4">Faster than the form — just call or WhatsApp us.</p>
+              <p className="text-white/70 text-sm mb-4">
+                Faster than the form — just call or WhatsApp us.
+              </p>
               <div className="flex flex-col sm:flex-row gap-3">
-                <Link aria-label="Call us" href="tel:+919991777219"
-                  className="flex-1 inline-flex items-center justify-center gap-2 bg-black text-green-500 font-bold px-4 py-3 rounded-xl hover:bg-gray-900 transition-all">
+                <Link
+                  aria-label="Call us"
+                  href="tel:+919991777219"
+                  className="flex-1 inline-flex items-center justify-center gap-2 bg-black text-green-500 font-bold px-4 py-3 rounded-xl hover:bg-gray-900 transition-all"
+                >
                   <FiPhone size={16} /> Call Now
                 </Link>
-                <Link aria-label="WhatsApp us" href="https://wa.me/919991777218" target="_blank" rel="noopener noreferrer"
-                  className="flex-1 inline-flex items-center justify-center gap-2 bg-green-500 text-white font-bold px-4 py-3 rounded-xl hover:bg-green-600 transition-all">
+                <Link
+                  aria-label="WhatsApp us"
+                  href="https://wa.me/919991777218"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex-1 inline-flex items-center justify-center gap-2 bg-green-500 text-white font-bold px-4 py-3 rounded-xl hover:bg-green-600 transition-all"
+                >
                   <FaWhatsapp size={16} /> WhatsApp
                 </Link>
               </div>
