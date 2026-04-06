@@ -1,6 +1,5 @@
 import React from "react";
 import { Heading } from "@/components/common/Heading";
-import { SubHeading } from "@/components/common/SubHeading";
 import { Button } from "@/components/common/Button";
 import { FiCheckCircle, FiAward, FiUsers, FiZap, FiSettings, FiTarget, FiEye } from "react-icons/fi";
 import { FaLeaf } from "react-icons/fa";
